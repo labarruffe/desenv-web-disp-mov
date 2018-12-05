@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="2" />
+    <meta name="slide-number"       content="6" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="18" />
+    <meta name="slide-previous"     content="04-position-static.html" />
+    <meta name="slide-next"         content="06-position-relative.html" />
+	
+	<title>position: absolute</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/revision.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    position: absolute
+                </span>
+            </h1>
+            
+            
+            
+            <div class="absolute border-1 border-red">
+                position: 	absolute;
+            </div>
+            
+            <div class="absolute border-1 border-red">
+                position: 	absolute;
+            </div>
+            
+            <div class="absolute top-0 left-0 lines-3 border-1">
+                position: 	absolute;<br />
+                top:		0px;<br />
+                left:		0px;
+            </div>
+            
+            <div class="absolute top-600 left-600 lines-3 border-1">
+                position: 	absolute;	<br />
+                top:		600px;		<br />
+                left:		600px;
+            </div>
+            
+            <div class="absolute top-600 left-600 lines-3 border-1">
+                position: 	absolute;	<br />
+                top:		600px;		<br />
+                left:		600px;
+            </div>
+            
+            <div class="absolute top-700 left-700 lines-3 border-1">
+                position: 	absolute;	<br />
+                top:		700px;		<br />
+                left:		700px;
+            </div>
+            
+            <div class="absolute top-700 left-700 lines-3 border-1">
+                position: 	absolute;	<br />
+                top:		700px;		<br />
+                left:		700px;
+            </div>
+            
+            <div class="absolute father right-0 top-0 border-1">
+                <div class="absolute width-half height-half lines-2 border-1">
+                    Oriento-me pelo father <br />
+                    50% do tamanho dele
+                </div>
+            </div>
+            
+            <p class="relative top-200 w3-padding">
+                Elementos com a posição (position) absolute posicionam-se a partir 
+                do elemento pai. O padrão é top: 0px e left: 0px se nada for 
+                estipulado.
+            </p>
+            
+            <p class="relative top-200 w3-padding">
+                Esses elementos agora podem ser movidos para posições arbitrárias 
+                utilizando os atributos top ou bottom e left ou right; podendo até 
+                mesmo serem sobrepostos. Notem que os 3 primeiros divs estão 
+                sobrepostos, e que também temos 2 divs sobrepostas nos exemplos 
+                movidos 600px e 700px.
+            </p>
+
+        
+        
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+	
+    
+    
+</body>
+
+</html>

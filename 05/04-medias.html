@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="5" />
+    <meta name="slide-number"       content="3" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="7" />
+    <meta name="slide-previous"     content="03-media-query.html" />
+    <meta name="slide-next"         content="05-condicoes.html" />
+	
+	<title>Medias</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    
+    
+    <style type="text/css">
+    
+        #medias .w3-tag {
+            display:    none;
+        }
+        
+        
+        
+        @media all 
+        {
+        
+            #medias .all {
+                display:    initial;
+            }
+            
+        }
+        
+        @media print
+        {
+        
+            #medias .print {
+                display:    initial;
+            }
+            
+        }
+        
+        @media screen
+        {
+        
+            #medias .screen {
+                display:    initial;
+            }
+            
+        }
+        
+        @media print, screen
+        {
+        
+            #medias .print-screen {
+                display:    initial;
+            }
+            
+        }
+        
+        @media speech
+        {
+        
+            #medias .speech {
+                display:    initial;
+            }
+            
+        }
+    
+    </style>
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    Medias
+                </span>
+            </h1>
+           
+            <p>
+                Medias, em PT_BR, mídias, são os diferentes tipos de dispositivo 
+                em que é possível interpretar CSS. Essa parte é <b>OBRIGATÓRIA</b> na 
+                definição de uma media-query, a não ser que seu valor seja o default (<b>ALL</b>).
+                Os valores possíveis pra media são 
+                equivalentes aos possíveis valores do atributo media na tag &lt;link&gt;, e são:
+            </p>   
+            
+            <div class="w3-container" id="medias">
+                <span class="all w3-tag w3-theme w3-margin">			ALL</span>
+                <span class="screen w3-tag w3-theme w3-margin">		    SCREEN</span>
+                <span class="print w3-tag w3-theme w3-margin">		    PRINT</span>
+                <span class="print-screen w3-tag w3-theme w3-margin">   PRINT, SCREEN</span>
+                <span class="speech w3-tag w3-theme w3-margin">		    SPEECH</span>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <ul class="w3-border-left">
+                <li><b>all: </b>Em toda e qualquer mídia</li>
+                <li><b>screen: </b>Em telas (desktop e mobile)</li>
+                <li><b>print: </b>Mídia impressa (versão amigável pra impressão)</li>
+                <li><b>speech: </b>Sintetizadores de voz / leitores de tela</li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+            
+            
+            <h2> Exemplo de uma media em uma media-query</h2>
+            
+            <div class="w3-example">
+                
+                <pre class="w3-code notranslate cssHigh challenge">
+                
+       +-----+             
+@media | all |
+{      +-----+
+
+    /*  REGRAS  */
+    
+}
+                </pre>
+  
+            </div>
+          
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2>Combinando mídias (OU)</h2>
+            
+            <div class="w3-example">
+                
+                <pre class="w3-code notranslate cssHigh challenge">
+                
+       +---------------+             
+@media | print, screen | and (max-width: 768px)
+{      +---------------+
+
+    /*  REGRAS  */
+    
+}
+                </pre>
+  
+            </div>
+          
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2>Mídia E condições (E)</h2>
+            
+            <p>
+            </p>
+            
+            <div class="w3-example">
+                
+                <pre class="w3-code notranslate cssHigh challenge">
+                
+       +-------------------------------+             
+@media | screen and (max-width: 768px) |
+{      +-------------------------------+
+
+    /*  REGRAS  */
+    
+}
+
+/*  iPad tanto deitado como de pé   */
+       +--------------------------------+             
+@media | screen and (min-width: 769px)  |
+       |        and (max-width: 1024px) |
+{      +--------------------------------+
+
+    /*  REGRAS  */
+    
+}
+
+/*--------------------------------------*/
+
+       +----------------------------+             
+@media | all and (min-width: 769px) |
+{      +----------------------------+
+
+    /*  REGRAS  */
+    
+}
+
+equivale à 
+
+       +--------------------+             
+@media | (min-width: 769px) |
+{      +--------------------+
+
+    /*  REGRAS  */
+    
+}
+
+                </pre>
+  
+            </div>
+          
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2>Se uma condição for falsa (NOT)</h2>
+            
+            <div class="w3-example">
+                
+                <pre class="w3-code notranslate cssHigh challenge">
+                
+       +-----------+             
+@media | not print |
+{      +-----------+ 
+
+    /*  REGRAS  */
+    
+}
+                </pre>
+  
+            </div>
+          
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+            
+            
+            
+            
+        </article>
+    
+    </main>
+
+    
+        
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>

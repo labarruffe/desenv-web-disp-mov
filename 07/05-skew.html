@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="7" />
+    <meta name="slide-number"       content="5" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="9" />
+    <meta name="slide-previous"     content="04-rotate-2d.html" />
+    <meta name="slide-next"         content="06-matrix.html" />
+	
+	<title>skew()</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/transforms.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    skew(<i>graus em X</i>, <i>graus em Y</i>) 
+                    <br />ou skewX(<i>graus</i>)
+                    <br />ou skewY(<i>graus</i>)
+                </span>
+            </h1>
+            
+            <p>
+                É uma transformação implementada unicamentem em 2D, que faz um 
+                shearing (cizalhamento, deformação), em que os pixels da imagem 
+                são linearmente movidos em um determinado ângulo (deg), como podemos 
+                ver na imagem abaixo.
+            </p>
+            
+            <figure class="w3-margin-top  w3-center">
+                <img class="w3-image" src="img/skew.jpg" alt="skewX(20deg) e skewY(20deg), respectivamente" />
+                <figcaption class="w3-margin-top">skewX(20deg) e skewY(20deg), respectivamente</figcaption>
+            </figure>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <p>
+                Apesar de essa ser uma transformação 2D ela é muito utilizada em conjunto 
+                com transformações 3D, pois ela consegue dar a idéia de torção lateral 
+                que uma rotação 3D pode não conseguir tão bem.
+            </p>
+            
+            
+            
+            <div class="w3-row w3-margin-top">
+
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center w3-margin-bottom">
+                        <figcaption><b>A) </b>Mister Mxyzptlk sem skew()</figcaption>
+                        <img id="mr-mxyzptlk-A" class="w3-image identity-matrix w3-border" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+               
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-top w3-margin-bottom"><b>B) </b>skew(20deg, 20deg)</figcaption>
+                        <img id="mr-mxyzptlk-B" class="w3-image skew-20-20 w3-border" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+
+            </div>
+           
+           
+           
+            <div class="w3-row w3-margin-top">
+
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-top w3-margin-bottom"><b>C) </b>skewX(20deg)</figcaption>
+                        <img id="mr-mxyzptlk-C" class="w3-image skew-X-20 w3-border" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+               
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-top w3-margin-bottom"><b>D) </b>skewY(20deg)</figcaption>
+                        <img id="mr-mxyzptlk-D" class="w3-image skew-Y-20 w3-border" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+
+            </div>
+            
+            
+            
+            <div class="w3-row w3-margin-top">
+
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-top w3-margin-bottom"><b>E) </b>skewX(-20deg)</figcaption>
+                        <img id="mr-mxyzptlk-E" class="w3-image skew-X--20 w3-border" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+               
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-top w3-margin-bottom"><b>F) </b>skewY(-20deg)</figcaption>
+                        <img id="mr-mxyzptlk-F" class="w3-image skew-Y--20 w3-border" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+
+            </div>
+            
+            
+            
+            <div class="w3-example">
+                <pre id="matrix-output" class="w3-code notranslate cssHigh">
+        
+                </pre>  
+            </div>
+            
+            <h2> E como isso é feito?</h2>
+            <div class="w3-example">
+                <pre class="w3-code notranslate cssHigh">
+/*  Aplicado em B   */
+.skew-20-20 {
+    transform:          skew(20deg, 20deg);
+    -webkit-transform:  skew(20deg, 20deg);
+}
+
+/*  Aplicado em C   */
+.skew-X-20 {
+    transform:          skewX(20deg);
+    -webkit-transform:  skewX(20deg);
+}
+
+/*  Aplicado em E   */
+.skew-X--20 {
+    transform:          skewX(-20deg);
+    -webkit-transform:  skewX(-20deg);
+}
+
+/*  Aplicado em D   */
+.skew-Y-20 {
+    transform:          skewY(20deg);
+    -webkit-transform:  skewY(20deg);
+}
+
+/*  Aplicado em F   */
+.skew-Y--20 {
+    transform:          skewY(-20deg);
+    -webkit-transform:  skewY(-20deg);
+}
+                </pre>  
+            </div>
+
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+    
+     <script type="text/javascript">
+    
+        ;(function (undefined)
+        {
+            
+            'use strict';
+            
+            
+            
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $output1        =   document.querySelector('#matrix-output')
+                ,   $mrMxyzptlkA    =   document.querySelector('#mr-mxyzptlk-A')
+                ,   $mrMxyzptlkB    =   document.querySelector('#mr-mxyzptlk-B')
+                ,   $mrMxyzptlkC    =   document.querySelector('#mr-mxyzptlk-C')
+                ,   $mrMxyzptlkD    =   document.querySelector('#mr-mxyzptlk-D')
+                ,   $mrMxyzptlkE    =   document.querySelector('#mr-mxyzptlk-E')
+                ,   $mrMxyzptlkF    =   document.querySelector('#mr-mxyzptlk-F');
+                
+                var transformA  =   window.getComputedStyle($mrMxyzptlkA).getPropertyValue('transform')
+                ,   transformB  =   window.getComputedStyle($mrMxyzptlkB).getPropertyValue('transform')
+                ,   transformC  =   window.getComputedStyle($mrMxyzptlkC).getPropertyValue('transform')
+                ,   transformD  =   window.getComputedStyle($mrMxyzptlkD).getPropertyValue('transform')
+                ,   transformE  =   window.getComputedStyle($mrMxyzptlkE).getPropertyValue('transform')
+                ,   transformF  =   window.getComputedStyle($mrMxyzptlkF).getPropertyValue('transform');
+                
+                $output1.innerHTML  =   
+                    'A: '   + transformA + '\nB: ' + transformB
+                +   '\nC: ' + transformC + '\nD: ' + transformD
+                +   '\nE: ' + transformE + '\nF: ' + transformF;
+            
+            });
+        
+        })();
+    
+    </script>
+	
+    
+    
+</body>
+
+</html>

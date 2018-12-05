@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="1" />
+    <meta name="slide-number"       content="2" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="7" />
+    <meta name="slide-previous"     content="01-padroes-layout.htm" />
+    <meta name="slide-next"         content="03-dicas-mobile-first.htm" />
+	
+	<title>Mobile-first</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    Mobile-first
+                </span>
+            </h1>
+            
+            
+            <h2 class="w3-margin-top w3-margin-bottom">Por quê mobile-first?</h2>
+		
+            <h3>Desenvolvimento para mobile não é mais um nicho</h3>
+            
+            <ul class="w3-border-left">
+                <li class="w3-margin-top">Há mais de 1.2 bilhão de usuários mobile na web</li>
+                <li class="w3-margin-top">Nos E.U.A, 25% dos usuários são mobile-only</li>
+                <li class="w3-margin-top">APPs já têm mais de 10.9 bilhões de downloads</li>
+                <li class="w3-margin-top">Mais de 85% dos mobile vendidos atualmente podem acessar a web, 
+                e as vendas crescem em ritmo acelerado</li>
+                <li class="w3-margin-top">É o approach da Google para design</li>
+            </ul>
+            
+            <p class="w3-padding w3-margin-top">
+                A interação do cliente é diferente em cada discpositivo. Por exemplo 
+                um usuário no mobile ao entrar no site de um restaurante provavelmente 
+                está no trânsito, se dirigindo pra ele, e não vai querer ver a galeria 
+                de fotos e vídeos introdutórios (que ele provavelmente já viu antes de 
+                escolher o restaurate) antes de poder ver o endereço.
+            </p>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-margin-top w3-margin-bottom">Porque evitar design orientado a grageful degradation</h2>
+            
+            <p class="w3-padding w3-margin-top">
+                Soluções orientadas a graceful degradation tem a seguinte característica: 
+                criam a melhor solução possível, e vão entregando versões "menores" 
+                dessa solução se houver alguma limitação por parte da plataforma do 
+                usuário (poder usar Flash, CSS3, resoluções menores).
+            </p>
+            
+            <p class="w3-padding w3-margin-top">
+                Criar o projeto assim nos leva a fazer a versão desktop primeiro. e 
+                com todos os recursos possíveis, que serão então ocultados e/ou 
+                substituídos na versão mobile, entretando o usuário já fez o download 
+                de muitas coisas que ele não nescessitava, perdendo tempo e plano de 
+                dados nisso.
+            </p>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-margin-top w3-margin-bottom">Porque pensar em progressive enhancement</h2>
+
+            <p class="w3-padding w3-margin-top">
+                Projetos baseados em graceful-degradation tendem a parecer mal-acabados, 
+                ou adaptações mal-feitas no mobile, e é isso realmente que eles são. 
+                Sem falar que tu terás que enfrentar o maior de todos os problemas, 
+                <b>eliminação de conteúdo</b>.
+            </p>
+            
+            <p class="w3-padding w3-margin-top">
+                Já se iniciarmos pelo mobile, e irmos melhorando o projeto, adicionando 
+                elementos que fortaleçam a mensagem deste, como, vídeos, animações, 
+                imagens, mais texto, só temos a ganhar.
+            </p>
+            
+            <p class="w3-padding w3-margin-top">
+                Evitar downloads desnecessários sempre é bom, mas principlamnte na 
+                plataforma com maior limitação de banda e memória isso é vital. Por 
+                isso escrever media-queryes mobile-first é importante, para evitar 
+                expor elementos que não serão nescessários na plataforma apenas para 
+                escondê-los depois.
+            </p>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-margin-top w3-margin-bottom">Por quê não mobile-first?</h2>
+            
+            <ul class="w3-border-left">
+                <li class="w3-margin-top">Não é fácil</li>
+                <li class="w3-margin-top">Não é divertido</li>
+                <li class="w3-margin-top">É fora da zona de conforto</li>
+                <li class="w3-margin-top">Num mundo de crescentes liberdades haverá então muitas limitações</li>
+                <li class="w3-margin-top">
+                    <ul class="w3-border-left">
+                        <li class="w3-margin-top">Telas pequenas</li>
+                        <li class="w3-margin-top">Poucos recursos</li>
+                        <li class="w3-margin-top">Pouca memória</li>
+                        <li class="w3-margin-top">Pouca banda de download</li>
+                        <li class="w3-margin-top">Sem hover, as vezes sem click</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-margin-top w3-margin-bottom">Por quê não mobile-only?</h2>
+            
+            <figure class="w3-center w3-margin-top w3-margin-bottom">
+                <img class="w3-image" src="img/hours-on-screens.png" alt="Horas na frente de uma tela (EUA)">
+                <figcaption>Horas na frente de uma tela (EUA)</figcaption>
+            </figure>
+            
+            <p class="w3-padding w3-margin-top">
+                75% dos usuários não são mobile-only, logo, não devemos estragar as 
+                experiências deles limitando-as ao dispositivo com menos opções. Sem 
+                falar que o usuário pode entrar em contato com o teu produto em uma 
+                plataforma "não-adequada", acabar tendo uma experiência ruim e 
+                decidindo nunca encarar o seu produto na plataforma "adequada".
+            </p>
+            
+            <p class="w3-padding w3-margin-top">
+                Em breve televisões entrarão também de forma pesada no jogo da web, 
+                e sendo um dispositivo que famílias inteiras despendem tempo em frente 
+                vale a pena ser ignorado?
+            </p>
+            
+            <p class="w3-padding w3-margin-top">
+                Até mesmo grandes players do mobile-only já repensaram sua estratégia, 
+                como o: Uber, Waze e Instagram. Portanto, apenas botõezinhos de baixe 
+                a app aqui já não são o bastante.
+            </p>
+            
+
+        </article>
+    
+    </main>
+
+    
+    
+    
+
+    <script src="../js/index.js"></script>
+	
+</body>
+
+</html>

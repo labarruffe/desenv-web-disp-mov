@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+
+	<title>Exercício 04</title>
+    
+    <style type="text/css">
+            
+        @keyframes system-rotation {
+            
+            from {
+                transform:	rotate(0deg);
+            }
+            
+            to {
+                transform:	rotate(-360deg);
+            }
+            
+        }
+
+        @-webkit-keyframes system-rotation {
+            
+            from {
+                -webkit-transform:	rotate(0deg);
+            }
+            
+            to {
+                -webkit-transform:	rotate(-360deg);
+            }
+            
+        }
+
+        
+
+
+        .system {
+            
+            width:			    300px;
+            height:			    300px;
+            
+            position:		    absolute;
+            top:                calc(50vh - 150px);
+            left:               calc(50vw - 150px);
+            
+            animation:		    system-rotation 5s linear 0s infinite normal none running;
+            -webkit-animation:	system-rotation 5s linear 0s infinite normal none running;
+        }
+
+        .system div {
+            border:			    1px solid rgb(0, 0, 0);
+            position:		    absolute;
+            
+            width:			    50px;
+            height:			    50px;
+            line-height:		50px;
+            
+            vertical-align:		middle;
+            text-align:		    center;
+            
+            border-radius:		50%;
+            background-color:	rgb(111, 111, 111);
+            
+            top:			    0px;
+            left:			    calc(50% - 25px);
+            
+            animation:		    system-rotation 1s linear 0s infinite normal none running;
+            -webkit-animation:	system-rotation 1s linear 0s infinite normal none running;
+        }
+
+        .system .big {
+            width:			    100px;
+            height:			    100px;
+            line-height:		100px;
+            
+            background-color:	rgb(0, 0, 255);
+            
+            left:			    calc(50% - 50px);
+            top:			    calc(50% - 50px);
+            
+            animation:		    system-rotation 2s linear 0s infinite reverse none running;
+            -webkit-animation:	system-rotation 2s linear 0s infinite reverse none running;
+        }
+    
+    </style>
+
+</head>
+
+<body>
+
+    <div class="system">
+		
+        <div class="big">B</div>
+        <div class="small">s</div>
+
+    </div>
+
+</body>
+
+</html>

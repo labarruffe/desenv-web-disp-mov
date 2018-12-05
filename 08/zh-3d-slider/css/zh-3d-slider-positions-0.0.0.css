@@ -1,0 +1,349 @@
+.zh-3d-slider-item {
+    left:   0px;
+    top:    calc(100% / 2);
+}
+    
+    
+    
+    
+/**
+ *
+ *  Quando o slider está na posição 1
+ *
+ **/
+.zh-3d-slider-at-1 .zh-3d-slider-item-1 {
+    left:               50%;
+    transform:          translate3d(-50%, -50%, 333vw) skew(0deg, 0deg) scale(1.0, 1.0);
+    -webkit-transform:  translate3d(-50%, -50%, 333vw) skew(0deg, 0deg) scale(1.0, 1.0);
+    z-index:            333;
+}
+
+.zh-3d-slider-at-1 .zh-3d-slider-item-2 {
+    left:               90%;
+    transform:          translate3d(-50%, -50%, 222vw) skew(0deg, -2deg) scale(0.9, 0.9);
+    -webkit-transform:  translate3d(-50%, -50%, 222vw) skew(0deg, -2deg) scale(0.9, 0.9);
+    z-index:            222;
+}
+
+.zh-3d-slider-at-1 .zh-3d-slider-item-3 {
+    left:               130%;
+    transform:          translate3d(-50%, -55%, 111vw) skew(0deg, -1deg) scale(0.8, 0.8);
+    -webkit-transform:  translate3d(-50%, -55%, 111vw) skew(0deg, -1deg) scale(0.8, 0.8);
+    z-index:            111;
+}
+
+.zh-3d-slider-at-1 .zh-3d-slider-item-4 {
+    left:               -30%;
+    transform:          translate3d(-50%, -55%, 111vw) skew(0deg, 1deg) scale(0.8, 0.8);
+    -webkit-transform:  translate3d(-50%, -55%, 111vw) skew(0deg, 1deg) scale(0.8, 0.8);
+    z-index:            111;
+}
+
+.zh-3d-slider-at-1 .zh-3d-slider-item-5 {
+    left:               10%;
+    transform:          translate3d(-50%, -50%, 222vw) skew(0deg, 2deg) scale(0.9, 0.9);
+    -webkit-transform:  translate3d(-50%, -50%, 222vw) skew(0deg, 2deg) scale(0.9, 0.9);
+    z-index:            222;
+}
+
+
+
+/**
+ *
+ *  Quando o slider está na posição 2
+ *
+ **/
+.zh-3d-slider-at-2 .zh-3d-slider-item-1 {
+    left:               10%;
+    transform:          translate3d(-50%, -50%, 222vw) skew(0deg, 2deg) scale(0.9, 0.9);
+    -webkit-transform:  translate3d(-50%, -50%, 222vw) skew(0deg, 2deg) scale(0.9, 0.9);
+    z-index:            222;
+}
+
+.zh-3d-slider-at-2 .zh-3d-slider-item-2 {
+    left:               50%;
+    transform:          translate3d(-50%, -50%, 333vw) skew(0deg, 0deg) scale(1.0, 1.0);
+    -webkit-transform:  translate3d(-50%, -50%, 333vw) skew(0deg, 0deg) scale(1.0, 1.0);
+    z-index:            333;
+}
+
+.zh-3d-slider-at-2 .zh-3d-slider-item-3 {
+    left:               90%;
+    transform:          translate3d(-50%, -50%, 222vw) skew(0deg, -2deg) scale(0.9, 0.9);
+    -webkit-transform:  translate3d(-50%, -50%, 222vw) skew(0deg, -2deg) scale(0.9, 0.9);
+    z-index:            222;
+}
+
+.zh-3d-slider-at-2 .zh-3d-slider-item-4 {
+    left:               130%;
+    transform:          translate3d(-50%, -55%, 111vw) skew(0deg, -1deg) scale(0.8, 0.8);
+    -webkit-transform:  translate3d(-50%, -55%, 111vw) skew(0deg, -1deg) scale(0.8, 0.8);
+    z-index:            111;
+}
+
+.zh-3d-slider-at-2 .zh-3d-slider-item-5 {
+    left:               -30%;
+    transform:          translate3d(-50%, -55%, 111vw) skew(0deg, 1deg) scale(0.8, 0.8);
+    -webkit-transform:  translate3d(-50%, -55%, 111vw) skew(0deg, 1deg) scale(0.8, 0.8);
+    z-index:            111;
+}
+
+
+
+/**
+ *
+ *  Quando o slider está na posição 3
+ *
+ **/
+.zh-3d-slider-at-3 .zh-3d-slider-item-1 {
+    left:               -30%;
+    transform:          translate3d(-50%, -55%, 111vw) skew(0deg, 1deg) scale(0.8, 0.8);
+    -webkit-transform:  translate3d(-50%, -55%, 111vw) skew(0deg, 1deg) scale(0.8, 0.8);
+    z-index:            111;
+}
+
+.zh-3d-slider-at-3 .zh-3d-slider-item-2 {
+    left:               10%;
+    transform:          translate3d(-50%, -50%, 222vw) skew(0deg, 2deg) scale(0.9, 0.9);
+    -webkit-transform:  translate3d(-50%, -50%, 222vw) skew(0deg, 2deg) scale(0.9, 0.9);
+    z-index:            222;
+}
+
+.zh-3d-slider-at-3 .zh-3d-slider-item-3 {
+    left:               50%;
+    transform:          translate3d(-50%, -50%, 333vw) skew(0deg, 0deg) scale(1.0, 1.0);
+    -webkit-transform:  translate3d(-50%, -50%, 333vw) skew(0deg, 0deg) scale(1.0, 1.0);
+    z-index:            333;
+}
+
+.zh-3d-slider-at-3 .zh-3d-slider-item-4 {
+    left:               90%;
+    transform:          translate3d(-50%, -50%, 222vw) skew(0deg, -2deg) scale(0.9, 0.9);
+    -webkit-transform:  translate3d(-50%, -50%, 222vw) skew(0deg, -2deg) scale(0.9, 0.9);
+    z-index:            222;
+}
+
+.zh-3d-slider-at-3 .zh-3d-slider-item-5 {
+    left:               130%;
+    transform:          translate3d(-50%, -55%, 111vw) skew(0deg, -1deg) scale(0.8, 0.8);
+    -webkit-transform:  translate3d(-50%, -55%, 111vw) skew(0deg, -1deg) scale(0.8, 0.8);
+    z-index:            111;
+}
+
+
+
+/**
+ *
+ *  Quando o slider está na posição 4
+ *
+ **/
+.zh-3d-slider-at-4 .zh-3d-slider-item-1 {
+    left:               130%;
+    transform:          translate3d(-50%, -55%, 111vw) skew(0deg, -1deg) scale(0.8, 0.8);
+    -webkit-transform:  translate3d(-50%, -55%, 111vw) skew(0deg, -1deg) scale(0.8, 0.8);
+    z-index:            111;
+}
+
+.zh-3d-slider-at-4 .zh-3d-slider-item-2 {
+    left:               -30%;
+    transform:          translate3d(-50%, -55%, 111vw) skew(0deg, 1deg) scale(0.8, 0.8);
+    -webkit-transform:  translate3d(-50%, -55%, 111vw) skew(0deg, 1deg) scale(0.8, 0.8);
+    z-index:            111;
+}
+
+.zh-3d-slider-at-4 .zh-3d-slider-item-3 {
+    left:               10%;
+    transform:          translate3d(-50%, -50%, 222vw) skew(0deg, 2deg) scale(0.9, 0.9);
+    -webkit-transform:  translate3d(-50%, -50%, 222vw) skew(0deg, 2deg) scale(0.9, 0.9);
+    z-index:            222;
+}
+
+.zh-3d-slider-at-4 .zh-3d-slider-item-4 {
+    left:               50%;
+    transform:          translate3d(-50%, -50%, 333vw) skew(0deg, 0deg) scale(1.0, 1.0);
+    -webkit-transform:  translate3d(-50%, -50%, 333vw) skew(0deg, 0deg) scale(1.0, 1.0);
+    z-index:            333;
+}
+
+.zh-3d-slider-at-4 .zh-3d-slider-item-5 {
+    left:               90%;
+    transform:          translate3d(-50%, -50%, 222vw) skew(0deg, -2deg) scale(0.9, 0.9);
+    -webkit-transform:  translate3d(-50%, -50%, 222vw) skew(0deg, -2deg) scale(0.9, 0.9);
+    z-index:            222;
+}
+
+
+
+/**
+ *
+ *  Quando o slider está na posição 5
+ *
+ **/
+.zh-3d-slider-at-5 .zh-3d-slider-item-1 {
+    left:               90%;
+    transform:          translate3d(-50%, -50%, 222vw) skew(0deg, -2deg) scale(0.9, 0.9);
+    -webkit-transform:  translate3d(-50%, -50%, 222vw) skew(0deg, -2deg) scale(0.9, 0.9);
+    z-index:            222;
+}
+
+.zh-3d-slider-at-5 .zh-3d-slider-item-2 {
+    left:               130%;
+    transform:          translate3d(-50%, -55%, 111vw) skew(0deg, -1deg) scale(0.8, 0.8);
+    -webkit-transform:  translate3d(-50%, -55%, 111vw) skew(0deg, -1deg) scale(0.8, 0.8);
+    z-index:            111;
+}
+
+.zh-3d-slider-at-5 .zh-3d-slider-item-3 {
+    left:               -30%;
+    transform:          translate3d(-50%, -55%, 111vw) skew(0deg, 1deg) scale(0.8, 0.8);
+    -webkit-transform:  translate3d(-50%, -55%, 111vw) skew(0deg, 1deg) scale(0.8, 0.8);
+    z-index:            111;
+}
+
+.zh-3d-slider-at-5 .zh-3d-slider-item-4 {
+    left:               10%;
+    transform:          translate3d(-50%, -50%, 222vw) skew(0deg, 2deg) scale(0.9, 0.9);
+    -webkit-transform:  translate3d(-50%, -50%, 222vw) skew(0deg, 2deg) scale(0.9, 0.9);
+    z-index:            222;
+}
+
+.zh-3d-slider-at-5 .zh-3d-slider-item-5 {
+    left:               50%;
+    transform:          translate3d(-50%, -50%, 333vw) skew(0deg, 0deg) scale(1.0, 1.0);
+    -webkit-transform:  translate3d(-50%, -50%, 333vw) skew(0deg, 0deg) scale(1.0, 1.0);
+    z-index:            333;
+}
+
+
+
+
+
+@media screen and (min-width: 1000px)
+{
+    
+    /**
+     *
+     *  Quando o slider está na posição 1
+     *
+     **/
+    .zh-3d-slider-at-1 .zh-3d-slider-item-1 {
+        left:   50%;
+    }
+
+    .zh-3d-slider-at-1 .zh-3d-slider-item-2 {
+        left:   65%;
+    }
+
+    .zh-3d-slider-at-1 .zh-3d-slider-item-3 {
+        left:   80%;
+    }
+
+    .zh-3d-slider-at-1 .zh-3d-slider-item-4 {
+        left:   20%;
+    }
+
+    .zh-3d-slider-at-1 .zh-3d-slider-item-5 {
+        left:   35%;
+    }
+    
+    /**
+     *
+     *  Quando o slider está na posição 2
+     *
+     **/
+    .zh-3d-slider-at-2 .zh-3d-slider-item-1 {
+        left:   35%;
+    }
+
+    .zh-3d-slider-at-2 .zh-3d-slider-item-2 {
+        left:   50%;
+    }
+
+    .zh-3d-slider-at-2 .zh-3d-slider-item-3 {
+        left:   65%;
+    }
+
+    .zh-3d-slider-at-2 .zh-3d-slider-item-4 {
+        left:   80%;
+    }
+
+    .zh-3d-slider-at-2 .zh-3d-slider-item-5 {
+        left:   20%;
+    }
+    
+    /**
+     *
+     *  Quando o slider está na posição 3
+     *
+     **/
+    .zh-3d-slider-at-3 .zh-3d-slider-item-1 {
+        left:   20%;
+    }
+
+    .zh-3d-slider-at-3 .zh-3d-slider-item-2 {
+        left:   35%;
+    }
+
+    .zh-3d-slider-at-3 .zh-3d-slider-item-3 {
+        left:   50%;
+    }
+
+    .zh-3d-slider-at-3 .zh-3d-slider-item-4 {
+        left:   65%;
+    }
+
+    .zh-3d-slider-at-3 .zh-3d-slider-item-5 {
+        left:   80%;
+    }
+
+    /**
+     *
+     *  Quando o slider está na posição 4
+     *
+     **/
+    .zh-3d-slider-at-4 .zh-3d-slider-item-1 {
+        left:   80%;
+    }
+
+    .zh-3d-slider-at-4 .zh-3d-slider-item-2 {
+        left:   20%;
+    }
+
+    .zh-3d-slider-at-4 .zh-3d-slider-item-3 {
+        left:   35%;
+    }
+
+    .zh-3d-slider-at-4 .zh-3d-slider-item-4 {
+        left:   50%;
+    }
+
+    .zh-3d-slider-at-4 .zh-3d-slider-item-5 {
+        left:   65%;
+    }
+    
+    /**
+     *
+     *  Quando o slider está na posição 5
+     *
+     **/
+    .zh-3d-slider-at-5 .zh-3d-slider-item-1 {
+        left:   65%;
+    }
+
+    .zh-3d-slider-at-5 .zh-3d-slider-item-2 {
+        left:   80%;
+    }
+
+    .zh-3d-slider-at-5 .zh-3d-slider-item-3 {
+        left:   20%;
+    }
+
+    .zh-3d-slider-at-5 .zh-3d-slider-item-4 {
+        left:   35%;
+    }
+
+    .zh-3d-slider-at-5 .zh-3d-slider-item-5 {
+        left:   50%;
+    }
+    
+}

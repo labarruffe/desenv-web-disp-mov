@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="0" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="100" />
+    <meta name="slide-previous"     content="03-transition-duration.html" />
+    <meta name="slide-next"         content="05-transition-delay.html" />
+	
+	<title>05-transition-delay.html</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/transitions.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    transform-timing-function
+                </span>
+            </h1>
+            
+            
+            
+            <p>
+                É a função utilizada para controlar em que estado da transformação 
+                o elemento vai se encontrar em determinado tempo dela. Ou seja, é 
+                o conjunto de pontos intermediários das interpolações de estado 
+                ao londgo do tempo.Abaixo seguem os gráficos que representam essas 
+                funções.
+            </p>
+            
+            <figure class="w3-center w3-padding">
+                <img src="img/functions.jpg" alt="Funções de transform-timing do CSS" />
+                <figcaption>Funções de transform-timing do CSS</figcaption>
+            </figure>
+            
+            <div class="w3-row w3-padding w3-center">
+                <div class="w3-half w3-padding">
+                    <button id="hover-button-10" class="button">Hover-linear [10]</button>
+                </div>
+                    
+                <div class="w3-half w3-padding">
+                    <button id="hover-button-11" class="button">Hover-ease [11]</button>
+                </div>
+            </div>
+            
+            <div class="w3-row w3-padding w3-center">
+                <div class="w3-half w3-padding">
+                    <button id="hover-button-12" class="button">Hover-ease-in [12]</button>
+                </div>
+                    
+                <div class="w3-half w3-padding">
+                    <button id="hover-button-13" class="button">Hover-ease-out [13]</button>
+                </div>
+
+            </div>
+            
+            <div class="w3-row w3-padding w3-center">
+                <div class="w3-half w3-padding">
+                    <button id="hover-button-13" class="button">Hover-ease-in-out [13]</button>
+                </div>
+                    
+                <div class="w3-half w3-padding">
+                    &nbsp;
+                </div>
+
+            </div>
+            
+            <div class="w3-example">
+                <pre id="output-1" class="w3-code notranslate cssHigh">
+                
+#hover-button-10, 
+#hover-button-11, 
+#hover-button-12, 
+#hover-button-13, 
+#hover-button-14 {
+    transition-property:                width;
+    -webkit-transition-property:        width;
+    
+    transition-timing-function:         linear;
+    -webkit-transition-timing-function: linear;
+    
+    transition-duration:                3s;
+    -webkit-transition-duration:        3s;
+    
+    transition-delay:                   0ms;
+    -webkit-transition-delay:           0ms;
+}
+
+#hover-button-11 {
+    transition-timing-function:         ease;
+    -webkit-transition-timing-function: ease;
+}
+
+#hover-button-12 {
+    transition-timing-function:         ease-in;
+    -webkit-transition-timing-function: ease-in;
+}
+
+#hover-button-13 {
+    transition-timing-function:         ease-out;
+    -webkit-transition-timing-function: ease-out;
+}
+
+#hover-button-14 {
+    transition-timing-function:         ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+#hover-button-10:hover, 
+#hover-button-11:hover, 
+#hover-button-12:hover, 
+#hover-button-13:hover, 
+#hover-button-14:hover {
+    width:  300px;
+}
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <p class="w3-padding">
+                Também podemos definir funções próprias usando besier-curves, 
+                veja o editor de propriedades CSS do Google Chrome para mais 
+                informações.
+            </p>
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+	
+    
+    
+</body>
+
+</html>

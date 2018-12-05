@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="1" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="7" />
+    <meta name="slide-previous"     content="index.html" />
+    <meta name="slide-next"         content="02-mobile-first.htm" />
+	
+	<title>Padrões de layout responsivo</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    Padrões de layout responsivo
+                </span>
+            </h1>
+            
+            
+            
+            <h2 class="w3-tag w3-theme w3-margin-top">Mostly Fluid</h2>
+		
+            <figure class="w3-center w3-margin-bottom">
+                <img class="w3-image" src="img/mostly-fluid.png" alt="Mostly Fluid">
+                <figcaption>Mostly Fluid</figcaption>
+            </figure><br />
+            
+            
+            <ul class="w3-border-left w3-margin-top">
+                <li class="w3-margin-top">O Layout tem uma largura máxima, mais do que isso há acréscimo de margens.</li>
+                <li class="w3-margin-top">Usa grids responsivos, e depende de resize de imagens em tamanhos menores de tela</li>
+                <li class="w3-margin-top">As colunas empilham-se verticalmente em resoluções menores</li>
+                <li class="w3-margin-top">A estrutura do layout só é modificada na menor resolução prevista</li>
+                <li class="w3-margin-top">Exemplo: <a href="http://mediaqueri.es/fss/" target="_blank">Five Simple Steps <i class="fa fa-external-link"></i></a></li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-tag w3-theme w3-margin-top">Column drop</h2>
+            
+            <figure class="w3-center w3-margin-bottom">
+                <img class="w3-image" src="img/column-drop.png" alt="Column drop">
+                <figcaption>Column drop</figcaption>
+            </figure><br />
+            
+            <ul class="w3-border-left">
+                <li class="w3-margin-top">O Layout inicia com várias colunas e termina com uma única</li>
+                <li class="w3-margin-top">Conforme a resolução diminui as colunas vão "caindo" para baixo</li>
+                <li class="w3-margin-top">O tamanho dos elementos (imagens) tende a ser consistente</li>
+                <li class="w3-margin-top">Exemplo: <a href="http://mediaqueri.es/mod/" target="_blank">Modernizr <i class="fa fa-external-link"></i></a></li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-tag w3-theme w3-margin-top">Layout shifter</h2>
+            
+            <figure class="w3-center w3-margin-bottom">
+                <img class="w3-image" src="img/layout-shifter.png" alt="Layout shifter">
+                <figcaption>Layout shifter</figcaption>
+            </figure><br />
+            
+            <ul class="w3-border-left">
+                <li class="w3-margin-top">Em teoria é o mundo ideal, todos os designs deveriam ser assim, 
+                adaptando os elementos para prover a melhor experiência para 
+                cada dispositivo</li>
+                <li class="w3-margin-top">Entretanto é o layout que mais requer trabalho para ser implementado</li>
+                <li class="w3-margin-top">A altura dos elementos também é importante, o que aparece na 
+                tela em cada momento é importante</li>
+                <li class="w3-margin-top">Há muita variação na implementaçõa para ser facilmente representado, 
+                ao contrário dos layouts anteriores</li>
+                <li class="w3-margin-top">Em suma, em cada breakpoint temos um design diferente</li>
+                <li class="w3-margin-top">Exemplo: <a href="http://mediaqueri.es/bg/" target="_blank">The Boston Globe <i class="fa fa-external-link"></i></a></li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-tag w3-theme w3-margin-top">Tiny Tweaks</h2>
+            
+            <figure class="w3-center w3-margin-bottom">
+                <img class="w3-image" src="img/tiny-tweaks.png" alt="Tiny Tweaks">
+                <figcaption>Tiny Tweaks</figcaption>
+            </figure><br />
+            
+            <ul class="w3-border-left">
+                <li class="w3-margin-top">O simples é belo.</li>
+                <li class="w3-margin-top">Apenas possível para sites com layout de uma coluna</li>
+                <li class="w3-margin-top">Apenas ajustes de tamanho de imagens e vídeos são nescessários, 
+                se eles forem responsivos, nenhum ajuste é nescessário.</li>
+                <li class="w3-margin-top">Exemplo: <a href="http://mediaqueri.es/ff/" target="_blank">Future Friendly <i class="fa fa-external-link"></i></a></li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            
+            <h2 class="w3-tag w3-theme w3-margin-top">Off canvas</h2>
+            
+            <figure class="w3-center w3-margin-bottom">
+                <img class="w3-image" src="img/off-canvas.png" alt="Off canvas">
+                <figcaption>Off canvas</figcaption>
+            </figure><br />
+            
+            <ul class="w3-border-left">
+                <li class="w3-margin-top">Design estilo app de mobile.</li>
+                <li class="w3-margin-top">Elementos do layout estão fora da tela, sendo trazidos para a tela 
+                através de interações do usuário</li>
+                <li class="w3-margin-top">Passa a idéia de que em resoluções maiores esses elementos estarão na tela</li>
+                <li class="w3-margin-top">Exemplo: <a href="http://disney.com.br/" target="_blank">Disney <i class="fa fa-external-link"></i></a></li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+        </article>
+    
+    </main>
+
+    
+    
+    
+
+    <script src="../js/index.js"></script>
+	
+</body>
+
+</html>

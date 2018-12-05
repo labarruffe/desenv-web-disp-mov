@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="0" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="100" />
+    <meta name="slide-previous"     content="index.html" />
+    <meta name="slide-next"         content="02-usando-porcentagens.html" />
+	
+	<title>css-animation</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/animations.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    css-animation
+                </span>
+            </h1>
+            
+            
+            
+            <p class="w3-padding">
+                Uma atributo que permite que uma animação seja aplicada a um 
+                elemento, ou seja, seus atributos sejam mudados de forma animada. 
+                Podemos confundir com transitions, entretanto há diferenças. 
+                Geralmente animações tocam sem parar, repetindo seu ciclo de 
+                animação infinitamente, ao contrário da transição que precisa 
+                de um gatilho e SEMPRE só ocorre uma vez (por gatilho). 
+                Lembre-se que as mesmas propriedades que não podem ser 
+                trabalhadas com transition também não são animáveis.
+            </p>
+            
+            <p class="w3-padding">
+                Animações também contam com um controle mais fino, permitindo 
+                mudanças de direção, definição de valores intermediários e um 
+                controle mais fino dos "frames" da animação, que no caso das 
+                transitions podem ser dados apenas por funções. Nas animações 
+                podemos controlar o estado inicial e final ou podemos fazer 
+                esses controle através de porcentagem da animação (keyframes).
+            </p>
+            
+            <div class="outer-bar" id="loading-1">
+                <div class="inner-bar"><span>loading-1</span></div>
+            </div>
+            
+            <div class="outer-bar" id="loading-2">
+                <div class="inner-bar"><span>loading-2</span></div>
+            </div>
+            
+            <div class="outer-bar" id="loading-3">
+                <div class="inner-bar"><span>loading-3</span></div>
+            </div>
+            
+            <p class="w3-padding">
+                O passo 1 é criar os keyframes (quadros-chave) da animação. 
+                Usar pelo menos o -webkit- e lembrar que essas animações são 
+                altamente reusáveis.
+            </p>
+            
+            <div class="w3-example">
+                <pre id="output-1" class="w3-code notranslate cssHigh">
+                
+@keyframes loading-1 {
+	
+	from {
+		width:	0%;
+	}
+	
+	to {
+		width:	100%;
+	}
+	
+}
+
+@-webkit-keyframes loading-1 {
+	
+	from {
+		width:	0%;
+	}
+	
+	to {
+		width:	100%;
+	}
+	
+}
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <p class="w3-padding">
+                Depois aplique essa animação e configure os outros parãmetros. 
+                Além do nome da animação também devemos passar a duração, os 
+                outros argumentos são opcionais, mas serão completados com os 
+                valores default. Os 3 loadings cima são idênticos, apenas 
+                escritos de maneiras diferentes.
+            </p>
+            
+            <div class="w3-example">
+                <pre id="output-1" class="w3-code notranslate cssHigh">
+                
+#loading-1 .inner-bar {
+	animation:          loading-1 2s;
+	-webkit-animation:  loading-1 2s;
+}
+
+#loading-2 .inner-bar {
+	animation:          loading-1 2s ease 0s 1 normal none running;
+	-webkit-animation:  loading-1 2s ease 0s 1 normal none running;
+}
+
+#loading-3 .inner-bar {
+	animation-name:                     loading-1;
+	animation-duration:                 2s;
+	animation-timing-function:          ease;
+	animation-delay:                    0s;
+	animation-iteration-count:          1;
+	animation-direction:                normal;
+	animation-fill-mode:                none;
+	animation-play-state:               running;
+    
+        -webkit-animation-name:             loading-1;
+	-webkit-animation-duration:         2s;
+	-webkit-animation-timing-function:  ease;
+	-webkit-animation-delay:            0s;
+	-webkit-animation-iteration-count:  1;
+	-webkit-animation-direction:        normal;
+	-webkit-animation-fill-mode:        none;
+	-webkit-animation-play-state:       running;
+}
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+	
+    
+    
+</body>
+
+</html>

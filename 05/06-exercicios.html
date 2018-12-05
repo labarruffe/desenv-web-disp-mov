@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="5" />
+    <meta name="slide-number"       content="6" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="7" />
+    <meta name="slide-previous"     content="05-condicoes.html" />
+    <meta name="slide-next"         content="" />
+	
+	<title>Exercícios</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    
+    
+    <style type="text/css">
+    
+        #medias .w3-tag {
+            display:    none;
+        }
+        
+        
+        
+        @media screen and (max-width: 767px)
+        {
+        
+            #medias .mobile {
+                display:    initial;
+            }
+            
+        }
+        
+        @media screen   and (min-width: 768px)
+                        and (max-width: 1024px)
+        {
+        
+            #medias .tablet {
+                display:    initial;
+            }
+            
+        }
+        
+        @media screen   and (min-width: 1025px)
+        {
+        
+            #medias .desktop {
+                display:    initial;
+            }
+            
+        }        
+    
+    </style>
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    Exercícios
+                </span>
+            </h1>
+
+            
+            
+            <h2 class="w3-easy w3-round w3-tag w3-wide w3-padding-left w3-padding-right">
+                01
+            </h2>
+            
+            <p>
+                Desenvolver uma página que identifique através de mudança de cor de fundo 
+                e alteração de texto exibido se tela está em pé (ou é mais alta do que comprida) 
+                ou deitada (mais comprida do que alta), vulgo, orientações retrato ou paisagem.
+            </p>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-regular w3-round w3-tag w3-wide w3-padding-left w3-padding-right">
+                02
+            </h2>
+            
+            <p>
+                Desenvolver uma página que identifique através de mudança de cor de fundo 
+                e alteração de texto exibido se ela está sendo exibida em:
+            </p>
+            
+            <ul class="w3-border-left">
+                <li><b>Mobile:  </b>    menos de 768px</li>
+                <li><b>Tablet:  </b>    de 768 até 1024px</li>
+                <li><b>Desktop: </b>    1024px ou mais</li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-hard w3-round w3-tag w3-wide w3-padding-left w3-padding-right">
+                03
+            </h2>
+            
+            <p>
+                Desenvolver uma página que identifique através de mudança de cor de fundo 
+                e alteração de texto exibido se ela está sendo exibida em um display retina 
+                ou não, e use o simulador de dispositivos do Google Chrome para  obter uma lista 
+                de que dispositivos suportados por ele têm e quais não têm display retina
+            </p>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-regular w3-round w3-tag w3-wide w3-padding-left w3-padding-right">
+                04
+            </h2>
+            
+            <p>
+                Faça um layout com o seguinte comportamento.
+            </p>
+            
+            <ul class="w3-border-left">
+                <li><b>Acima de 1024px:     </b>três colunas da mesma largura(lembre-se dos floats, displays)</li>
+                <li><b>Abaixo de 1024px:    </b>uma coluna ocupando a tela inteira, porém todo o conteúdo deve ser apresentado</li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-hard w3-round w3-tag w3-wide w3-padding-left w3-padding-right">
+                05
+            </h2>
+            
+            <p>
+                Faça um layout com o seguinte comportamento.
+            </p>
+            
+            <ul class="w3-border-left">
+                <li><b>Acima de 1024px:         </b>três colunas da mesma largura(lembre-se dos floats, displays)</li>
+                <li><b>Entre 1024px e 769px:    </b>duas colunas da mesma largura, essas devem ser as duas primeiras das 3 do desktop</li>
+                <li><b>Abaixo de 768px:         </b>uma coluna ocupando a tela inteira, essa deve ser a primeira das 3 do desktop</li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            
+        </article>
+    
+    </main>
+
+    
+        
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>

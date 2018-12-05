@@ -1,0 +1,423 @@
+.outer-bar, 
+.inner-bar {
+	width:				320px;
+	position:			relative;
+	height:				50px;
+	line-height:		50px;
+	vertical-align:		middle;
+	background-color:	rgb(0, 0, 0);
+	border-radius:		25px;
+	overflow:			hidden;
+	color:				rgb(255, 255, 255);
+}
+
+.outer-bar {
+	margin:	30px;
+}
+
+.inner-bar {
+	width:				0%;
+	background-color:	rgba(255, 255, 0, 0.5);
+}
+
+.inner-bar span {
+	float:		right;
+	padding:	0px 10px;
+}
+
+
+
+
+
+@keyframes loading-1 {
+	
+	from {
+		width:	0%;
+	}
+	
+	to {
+		width:	100%;
+	}
+	
+}
+
+@-webkit-keyframes loading-1 {
+	
+	from {
+		width:	0%;
+	}
+	
+	to {
+		width:	100%;
+	}
+	
+}
+
+#loading-1 .inner-bar {
+	animation:          loading-1 2s;
+	-webkit-animation:  loading-1 2s;
+}
+
+#loading-2 .inner-bar {
+	animation:          loading-1 2s ease 0s 1 normal none running;
+	-webkit-animation:  loading-1 2s ease 0s 1 normal none running;
+}
+
+#loading-3 .inner-bar {
+	animation-name:                     loading-1;
+	animation-duration:                 2s;
+	animation-timing-function:          ease;
+	animation-delay:                    0s;
+	animation-iteration-count:          1;
+	animation-direction:                normal;
+	animation-fill-mode:                none;
+	animation-play-state:               running;
+    
+    -webkit-animation-name:             loading-1;
+	-webkit-animation-duration:         2s;
+	-webkit-animation-timing-function:  ease;
+	-webkit-animation-delay:            0s;
+	-webkit-animation-iteration-count:  1;
+	-webkit-animation-direction:        normal;
+	-webkit-animation-fill-mode:        none;
+	-webkit-animation-play-state:       running;
+}
+
+
+
+
+
+@keyframes loading-2 {
+	
+	0% {
+		width:	0%;
+	}
+	
+	100% {
+		width:	100%;
+	}
+	
+}
+
+@-webkit-keyframes loading-2 {
+	
+	0% {
+		width:	0%;
+	}
+	
+	100% {
+		width:	100%;
+	}
+	
+}
+
+#loading-4 .inner-bar {
+	-webkit-animation:	loading-2 2s ease 0s 1 normal none running;
+	animation:			loading-2 2s ease 0s 1 normal none running;
+}
+
+
+
+
+
+@keyframes loading-3 {
+
+    0% {
+        width:              0%;
+    }
+    
+    50% {
+        background-color:   rgba(255, 255, 0, 0.9);
+        width:			    80%;
+    }
+    
+    75% {
+        background-color:   rgba(255, 0, 0, 0.9);
+        width:              50%;
+    }
+    
+    100% {
+        background-color:   rgba(255, 255, 0, 0.5);
+        width:              100%;
+    }
+    
+}
+
+@-webkit-keyframes loading-3 {
+    
+    0% {
+        width:              0%;
+    }
+    
+    50% {
+        background-color:   rgba(255, 255, 0, 0.9);
+        width:              80%;
+    }
+    
+    75% {
+        background-color:   rgba(255, 0, 0, 0.9);
+        width:              50%;
+    }
+    
+    100% {
+        background-color:   rgba(255, 255, 0, 0.5);
+        width:              100%;
+    }
+    
+}
+
+#loading-5 .inner-bar {
+    animation:		    loading-3 2s ease 0s infinite normal none running;
+    -webkit-animation:  loading-3 2s ease 0s infinite normal none running;
+}
+
+
+
+
+
+@keyframes loading-3-width {
+	
+	0% {
+		width:				0%;
+	}
+	
+	50% {
+		width:				80%;
+	}
+	
+	75% {
+		width:				50%;
+	}
+	
+	100% {
+		width:				100%;
+	}
+	
+}
+
+@-webkit-keyframes loading-3-width {
+	
+	0% {
+		width:				0%;
+	}
+	
+	50% {
+		width:				80%;
+	}
+	
+	75% {
+		width:				50%;
+	}
+	
+	100% {
+		width:				100%;
+	}
+	
+}
+
+@keyframes loading-3-color {
+	
+	50% {
+		background-color:	rgba(255, 255, 0, 0.9);
+	}
+	
+	75% {
+		background-color:	rgba(255, 0, 0, 0.9);
+	}
+	
+	100% {
+		background-color:	rgba(255, 255, 0, 0.5);
+	}
+	
+}
+
+@-webkit-keyframes loading-3-color {
+
+	50% {
+		background-color:	rgba(255, 255, 0, 0.9);
+	}
+	
+	75% {
+		background-color:	rgba(255, 0, 0, 0.9);
+	}
+	
+	100% {
+		background-color:	rgba(255, 255, 0, 0.5);
+	}
+	
+}
+
+#loading-6 .inner-bar {
+	animation:			loading-3-width 2s ease 0s infinite, loading-3-color 2s ease 0s infinite;
+	-webkit-animation:	loading-3-width 2s ease 0s infinite, loading-3-color 2s ease 0s infinite;
+}
+
+
+
+
+
+#loading-7 .inner-bar {
+	animation:			loading-2 2s ease 0s 1 normal none running;
+	-webkit-animation:	loading-2 2s ease 0s 1 normal none running;
+}
+
+#loading-8 .inner-bar {
+	animation:			loading-2 5s ease 0s 1 normal none running;
+	-webkit-animation:	loading-2 5s ease 0s 1 normal none running;
+}
+
+
+
+
+
+#loading-linear .inner-bar {
+	animation:			loading-2 3s linear 0s 1 normal none running;
+	-webkit-animation:	loading-2 3s linear 0s 1 normal none running;
+}
+
+#loading-ease .inner-bar {
+	animation:			loading-2 3s ease 0s 1 normal none running;
+	-webkit-animation:	loading-2 3s ease 0s 1 normal none running;
+}
+
+#loading-ease-in .inner-bar {
+	animation:			loading-2 3s ease-in 0s 1 normal none running;
+	-webkit-animation:	loading-2 3s ease-in 0s 1 normal none running;
+}
+
+#loading-ease-out .inner-bar {
+	animation:			loading-2 3s ease-out 0s 1 normal none running;
+	-webkit-animation:	loading-2 3s ease-out 0s 1 normal none running;
+}
+
+#loading-ease-in-out .inner-bar {
+	animation:			loading-2 3s ease-in-out 0s 1 normal none running;
+	-webkit-animation:	loading-2 3s ease-in-out 0s 1 normal none running;
+}
+
+
+
+
+
+#loading-sem-delay .inner-bar {
+	animation:			loading-2 3s linear 0s 1 normal none running;
+	-webkit-animation:	loading-2 3s linear 0s 1 normal none running;
+}
+
+#loading-com-delay .inner-bar {
+	animation:			loading-2 3s linear 2s 1 normal none running;
+	-webkit-animation:	loading-2 3s linear 2s 1 normal none running;
+}
+
+
+
+
+
+#loading-1x .inner-bar {
+	animation:			loading-2 3s linear 0s 1 normal none running;
+	-webkit-animation:	loading-2 3s linear 0s 1 normal none running;
+}
+
+#loading-3x .inner-bar {
+	animation:			loading-2 3s linear 0s 3 normal none running;
+	-webkit-animation:	loading-2 3s linear 0s 3 normal none running;
+}
+
+#loading-infinite .inner-bar {
+	animation:			loading-2 3s linear 0s infinite normal none running;
+	-webkit-animation:	loading-2 3s linear 0s infinite normal none running;
+}
+
+
+
+
+
+#loading-11 .inner-bar {
+    animation:          loading-2 2s ease 0s infinite normal none running;
+    -webkit-animation:  loading-2 2s ease 0s infinite normal none running;
+}
+
+#loading-12 .inner-bar {
+    animation:          loading-2 2s ease 0s infinite reverse none running;
+    -webkit-animation:  loading-2 2s ease 0s infinite reverse none running;
+}
+
+#loading-13 .inner-bar {
+    animation:          loading-2 2s ease 0s infinite alternate none running;
+    -webkit-animation:  loading-2 2s ease 0s infinite alternate none running;
+}
+
+#loading-14 .inner-bar {
+    animation:          loading-2 2s ease 0s infinite alternate-reverse none running;
+    -webkit-animation:  loading-2 2s ease 0s infinite alternate-reverse none running;
+}
+
+
+
+
+
+@keyframes loading-4 {
+
+	
+	from {
+		background-color:   rgba(255, 0, 0, 0.5);
+        color:              rgba(255, 255, 0, 0.8);
+		width:              50%;
+	}
+	
+	to {
+		background-color:   rgba(0, 0, 255, 0.5);
+		width:	            100%;
+	}
+	
+}
+
+@-webkit-keyframes loading-4 {
+	
+	from {
+		background-color:   rgba(255, 0, 0, 0.5);
+        color:              rgba(255, 255, 0,  0.8);
+		width:	            50%;
+	}
+	
+	to {
+		background-color:   rgba(0, 0, 255, 0.5);
+		width:              100%;
+	}
+	
+}
+
+#loading-15 .inner-bar {
+	animation:			loading-4 2s ease 0s 1 normal none running;
+	-webkit-animation:	loading-4 2s ease 0s 1 normal none running;
+}
+
+#loading-16 .inner-bar {
+	animation:			loading-4 2s ease 0s 1 normal forwards running;
+	-webkit-animation:	loading-4 2s ease 0s 1 normal forwards running;
+}
+
+#loading-17 .inner-bar {
+	animation:			loading-4 2s ease 0s 1 normal backwards running;
+	-webkit-animation:	loading-4 2s ease 0s 1 normal backwards running;
+}
+
+#loading-18 .inner-bar {
+	animation:			loading-4 2s ease 0s 1 normal both running;
+	-webkit-animation:	loading-4 2s ease 0s 1 normal both running;
+}
+
+
+
+
+
+#loading-19 .inner-bar {
+    animation:			loading-2 2s ease 0s infinite alternate none paused;
+    cursor:             pointer;
+    -webkit-animation:	loading-2 2s ease 0s infinite alternate none paused;
+}
+
+#loading-19:hover .inner-bar {
+    animation:			loading-2 2s ease 0s infinite alternate none running;
+    -webkit-animation:	loading-2 2s ease 0s infinite alternate none running;
+}

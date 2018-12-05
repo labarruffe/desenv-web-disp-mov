@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="0" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="100" />
+    <meta name="slide-previous"     content="index.html" />
+    <meta name="slide-next"         content="02-perspective.html" />
+	
+	<title>O que são?</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/cube.css">
+    <link rel="stylesheet" href="css/transforms-3d.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    O que são?
+                </span>
+            </h1>
+            
+            
+            
+            <p class="w3-padding">
+                São transformações que ocorrem no espaço de coordenadas tridimensional, 
+                e afetam como o usuário vê o elemento. Temos uma nova coordenada, se 
+                compararmos com as transformações 2D, que é a coordenada Z, que vêm 
+                do fundo da tela ao encontro do usuário.
+            </p>
+            
+            <figure class="w3-margin-top w3-center w3p-padding">
+                <img src="img/axis.jpg" alt="Os 3 eixos de coordenadas 3D" />
+                <figcaption>Os 3 eixos de coordenadas 3D</figcaption>
+            </figure>
+            
+            <p>
+                Entretanto ao usarmos trasnformações 3D temos novas preocupações, 
+                primariamente a matriz identidade 3D é diferente da 2D. Como podemos 
+                ver nos exemplos abaixo.
+            </p>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+            <figure class="w3-margin-top  w3-center">
+                <img id="impossible-man" class="w3-image identity-matrix" src="img/the-impossible-man.jpg" alt="Impossible Man" />
+                <figcaption>Impossible Man e sua matriz identidade 3D (translação de 1px em Z, senão será simplificado para matriz 2D)</figcaption>
+            </figure>
+            
+            <div class="w3-example">
+                <pre id="matrix-output" class="w3-code notranslate cssHigh challenge">
+        
+                </pre>  
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            <h2>E como fazer?</h2>
+            
+            <div class="w3-example">
+                <pre class="w3-code notranslate cssHigh">
+/*  Matriz identidade 2D (não altera a vizualização) */
+.identity-matrix-2d {
+    transform:          matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform:  matrix(1, 0, 0, 1, 0, 0);
+}
+
+/**
+ *  Matriz identidade 3D (não altera a vizualização)
+ *  O penúltimo 1 é uma translação em Z de 1px, senão
+ *  O navegador vai trasnformar a matriz 3D em uma 2D
+ **/
+.identity-matrix , 
+.identity-matrix-3d {
+    transform:          matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+    -webkit-transform:  matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+}
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <p>
+                Para vermos as outras preocupações ao usarmos trasnformações 3D 
+                vamos utilizar um cubo 3D nos próximos exemplos, apenas vamos abstrair 
+                as transformações aplicadas em cada uma das faces dele por enquanto.
+            </p>
+            
+            <figure class="w3-center w3-margin-top">
+            
+                <div class="container">
+                    <div class="cube perspective-1000px perspective-origin-150pc-150pc">
+                        <div class="face front">1</div>
+                        <div class="face back">2</div>
+                        <div class="face right">3</div>
+                        <div class="face left">4</div>
+                        <div class="face top">5</div>
+                        <div class="face bottom">6</div>
+                    </div>
+                </div>
+
+                <figcaption>Um cubo 3D</figcaption>
+            
+            </figure>
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+    
+    <script type="text/javascript">
+    
+        ;(function (undefined)
+        {
+            
+            'use strict';
+            
+            
+            
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $output         =   document.querySelector('#matrix-output')
+                ,   $impossibleMan  =   document.querySelector('#impossible-man');
+                
+                var transform   =   window.getComputedStyle($impossibleMan).getPropertyValue('transform');
+                
+                $output.innerHTML   =   transform;
+            
+            });
+        
+        })();
+    
+    </script>
+	
+    
+    
+</body>
+
+</html>

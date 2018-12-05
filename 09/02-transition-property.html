@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="0" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="100" />
+    <meta name="slide-previous"     content="01-oque-e.html" />
+    <meta name="slide-next"         content="03-transition-duration.html" />
+	
+	<title>transition-property</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    
+    <link rel="stylesheet" href="css/transitions.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    transition-property
+                </span>
+            </h1>
+            
+            
+            
+            <p class="w3-padding">
+                São a(s) propriedade(s) que serão alteradas gradualmente durante 
+                <i>duration</i> tempo entre um estado e outro. A palavra chave 
+                <b>all</b> faz com que todas as propriedades passíveis de 
+                transição sejam animadas gradualmente. Também podemos citar 
+                apenas uma ou algumas propriedades para animarmos. 
+                Se citarmso mais de uma separamos por , (vírgula).
+            </p>
+            
+            <p class="w3-padding">
+                O botão 3, por exemplo, tera´ transition apenas na sua height, 
+                enquanto o botão 4 terá na height e width. O estado :hover 
+                de ambos envolve alterações na width E height.
+            </p>
+            
+            <div class="w3-row w3-padding w3-center">
+                <div class="w3-half w3-padding">
+                    <button id="hover-button-3" class="button">Hover-me [3]</button>
+                </div>
+                    
+                <div class="w3-half w3-padding">
+                    <button id="hover-button-4" class="button">Hover-me [4]</button>
+                </div>
+                
+            </div>
+            
+            <div class="w3-example">
+                <pre id="output-1" class="w3-code notranslate cssHigh">
+
+#hover-button-3,
+#hover-button-4	{
+    transition-property:                height;
+    -webkit-transition-property:        height;
+    
+    transition-timing-function:         ease;
+    -webkit-transition-timing-function: ease;
+    
+    transition-duration:                600ms;
+    -webkit-transition-duration:        600ms;
+    
+    transition-delay:                   0ms;
+    -webkit-transition-delay:           0ms;
+}
+
+#hover-button-4 {
+    transition-property:            width, height;
+    -webkit-transition-property:    width, height;
+}
+
+#hover-button-3:hover,
+#hover-button-4:hover {
+    height: 50px;
+    width:  200px;
+}
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <p class="w3-padding">
+                Agora vamos escrever essas transições com short-hands.
+            </p>
+            
+            <div class="w3-row w3-padding w3-center">
+                <div class="w3-half w3-padding">
+                    <button id="hover-button-5" class="button">Hover-me [5]</button>
+                </div>
+                    
+                <div class="w3-half w3-padding">
+                    <button id="hover-button-6" class="button">Hover-me [6]</button>
+                </div>
+                
+            </div>
+            
+            
+            <div class="w3-example">
+                <pre id="output-2" class="w3-code notranslate cssHigh">
+
+#hover-button-5 {
+    transition:         height 600ms ease 0ms;
+    -webkit-transition: height 600ms ease 0ms;
+}
+
+#hover-button-6 {
+    transition:         width 600ms ease 0ms, 	height 600ms ease 0ms;
+    -webkit-transition: width 600ms ease 0ms,	height 600ms ease 0ms;
+}
+
+#hover-button-5:hover,
+#hover-button-6:hover {
+    height: 50px;
+    width:  200px;
+}
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <p class="w3-padding">
+                Nem todas as propriedades podem ser animadas durante a transição, 
+                as mais notórias são:
+            </p>
+            
+            <ul class="w3-border-left">
+                <li>display</li>    
+                <li>float</li>
+                <li>font-family</li>
+                <li>text-align</li>
+                <li>vertical-align</li>
+                <li>position</li>
+                <li>background-image</li>
+            </ul>
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+	
+    
+    
+</body>
+
+</html>

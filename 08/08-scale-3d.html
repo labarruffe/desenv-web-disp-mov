@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="0" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="100" />
+    <meta name="slide-previous"     content="07-translate-3d.html" />
+    <meta name="slide-next"         content="09-links.html" />
+	
+	<title>scale-3d()</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/cube.css">
+    <link rel="stylesheet" href="css/transforms-3d.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    scale-3d()
+                </span>
+            </h1>
+            
+            
+            
+            <p class="w3-padding">
+                Operações de escala permitem-nos alterar o tamanho do objeto, sem 
+                alterar a sua caixa de renderização, evitando assim reflows da página.
+            </p>
+            
+            <p class="w3-padding">
+                Objetos no navegador são renderizados em 2D, natrualmente, ou seja 
+                se rotacionados eles parecerão achatados.
+            </p>
+            
+            
+            
+            <h2>Exemplos</h2>
+      
+            <div class="w3-row">
+            
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top">
+                        <figcaption><b>A) </b>Cubo sem escala</figcaption>
+                        <div class="container">
+                            <div id="cube-a" class="cube identity-matrix">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+                
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top">
+                        <figcaption><b>B) </b>scale3d(1.5, 1.0, 1.0)</figcaption>
+                        <div class="container">
+                            <div id="cube-b" class="cube scale-x-1_5">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+            
+            </div>
+            
+            
+            
+            
+            
+            <div class="w3-row">
+            
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top">
+                        <figcaption><b>C) </b>scale3d(1.0, 1.5, 1.0)</figcaption>
+                        <div class="container">
+                            <div id="cube-c" class="cube scale-y-1_5">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+                
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top">
+                        <figcaption><b>D) </b>scale3d(1.0, 1.0, 1.5) (com rotação)</figcaption>
+                        <div class="container">
+                            <div id="cube-d" class="cube rotate-y-45-scale-z-1_5">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+            
+            </div>
+            
+            <div class="w3-example">
+                <pre id="output-1" class="w3-code notranslate cssHigh">
+       
+                </pre>
+            </div>
+            
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+                        <h2>Como fazer</h2>
+            
+            <div class="w3-example">
+                <pre id="output-1" class="w3-code notranslate cssHigh">
+ 
+/*  Aplicado em B */ 
+/*  Equivalente a scaleX(1.5) */
+.scale-x-1_5 {
+    transform:          scale3d(1.5, 1.0, 1.0);
+    -webkit-transform:  scale3d(1.5, 1.0, 1.0);
+}
+
+/*  Aplicado em C */ 
+/*  Equivalente a scaleY(1.5) */
+.scale-y-1_5 {
+    transform:          scale3d(1.0, 1.5, 1.0);
+    -webkit-transform:  scale3d(1.0, 1.5, 1.0);
+}
+
+/*  Aplicado em D */ 
+/*  Equivalente a scaleZ(1.5) */
+/*  em D também foi aplicada uma rotação  */
+.scale-z-1_5 {
+    transform:          scale3d(1.0, 1.0, 1.5);
+    -webkit-transform:  scale3d(1.0, 1.0, 1.5);
+}
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+    
+    <script type="text/javascript">
+    
+        ;(function (undefined)
+        {
+            
+            'use strict';
+            
+            
+            
+            var indexes =   'abcd'.split('');
+            
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $output1    =   document.querySelector('#output-1')
+                ,   html        =   [];
+                
+                indexes.forEach(function (index)
+                {
+                
+                    var $cube           =   document.querySelector('#cube-' + index)
+                    ,   matrix          =   window.getComputedStyle($cube).getPropertyValue('transform');
+                    
+                    html[html.length]   =   (index.toUpperCase() + ') ' + matrix);
+                
+                });
+                
+                $output1.innerHTML  =   html.join('\n');
+            
+            });
+        
+        })();
+    
+    </script>
+	
+    
+    
+</body>
+
+</html>

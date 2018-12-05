@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="3" />
+    <meta name="slide-number"       content="8" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="12" />
+    <meta name="slide-previous"     content="08-font-family.html" />
+    <meta name="slide-next"         content="10-links.html" />
+	
+	<title>Webfonts</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <style type="text/css">
+    
+        @font-face {
+            font-family:    'source_sanspro_regular';
+            src:            url('fonts/SourceSansPro-Regular-webfont.eot');
+            src:            url('fonts/SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+                            url('fonts/SourceSansPro-Regular-webfont.woff2') format('woff2'),
+                            url('fonts/SourceSansPro-Regular-webfont.woff') format('woff'),
+                            url('fonts/SourceSansPro-Regular-webfont.ttf') format('truetype'),
+                            url('fonts/SourceSansPro-Regular-webfont.svg#source_sanspro_regular') format('svg');
+            font-weight:    normal;
+            font-style:     normal;
+        }      
+        
+        .font-source_sanpro_regular {
+            font-family:    'source_sanspro_regular', sans-serif;
+        }
+    
+    </style>
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-theme w3-top w3-left-align w3-large" w3-include-html="../top-menu.html">
+        &nbsp;  <!--    MEU QUERIDO MENU SUPERIOR   -->
+    </nav>
+	
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    Webfonts
+                </span>
+            </h1>
+            
+            <p>
+                Webfonts são fontes que são criadas pelo usuário, em oposição as 
+                fontes seguras, que estão disponíveis nos Sistemas Operacionais, 
+                e tu apenas precisa nomeá-las. Webfonts precisam ser criadas no 
+                CSS, utilizando a regra <i>@font-face.</i>
+            </p>
+            
+            <p>
+                As regras <i>@font-face</i> referenciam arquivo(s) que contém as 
+                fontes em si, geralmente com as extensões .eot ou .ttf, como p
+                odem ser encontrados no diretório de fontes do seu Sistema O
+                peracional. Criar uma fonte não faz parte do escopo do trabalho 
+                de um webdesigner, mas saber utilizá-las através de webfonts o é.
+            </p>
+            
+            <h2 class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                Exemplo de <i>@font-face</i>
+            </h2>
+            <div class="w3-code w3-small cssHigh notranslate">
+            
+                @font-face {<span class="eol"></span>
+                <span class="tab"></span>font-family:<span class="tab"></span>'source_sanspro_regular';<span class="eol"></span>
+                <span class="tab"></span>src:<span class="tab"></span><span class="tab"></span>url('../fonts/SourceSansPro-Regular-webfont.eot');<span class="eol"></span>
+                <span class="tab"></span>src:<span class="tab"></span><span class="tab"></span>url('../fonts/SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),<span class="eol"></span>
+                <span class="tab"></span><span class="tab"></span><span class="tab"></span>url('../fonts/SourceSansPro-Regular-webfont.woff2') format('woff2'),<span class="eol"></span>
+                <span class="tab"></span><span class="tab"></span><span class="tab"></span>url('../fonts/SourceSansPro-Regular-webfont.woff') format('woff'),<span class="eol"></span>
+                <span class="tab"></span><span class="tab"></span><span class="tab"></span>url('../fonts/SourceSansPro-Regular-webfont.ttf') format('truetype'),<span class="eol"></span>
+                <span class="tab"></span><span class="tab"></span><span class="tab"></span>url('../fonts/SourceSansPro-Regular-webfont.svg#source_sanspro_regular') format('svg');<span class="eol"></span>
+                <span class="tab"></span>font-weight:<span class="tab"></span>normal;<span class="eol"></span>
+                <span class="tab"></span>font-style:&nbsp;<span class="tab"></span>normal;<span class="eol"></span>
+                }      <span class="eol"></span>
+                
+                <br />
+                
+                .font-source_sanpro_regular {<span class="eol"></span>
+                <span class="tab"></span>font-family:    'source_sanspro_regular', sans-serif;<span class="eol"></span>
+                }<span class="eol"></span>
+                
+            </div>
+            
+            <p class="font-source_sanpro_regular">
+                Esse parágrafo está utilizando a webfont Source SansPro regular. Que não é a mesma do resto do corpo dessa página.
+                Mesmo tendo  acesso a centenas de fonte raramente mais do que 3 ou 4 fontes diferentes devem conviver em um projeto, 
+                mais fontes do que isso leva a um desagrado visual, dando a impressão de que as fontes só foram largadas ali.
+            </p>
+            
+           
+
+
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                Google Fonts
+            </h2>
+            
+            <p>
+                A regra CSS acima parecei BEM difícl, não? Uma solução comum para a utilização de webfotns é procurá-las no 
+                Google Fonts, seguir as instruções e aplicá-los no seu site. Isso torna o processo BEM mais fácil.
+            </p>
+            
+            
+            
+            <figure class="w3-figure w3-margin-top">
+                <img src="img/03-webfonts-01.jpg" class="w3-image w3-margin-top w3-margin-bottom" alt="Passo 1" />
+            
+                <figcaption class="w3-margin-top w3-margin-bottom">
+                    Acesse <a target="_blank" href="https://fonts.google.com/">https://fonts.google.com/ <i class="fa fa-external-link"></i></a>
+                </figcaption>
+            </figure>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <figure class="w3-figure w3-margin-top">
+                <img src="img/03-webfonts-02.jpg" class="w3-image w3-margin-top w3-margin-bottom" alt="Passo 2" />
+            
+                <figcaption class="w3-margin-top w3-margin-bottom">
+                    Clique na fonte desejada
+                </figcaption>
+            </figure>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            
+            <figure class="w3-figure w3-margin-top">
+                <img src="img/03-webfonts-03.jpg" class="w3-image w3-margin-top w3-margin-bottom" alt="Passo 3" />
+            
+                <figcaption class="w3-margin-top w3-margin-bottom">
+                    Siga as Instruções
+                </figcaption>
+            </figure>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-tag w3-theme w3-margin-top w3-xlarge">prós</h2>
+            <ul class="w3-border-left">
+                <li class="w3-padding">Fácil de usar</li>
+                <li class="w3-padding">Usuários tendem a ter essas fontes em cache já</li>
+                <li class="w3-padding">Tu não precisas te preocupar com arquivos de fontes</li>
+            </ul>
+            
+            <h2 class="w3-tag w3-theme w3-margin-top w3-xlarge">contras</h2>
+            <ul class="w3-border-left">
+                <li class="w3-padding">Podem não funcionarem em alguns navegadores</li>
+                <li class="w3-padding">Apesar de grande a seleção é limitada</li>
+            </ul>
+
+        </article>
+    
+    </main>
+
+    
+    
+    
+
+    <script src="../js/w3data.js"></script>
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3IncludeHTML();
+        w3CodeColor();
+    </script>
+    
+    <script src="../js/index.js"></script>
+	
+</body>
+
+</html>

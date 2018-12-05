@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="7" />
+    <meta name="slide-number"       content="3" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="9" />
+    <meta name="slide-previous"     content="02-scale-2d.html" />
+    <meta name="slide-next"         content="04-rotate-2d.html" />
+	
+	<title>translate()</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/transforms.css">
+    
+    <style type="text/css">
+    
+        .left-half {
+            left:       50%;
+            position:   relative;
+        }
+        
+        #rapunzel {
+            bottom:             0px;
+            height:             auto;
+            position:           fixed;
+            max-width:          100vw;
+            right:              0px;
+            transform:          translate(100%, 0%);
+            transition:         all ease-in-out 666ms;
+            width:              480px;
+            z-index:            100;
+            -webkit-transform:  translate(100%, 0%);
+            -webkit-transition: all ease-in-out 666ms;
+        }
+        
+        #bring-the-princess:active + #rapunzel, 
+        #bring-the-princess:hover  + #rapunzel {
+            transform:          translate(0%, 0%);
+            -webkit-transform:  translate(0%, 0%);
+        }
+    
+    </style>
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    translate(<i>x</i>, <i>y</i>)
+                </span>
+            </h1>
+            
+            <p>
+                A translação permite-nos mover elementos pela tela, sem alterar o 
+                fluxo de renderização, evitando danças de layout, e, portanto, 
+                tendo um desempenho superior ao uso de left e right para isso. 
+                Claro que essa colocação só deve ser levada em consideração ao 
+                lidarmos com elementos manipulados dinamicamente.
+            </p>
+            
+            <div class="w3-row w3-margin-top">
+           
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top w3-border w3-padding" style="height: 325px;">
+                        <figcaption><b>A) </b>Mister Mxyzptlk na sua posição original.</figcaption>
+                        <img id="mr-mxyzptlk-translate-A" class="w3-image identity-matrix" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+               
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top w3-border w3-padding" style="height: 325px;">
+                        <figcaption class="w3-margin-top"><b>B) </b>translate(50px, 50px)</figcaption>
+                        <img id="mr-mxyzptlk-translate-B" class="w3-image translate-50px-50px transform-origin-top-center" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+           
+           </div>
+           
+           <div class="w3-row w3-margin-top">
+           
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top w3-border w3-padding" style="height: 325px;">
+                        <figcaption class="w3-margin-top"><b>C) </b>translate(50px, 0px)</figcaption>
+                        <img id="mr-mxyzptlk-translate-C" class="w3-image transform-origin-top-center translate-50px-0px" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+               
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top w3-border w3-padding" style="height: 325px;">
+                        <figcaption class="w3-margin-top"><b>D) </b>translate(0px, 50px)</figcaption>
+                        <img id="mr-mxyzptlk-translate-D" class="w3-image transform-origin-top-center translate-0px-50px" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+           
+           </div>
+            
+            <div class="w3-example">
+                <pre id="matrix-output" class="w3-code notranslate cssHigh">
+        
+                </pre>  
+            </div>
+            
+            <h2> E como isso é feito?</h2>
+            <div class="w3-example">
+                <pre class="w3-code notranslate cssHigh">
+                
+/*  Aplicado em B   */
+/* (x += 50px) && (y += 50px)*/
+.translate-50px-50px {
+    transform:          translate(50px, 50px);
+    -webkit-transform:  translate(50px, 50px);
+}
+
+/*  Aplicado em C   */
+/* (x += 50px)  */
+.translate-50px-0px {
+    transform:          translate(50px, 0px);
+    -webkit-transform:  translate(50px, 0px);
+}
+
+/*  Aplicado em D   */
+/* (y += 50px)*/
+.translate-0px-50px {
+    transform:          translate(0px, 50px);
+    -webkit-transform:  translate(0px, 50px);
+}
+                </pre>  
+            </div>
+
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <p>
+                Outro detalhe MUITO importante é que a translação percentual (em %) 
+                é calculada com referência AO ELEMENTO, e não ao pai, como nos 
+                outros atributos semelhantes.
+            </p>
+            
+            <span class="w3-tag w3-theme w3-margin-bottom">
+                Usando left: 50%;
+            </span>
+
+            <div class="w3-container">
+                <img class="w3-image left-half" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+            </div>  
+            
+            <span class="w3-tag w3-theme w3-margin-bottom">
+                Usando transform: translate(50%, 0%);
+            </span>
+
+            <div class="w3-container">
+                <img class="w3-image translate-2d-X-half" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+            </div>
+            
+            
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <p>
+                Elementos que vêm de fora da tela geralmente são feitos utilizando-se 
+                translação, para evitar reflows na página. Por exemplo, como no 
+                uso do botão abaixo.
+            </p>
+            
+            <div class="w3-tag w3-sign w3-card-4 w3-round w3-green w3-mobile w3-margin-top w3-margin-bottom">
+              
+              <a target="_blank" id="bring-the-princess" class="w3-large w3-tag w3-round w3-green w3-border w3-border-white" href="javascript: void(0);">
+                <i class="fa fa-mouse-pointer w3-margin-right"></i>Deixe o mouse aqui
+              </a>
+              
+              <img src="img/rapunzel.png" id="rapunzel" />
+              
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2> E como isso é feito?</h2>
+            <div class="w3-example">
+                <pre class="w3-code notranslate cssHigh">
+                
+/*  Originalmente o objeto é 
+    transladado para fora da tela */
+#rapunzel {
+    bottom:             0px;
+    height:             auto;
+    position:           fixed;
+    max-width:          100vw;
+    right:              0px;
+    transform:          translate(100%, 0%);  
+    /*  Spoiler da aula que vêm */
+    transition:         all ease-in-out 666ms;
+    width:              480px;
+    z-index:            100;
+    -webkit-transform:  translate(100%, 0%);
+    /*  Spoiler da aula que vêm */
+    -webkit-transition: all ease-in-out 666ms;  
+}
+
+/*  E trazido de volta à 
+posição original com a interação  */
+#bring-the-princess:hover  + #rapunzel, 
+#bring-the-princess:active + #rapunzel {
+    transform:          translate(0%, 0%);
+    -webkit-transform:  translate(0%, 0%);
+}
+                </pre>  
+            </div>
+
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2>E o último truque para centralizar qualquer coisa teimosa</h2>
+            
+            <p>
+                Lembre de usar como último recurso, pois, geralmente há maneiras 
+                melhores.
+            </p>
+            
+            <div class="w3-example">
+                <pre class="w3-code notranslate cssHigh">
+                
+.center-x {
+    position:           relative;
+    left:               50%;
+    transform:          translate(-50%, 0%);
+    webkit-transform:	translate(-50%, 0%);
+}
+
+.center-y {
+    position:           relative;
+    top:                50%;
+    transform:          translate(0%, -50%);
+    webkit-transform:	translate(0%, -50%);
+}
+
+.center-x-y {
+    position:           relative;
+    left:               50%;
+    top:                50%;
+    transform:          translate(-50%, -50%);
+    webkit-transform:	translate(-50%, -50%);
+}
+                </pre>  
+            </div>
+
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+        </article>
+        
+        
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+    
+    <script type="text/javascript">
+    
+        ;(function (undefined)
+        {
+            
+            'use strict';
+            
+            
+            
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $output1        =   document.querySelector('#matrix-output')
+                ,   $mrMxyzptlkA    =   document.querySelector('#mr-mxyzptlk-translate-A')
+                ,   $mrMxyzptlkB    =   document.querySelector('#mr-mxyzptlk-translate-B')
+                ,   $mrMxyzptlkC    =   document.querySelector('#mr-mxyzptlk-translate-C')
+                ,   $mrMxyzptlkD    =   document.querySelector('#mr-mxyzptlk-translate-D');
+                
+                var transformA  =   window.getComputedStyle($mrMxyzptlkA).getPropertyValue('transform')
+                ,   transformB  =   window.getComputedStyle($mrMxyzptlkB).getPropertyValue('transform')
+                ,   transformC  =   window.getComputedStyle($mrMxyzptlkC).getPropertyValue('transform')
+                ,   transformD  =   window.getComputedStyle($mrMxyzptlkD).getPropertyValue('transform');
+                
+                $output1.innerHTML  =   
+                    'A: '   + transformA + '\nB: ' + transformB
+                +   '\nC: ' + transformC + '\nD: ' + transformD;
+            
+            });
+        
+        })();
+    
+    </script>
+	
+    
+    
+</body>
+
+</html>

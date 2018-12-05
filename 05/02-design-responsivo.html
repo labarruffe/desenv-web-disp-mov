@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="5" />
+    <meta name="slide-number"       content="2" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="7" />
+    <meta name="slide-previous"     content="01-historia.html" />
+    <meta name="slide-next"         content="03-media-query.html" />
+	
+	<title>Design Responsivo</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    Design Responsivo
+                </span>
+            </h1>
+           
+            <p>
+                Um conjunto de técnicas e práticas para fazer com que a tua página 
+                seja apresentada da melhor maneira possível em qualquer resolução, 
+                utilizando apenas um conjunto de arquivos (seja HTML e/ou CSS) para isso.
+            </p>   
+            
+            <h2>
+                Principais técnicas e práticas
+            </h2>
+            
+
+            
+            
+            
+            <dl class="w3-border-left">
+                
+                <dt class="w3-margin-left w3-margin-top w3-theme w3-show-inline-block w3-padding">Media-queryes</dt>
+                
+                <dd>
+                    Como aplicar blocos de regras CSS apenas em algumas situações (resoluções, DPIs, mídias)
+                </dd>
+                
+                
+                
+                <dt class="w3-margin-left w3-margin-top w3-margin-bottom w3-theme w3-show-inline-block w3-padding">GRIDS</dt>
+                
+                <dd>
+                    Estrutura básica do site em forma de grid (conjunto de linhas e colunas), 
+                    assemelhado ao layout de páginas em papel, mas baseado em %. É genérico, 
+                    e não baseado no projeto atual (ao contrário das tabelas)
+                </dd>
+                
+                
+                
+                <dt class="w3-margin-left w3-margin-top w3-margin-bottom w3-theme w3-show-inline-block w3-padding">Mobile-first</dt>
+                
+                <dd>
+                    Codificar (e criar o design) iniciando pela versão para mobile 
+                    (a com mais limitações) e adicionando visuais e interações 
+                    para resoluções maiores. Usar essa técnica reduz MUITO a 
+                    quantidade de CSS escrito nas media-queryes
+                </dd>
+                
+                
+                
+                <dt class="w3-margin-left w3-margin-top w3-margin-bottom w3-theme w3-show-inline-block w3-padding">Progressive enhancement</dt>
+                
+                <dd>
+                    Primeiro o conteúdo (texto), depois o resto. Após colocar todo 
+                    o conteúdo na página, começamos a fazer o CSS (visual), e por 
+                    último adicionamos a interação (JS). Essa técnica vai ao 
+                    encontro do mobile-first e do graceful degradation.
+                </dd>
+                
+                
+                
+                <dt class="w3-margin-left w3-margin-top w3-margin-bottom w3-theme w3-show-inline-block w3-padding">Graceful degradation</dt>
+                
+                <dd>
+                    Preocupar-se com o estado da página se as imagens não carregarem, 
+                    as fontes falharem, o JS não carregar ou certo componente não 
+                    estar presente no navegador, o CSS não carregar adequadamente ou 
+                    certas regras não estarem presentes no navegador. Sempre tentando 
+                    manter o máximo de usabilidade e apresentar o conteúdo mesmo assim.
+                </dd>
+                
+                
+                
+                <dt class="w3-margin-left w3-margin-top w3-margin-bottom w3-theme w3-show-inline-block w3-padding">reset/normalize/shiv CSS</dt>
+                
+                <dd>
+                    Resetar e/ou normalizar o CSS para que todos os elementos apresentem 
+                    um estilo inicial consistente entre os diferentes navegadores e 
+                    dispositivos. É o primeiro (e um dos mais importantes) passos 
+                    para o desenvolvimento responsivo com sucesso, pois evita as 
+                    inconsistências inirtentes às diferentes plataformas.
+                </dd>
+                
+            </dl>
+			
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            
+            
+        </article>
+    
+    </main>
+
+    
+        
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>

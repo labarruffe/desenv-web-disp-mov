@@ -1,0 +1,940 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="3" />
+    <meta name="slide-number"       content="2" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="12" />
+    <meta name="slide-previous"     content="01-img.html" />
+    <meta name="slide-next"         content="03-svg.html" />
+	
+	<title>background-image</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+     <style type="text/css">
+    
+        .half-size {
+            width:  180px;
+            height: 45px;
+        }
+
+        #challenge-2, 
+        #challenge-3, 
+        #challenge-4, 
+        #challenge-5, 
+        #challenge-6, 
+        #challenge-9, 
+        #challenge-10
+        {
+            background-image:       url('img/silver-surfer.png');
+        }
+    
+        #challenge-7 {
+            background-image:       url('img/pacman-map.png');
+            background-position:    center center;
+            background-repeat:      no-repeat;
+        }
+        
+        #challenge-8 {
+            background-image:       url('img/galactus.jpg');
+            background-position:    center center;
+        }
+        
+        #challenge-9,  
+        #challenge-10 
+        {
+            background-repeat:      no-repeat;
+        }
+        
+        #challenge-11 {
+            background-image:       url('img/megaman.png');
+            background-origin:      content-box;
+            height:                 190px;
+            max-width:              210px;
+            min-width:              210px;
+            overflow:               hidden;
+            width:                  210px; 
+        }
+        
+    </style>
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top" w3-include-html="../top-menu.html">
+        &nbsp;  <!--    MEU QUERIDO MENU SUPERIOR   -->
+    </nav>
+	
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">background-image: url(...);</span>
+            </h1>
+
+            <div class="w3-center">
+                <h2>background-image</h2>              
+            </div>
+           
+            <p>
+                O atributo CSS background, mais especificamente o atributo background-image 
+                permite que decoremos o fundo de um elemento com uma imagem, em adição / detrimento 
+                de fazê-lo com uma com (background / background-color).
+            </p>   
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            
+            
+            <div class="w3-center">
+                <h2>Qualidades</h2>              
+            </div>
+            
+            <ul class="w3-border-left">
+                <li class="w3-padding">
+                    Muito flexível, com muitas configurações possíveis
+                </li>
+                <li class="w3-padding">
+                    Há como obter vários backgrounds com um único download (spritesheet)
+                </li>
+                <li class="w3-padding">
+                    Mais ajustável à diferentes dimensões do que uma img.
+                </li>
+            </ul> 
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <div class="w3-center">
+                <h2>Defeitos</h2>              
+            </div>
+            
+            <ul class="w3-border-left">
+                <li class="w3-padding">
+                    Mais complicado de usar, pois é feito no CSS
+                </li>
+                <li class="w3-padding">
+                    Não pode sustentar o tamanho de um container, como uma &lt;img /&gt; pode
+                </li>
+                <li class="w3-padding">
+                    Não é naturalmente acessível
+                </li>
+            </ul> 
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <div class="w3-center">
+                <h2>AS PROPRIEDADES</h2>              
+            </div>
+            
+            <table class="w3-table w3-table-all">
+            
+                <thead>
+                    <tr>
+                        <th>propriedade</th>
+                        <th>valores</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                
+                    <tr>
+                        <td>
+                            background-image
+                        </td>
+                        <td>
+                            url(...)
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            background-repeat
+                        </td>
+                        <td>
+                            repeat(default), no-repeat, repeat-x, repeat-y, space, round
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            background-size
+                        </td>
+                        <td>
+                            &lt;value&gt;(px | %), auto(default), contain, cover
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            background-position
+                        </td>
+                        <td>
+                            Para X, Y:  &lt;value&gt;(px | %)<sup><i class="fa fa-asterisk"></i></sup>, left, right, top, bottom, center (o default é "left top")
+                        </td>
+                    </tr>
+                    
+                </tbody>
+                
+                <tfooter>
+                    <tr>
+                        <td colspan="2">
+                            <i class="fa fa-asterisk"></i>: O valor pode ser negativo
+                        </td>
+                    </tr>
+                </tfooter>
+                
+            </table>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            
+            
+            <div class="w3-container challenge-container">
+            
+                <h2 class="w3-padding-48">
+                    <span class="w3-tag w3-wide w3-padding-left w3-padding-right">DESAFIO 01</span>
+                </h2>
+                
+                <div id="challenge-1" class="challenge-element" data-index="0">
+                    &nbsp;
+                </div>
+                
+                <br /><br /><br />
+                
+                <div class="w3-example">
+                    <p>
+                        Sabendo que a imagem do Galactus encontra-se na pasta img e se chama galactus.jpg, use-a 
+                        como plano de fundo da div acima
+                    </p>
+                    <div class="w3-code notranslate htmlHigh challenge">
+                        
+                        <span>#challenge-1</span><span class="eol"> {</span>
+                        <span class="tab"></span>
+                        <select data-index="0">
+                            <option value="-1">-</option>
+                            <option value="0">background-image</option>
+                            <option value="1">background-repeat</option>
+                            <option value="2">background-size</option>
+                            <option value="3">background-position</option>
+                        </select>
+                        : <input data-index="0"  type="text" /><span class="eol">;</span>
+                        <span>}</span>
+                    </div>
+                    
+                    <div class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom challenge-output">
+                            <i class="fa fa-exclamation"></i>
+                            <span>Desafio não realizado</span>
+                     </div>
+                        
+                </div>
+                
+                <hr class="w3-margin-top w3-margin-bottom" />
+            
+            </div>
+            
+            
+            
+            
+            <div class="w3-container challenge-container">
+            
+                <h2 class="w3-padding-48">
+                    <span class="w3-tag w3-wide w3-padding-left w3-padding-right">DESAFIO 02</span>
+                </h2>
+                
+                <div id="challenge-2" class="challenge-element" data-index="1">
+                    &nbsp;
+                </div>
+                
+                <br /><br /><br />
+                
+                <div class="w3-example">
+                    <p>
+                        Não!!! Há vários Surfistas Prateados na div acima, e só pode haver um nesse universo. 
+                        Resolva esse problema com seus poderes de CSS.
+                    </p>
+                    <div class="w3-code notranslate htmlHigh challenge">
+                        
+                        <span>#challenge-2</span><span class="eol"> {</span>
+                        <span class="tab"></span>
+                        <select data-index="1">
+                            <option value="-1">-</option>
+                            <option value="0">background-image</option>
+                            <option value="1">background-repeat</option>
+                            <option value="2">background-size</option>
+                            <option value="3">background-position</option>
+                        </select>
+                        : <input data-index="1"  type="text" /><span class="eol">;</span>
+                        <span>}</span>
+                    </div>
+                    
+                    <div class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom challenge-output">
+                            <i class="fa fa-exclamation"></i>
+                            <span>Desafio não realizado</span>
+                     </div>
+                        
+                </div>
+                
+                <hr class="w3-margin-top w3-margin-bottom" />
+            
+            </div>
+            
+            
+            
+            <div class="w3-container challenge-container">
+            
+                <h2 class="w3-padding-48">
+                    <span class="w3-tag w3-wide w3-padding-left w3-padding-right">DESAFIO 03</span>
+                </h2>
+                
+                <div id="challenge-3" class="challenge-element" data-index="2">
+                    &nbsp;
+                </div>
+                
+                <br /><br /><br />
+                
+                <div class="w3-example">
+                    <p>
+                        Podes deixar vários surfistas agora, mas não permita que eles fiquem cortados, nem que tenham seu tamanho alterado.
+                    </p>
+                    <div class="w3-code notranslate htmlHigh challenge">
+                        
+                        <span>#challenge-3</span><span class="eol"> {</span>
+                        <span class="tab"></span>
+                        <select data-index="2">
+                            <option value="-1">-</option>
+                            <option value="0">background-image</option>
+                            <option value="1">background-repeat</option>
+                            <option value="2">background-size</option>
+                            <option value="3">background-position</option>
+                        </select>
+                        : <input data-index="2"  type="text" /><span class="eol">;</span>
+                        <span>}</span>
+                    </div>
+                    
+                    <div class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom challenge-output">
+                            <i class="fa fa-exclamation"></i>
+                            <span>Desafio não realizado</span>
+                     </div>
+                        
+                </div>
+                
+                <hr class="w3-margin-top w3-margin-bottom" />
+            
+            </div>
+            
+            
+            
+            
+            
+            <div class="w3-container challenge-container">
+            
+                <h2 class="w3-padding-48">
+                    <span class="w3-tag w3-wide w3-padding-left w3-padding-right">DESAFIO 04</span>
+                </h2>
+                
+                <div id="challenge-4" class="challenge-element" data-index="3">
+                    &nbsp;
+                </div>
+                
+                <br /><br /><br />
+                
+                <div class="w3-example">
+                    <p>
+                        Escola de vilão: não corte nenhum dos vários Surfistas Prateados, mas encolha-os.
+                    </p>
+                    <div class="w3-code notranslate htmlHigh challenge">
+                        
+                        <span>#challenge-4</span><span class="eol"> {</span>
+                        <span class="tab"></span>
+                        <select data-index="3">
+                            <option value="-1">-</option>
+                            <option value="0">background-image</option>
+                            <option value="1">background-repeat</option>
+                            <option value="2">background-size</option>
+                            <option value="3">background-position</option>
+                        </select>
+                        : <input data-index="3"  type="text" /><span class="eol">;</span>
+                        <span>}</span>
+                    </div>
+                    
+                    <div class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom challenge-output">
+                            <i class="fa fa-exclamation"></i>
+                            <span>Desafio não realizado</span>
+                     </div>
+                        
+                </div>
+                
+                <hr class="w3-margin-top w3-margin-bottom" />
+            
+            </div>
+            
+            
+            
+            
+            
+            <div class="w3-container challenge-container">
+            
+                <h2 class="w3-padding-48">
+                    <span class="w3-tag w3-wide w3-padding-left w3-padding-right">DESAFIO 05</span>
+                </h2>
+                
+                <div id="challenge-5" class="challenge-element" data-index="4">
+                    &nbsp;
+                </div>
+                
+                <br /><br /><br />
+                
+                <div class="w3-example">
+                    <p>
+                        Agora faça apenas uma LINHA de Surfistas Prateados.
+                    </p>
+                    <div class="w3-code notranslate htmlHigh challenge">
+                        
+                        <span>#challenge-5</span><span class="eol"> {</span>
+                        <span class="tab"></span>
+                        <select data-index="4">
+                            <option value="-1">-</option>
+                            <option value="0">background-image</option>
+                            <option value="1">background-repeat</option>
+                            <option value="2">background-size</option>
+                            <option value="3">background-position</option>
+                        </select>
+                        : <input data-index="4"  type="text" /><span class="eol">;</span>
+                        <span>}</span>
+                    </div>
+                    
+                    <div class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom challenge-output">
+                            <i class="fa fa-exclamation"></i>
+                            <span>Desafio não realizado</span>
+                     </div>
+                        
+                </div>
+                
+                <hr class="w3-margin-top w3-margin-bottom" />
+            
+            </div>
+            
+            
+            
+            
+            
+            <div class="w3-container challenge-container">
+            
+                <h2 class="w3-padding-48">
+                    <span class="w3-tag w3-wide w3-padding-left w3-padding-right">DESAFIO 06</span>
+                </h2>
+                
+                <div id="challenge-6" class="challenge-element" data-index="5">
+                    &nbsp;
+                </div>
+                
+                <br /><br /><br />
+                
+                <div class="w3-example">
+                    <p>
+                        Agora faça apenas uma COLUNA de Surfistas Prateados.
+                    </p>
+                    <div class="w3-code notranslate htmlHigh challenge">
+                        
+                        <span>#challenge-6</span><span class="eol"> {</span>
+                        <span class="tab"></span>
+                        <select data-index="5">
+                            <option value="-1">-</option>
+                            <option value="0">background-image</option>
+                            <option value="1">background-repeat</option>
+                            <option value="2">background-size</option>
+                            <option value="3">background-position</option>
+                        </select>
+                        : <input data-index="5"  type="text" /><span class="eol">;</span>
+                        <span>}</span>
+                    </div>
+                    
+                    <div class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom challenge-output">
+                            <i class="fa fa-exclamation"></i>
+                            <span>Desafio não realizado</span>
+                     </div>
+                        
+                </div>
+                
+                <hr class="w3-margin-top w3-margin-bottom" />
+            
+            </div>
+            
+            
+            
+            
+            
+            <div class="w3-container challenge-container">
+            
+                <h2 class="w3-padding-48">
+                    <span class="w3-tag w3-wide w3-padding-left w3-padding-right">DESAFIO 07</span>
+                </h2>
+                
+                <div id="challenge-7" class="challenge-element" data-index="6">
+                    &nbsp;
+                </div>
+                
+                <br /><br /><br />
+                
+                <div class="w3-example">
+                    <p>
+                        Faça com que o mapa do Pac-man apareça por completo na div acima, 
+                        mesmo que sobre margens, ele deve estar contido por inteiro, e 
+                        mantendo sua proporção.
+                    </p>
+                    <div class="w3-code notranslate htmlHigh challenge">
+                        
+                        <span>#challenge-7</span><span class="eol"> {</span>
+                        <span class="tab"></span>
+                        <select data-index="6">
+                            <option value="-1">-</option>
+                            <option value="0">background-image</option>
+                            <option value="1">background-repeat</option>
+                            <option value="2">background-size</option>
+                            <option value="3">background-position</option>
+                        </select>
+                        : <input data-index="6"  type="text" /><span class="eol">;</span>
+                        <span>}</span>
+                    </div>
+                    
+                    <div class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom challenge-output">
+                            <i class="fa fa-exclamation"></i>
+                            <span>Desafio não realizado</span>
+                     </div>
+                        
+                </div>
+                
+                <hr class="w3-margin-top w3-margin-bottom" />
+            
+            </div>
+            
+            
+            
+            
+            
+            <div class="w3-container challenge-container">
+            
+                <h2 class="w3-padding-48">
+                    <span class="w3-tag w3-wide w3-padding-left w3-padding-right">DESAFIO 08</span>
+                </h2>
+                
+                <div id="challenge-8" class="challenge-element" data-index="7">
+                    &nbsp;
+                </div>
+                
+                <br /><br /><br />
+                
+                <div class="w3-example">
+                    <p>
+                        Esse Galactus está muito próxima, faça com que ele cubra melhor o elemento, 
+                        buscando um elhor ajuste, e não usando seu tamanho natual, como está acontecendo agora.
+                    </p>
+                    <div class="w3-code notranslate htmlHigh challenge">
+                        
+                        <span>#challenge-8</span><span class="eol"> {</span>
+                        <span class="tab"></span>
+                        <select data-index="7">
+                            <option value="-1">-</option>
+                            <option value="0">background-image</option>
+                            <option value="1">background-repeat</option>
+                            <option value="2">background-size</option>
+                            <option value="3">background-position</option>
+                        </select>
+                        : <input data-index="7"  type="text" /><span class="eol">;</span>
+                        <span>}</span>
+                    </div>
+                    
+                    <div class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom challenge-output">
+                            <i class="fa fa-exclamation"></i>
+                            <span>Desafio não realizado</span>
+                     </div>
+                        
+                </div>
+                
+                <hr class="w3-margin-top w3-margin-bottom" />
+            
+            </div>
+            
+            
+            
+            
+            
+            <div class="w3-container challenge-container">
+            
+                <h2 class="w3-padding-48">
+                    <span class="w3-tag w3-wide w3-padding-left w3-padding-right">DESAFIO 09</span>
+                </h2>
+                
+                <div id="challenge-9" class="challenge-element" data-index="8">
+                    &nbsp;
+                </div>
+                
+                <br /><br /><br />
+                
+                <div class="w3-example">
+                    <p>
+                        Coloque esse pobre Surfista Prateado no centro da div
+                    </p>
+                    <div class="w3-code notranslate htmlHigh challenge">
+                        
+                        <span>#challenge-9</span><span class="eol"> {</span>
+                        <span class="tab"></span>
+                        <select data-index="8">
+                            <option value="-1">-</option>
+                            <option value="0">background-image</option>
+                            <option value="1">background-repeat</option>
+                            <option value="2">background-size</option>
+                            <option value="3">background-position</option>
+                        </select>
+                        : <input data-index="8"  type="text" /><span class="eol">;</span>
+                        <span>}</span>
+                    </div>
+                    
+                    <div class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom challenge-output">
+                            <i class="fa fa-exclamation"></i>
+                            <span>Desafio não realizado</span>
+                     </div>
+                        
+                </div>
+                
+                <hr class="w3-margin-top w3-margin-bottom" />
+            
+            </div>
+            
+            
+            
+            
+            
+            <div class="w3-container challenge-container">
+            
+                <h2 class="w3-padding-48">
+                    <span class="w3-tag w3-wide w3-padding-left w3-padding-right">DESAFIO 10</span>
+                </h2>
+                
+                <div id="challenge-10" class="challenge-element" data-index="9">
+                    &nbsp;
+                </div>
+                
+                <br /><br /><br />
+                
+                <div class="w3-example">
+                    <p>
+                        Coloque esse pobre Surfista Prateado no canto inferior direito
+                    </p>
+                    <div class="w3-code notranslate htmlHigh challenge">
+                        
+                        <span>#challenge-10</span><span class="eol"> {</span>
+                        <span class="tab"></span>
+                        <select data-index="9">
+                            <option value="-1">-</option>
+                            <option value="0">background-image</option>
+                            <option value="1">background-repeat</option>
+                            <option value="2">background-size</option>
+                            <option value="3">background-position</option>
+                        </select>
+                        : <input data-index="9"  type="text" /><span class="eol">;</span>
+                        <span>}</span>
+                    </div>
+                    
+                    <div class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom challenge-output">
+                            <i class="fa fa-exclamation"></i>
+                            <span>Desafio não realizado</span>
+                     </div>
+                        
+                </div>
+                
+                <hr class="w3-margin-top w3-margin-bottom" />
+            
+            </div>
+            
+            
+            
+            
+            
+            <div class="w3-container challenge-container">
+            
+                <h2 class="w3-padding-48">
+                    <span class="w3-tag w3-wide w3-padding-left w3-padding-right">DESAFIO 11</span>
+                </h2>
+                
+                <div id="challenge-11" class="challenge-element" data-index="10">
+                    &nbsp;
+                </div>
+                
+                <br /><br /><br />
+                
+                <div class="w3-example">
+                    <p>
+                        Aqui temos a spritesheet do Megaman: 
+                        <img src="img/megaman.png" alt="Spritesheet do Megaman" class="half-size" />. <br />
+                        Na div acima o Megaman naturalmente encontra-se no primeiro frame dessa animação, 
+                        ou seja, na posição [0px,&nbsp;0px] da spritesheet. Fala com que o terceiro frame 
+                        da animação apareça. <b>Dica: </b>cada frame tem [200px,&nbsp;180px]
+                    </p>
+                    <div class="w3-code notranslate htmlHigh challenge">
+                        
+                        <span>#challenge-11</span><span class="eol"> {</span>
+                        <span class="tab"></span>
+                        <select data-index="10">
+                            <option value="-1">-</option>
+                            <option value="0">background-image</option>
+                            <option value="1">background-repeat</option>
+                            <option value="2">background-size</option>
+                            <option value="3">background-position</option>
+                        </select>
+                        : <input data-index="10"  type="text" /><span class="eol">;</span>
+                        <span>}</span>
+                    </div>
+                    
+                    <div class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom challenge-output">
+                            <i class="fa fa-exclamation"></i>
+                            <span>Desafio não realizado</span>
+                     </div>
+                        
+                </div>
+                
+                <hr class="w3-margin-top w3-margin-bottom" />
+            
+            </div>
+            
+           
+           
+           
+           
+           <div class="w3-center">
+                <h2>Algumas spritesheets</h2>              
+            </div>
+           
+            <div class="w3-tag w3-sign w3-card-4 w3-round w3-green w3-mobile w3-margin-top w3-margin-bottom">
+              <a target="_blank" class="w3-tag w3-round w3-green w3-border w3-border-white" href="img/pacman-spritesheet.png">
+                <i class="fa fa-image w3-margin-right"></i> Spritesheet do Pacman
+              </a>
+            </div>
+            
+            
+            <div class="w3-tag w3-sign w3-card-4 w3-round w3-green w3-mobile w3-margin-top w3-margin-bottom">
+              <a target="_blank" class="w3-tag w3-round w3-green w3-border w3-border-white" href="img/youtube-spritesheet.png">
+                <i class="fa fa-image w3-margin-right"></i> Spritesheet do Youtube (2014)
+              </a>
+            </div>
+            
+            <p>
+                Para o adequado uso de spritesheets os elementos devem ter tamanhos definidos, 
+                pois o sprite (elemento de spritesheet) será utlizado em seu tamanho natu 
+            </p>
+            
+            <div class="w3-tag w3-large w3-sign w3-card-4 w3-red w3-mobile w3-margin-top w3-margin-bottom">
+              <span target="_blank" class="w3-tag w3-round w3-red w3-border-white w3-left-align">
+                    <i class="fa fa-exclamation-triangle w3-margin-right"></i> 
+                    <b>CUIDADO: </b>apesar do exemplo acima permitir tanto o uso de uma quantidade positiva 
+                    ou negativa de pixels para chegar na mesma solução isso não é sempre verdade, cada sinal 
+                    navega para um lado diferente da spritesheet. Teste o exemplo acima com, por exemplo com 200px e -200px.
+              </span>
+            </div>
+            
+            <div class="w3-tag w3-large w3-sign w3-card-4 w3-yellow w3-mobile w3-margin-top w3-margin-bottom">
+                <span target="_blank" class="w3-tag w3-round w3-yellow w3-border-white w3-left-align">
+                    <i class="fa fa-lightbulb-o w3-margin-right"></i> 
+                    calc() é um grande amigo de quem usa spritesheets, principalmente se 
+                    ela contém frames igualmente espaçados, nesse caso algo como: 
+                    <br /><br />
+                    <code class="w3-code notranslate htmlHigh">
+                        background-position: calc(-2 * 200px) calc(-0 * 180px);
+                    </code> 
+                    <br /><br />
+                    seria algo normal (e fácil de manter).
+                </span>
+            </div>
+            
+            
+        </article>
+    
+    </main>
+
+    
+    
+    
+
+    <script src="../js/w3data.js"></script>
+	<script type="text/javascript">
+        w3IncludeHTML();
+    </script>
+    
+    <script src="../js/index.js"></script>
+    
+    
+    
+    <script type="text/javascript">
+    
+        ;(function ()
+        {
+        
+            'use strict';
+            
+            
+            
+            var UNITS_REGEX     =   /px|%|em|vh|vw|cm|mm|in/gi
+            ,   ABSOLUTE_REGEX  =   /px|em|vh|vw|cm|mm|in/gi
+            ,   POSITIONS_REGEX =   /top|right|bottom|left|center|%/;
+            
+            var MESSAGES    =   {
+                'warning':  'Espertinho, mas não é isso que eu quero.'
+            ,   'error':    'Desafio não realizado'
+            ,   'success':  'Desafio completo'
+            };
+            
+            var ICONS       =   {
+                'warning':  'fa-exclamation-triangle'
+            ,   'error':    'fa-ban'
+            ,   'success':  'fa-check'
+            };
+            
+            var COLORS      =   {
+                'warning':  'w3-yellow'
+            ,   'error':    'w3-red'
+            ,   'success':  'w3-green'
+            };
+            
+            var ERROR   =   'error'
+            ,   SUCCESS =   'success'
+            ,   WARNING =   'warning';
+            
+            var successses  =   [
+                [   0,  /url\(['"]?(\.[\/]{1})?img[\/]{1}galactus\.jpg['"]?\)/gi  ]
+            ,   [   1,  /no-repeat/gi   ]
+            ,   [   1,  /space/gi       ]
+            ,   [   1,  /round/gi       ]
+            ,   [   1,  /repeat-x/gi    ]
+            ,   [   1,  /repeat-y/gi    ]
+            ,   [   2,  /contain/gi     ]
+            ,   [   2,  /cover/gi       ]
+            ,   [   3,  /center|50%(center|50%)?$/gi    ]
+            ,   [   3,  /((right|100%) (bottom|100%))|(bottom right)$/gi  ]
+            ,   [   3,  /-?400px( -?0px)?$/gi  ]
+            ];
+            
+            var warnings    =   [
+                null
+            ,   null
+            ,   null
+            ,   null
+            ,   null
+            ,   null
+            ,   UNITS_REGEX
+            ,   UNITS_REGEX
+            ,   ABSOLUTE_REGEX
+            ,   ABSOLUTE_REGEX
+            ,   POSITIONS_REGEX
+            ];
+            
+            var propertyes   =   [
+                'background-image'
+            ,   'background-repeat'
+            ,   'background-size'
+            ,   'background-position'
+            ];
+            
+
+            
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $challenges         =   document.querySelectorAll('.challenge-container')
+                ,   $challengeElements  =   document.querySelectorAll('.challenge-container .challenge-element')
+                ,   $challengeSelects   =   document.querySelectorAll('.challenge-container select')
+                ,   $challengeInputs    =   document.querySelectorAll('.challenge-container input')
+                ,   $outputs            =   document.querySelectorAll('.challenge-output')
+                ,   $outputIcons        =   document.querySelectorAll('.challenge-output i')
+                ,   $outputTexts        =   document.querySelectorAll('.challenge-output span');
+                
+                
+                
+                var checkChallenge  =   function (event)
+                {
+                    
+                    var status          =   ERROR
+                    ,   firedBy         =   event.target
+                    ,   index           =   parseInt(firedBy.attributes['data-index'].value)
+                    ,   alternatives    =   []
+                    ,   values          =   [
+                        parseInt($challengeSelects[index].value)
+                    ,   $challengeInputs[index].value.trim().toLocaleLowerCase()
+                    ];
+                    
+                    alternatives    =   [
+                        (values[0]  === successses[index][0])
+                    ,   (values[1].match(successses[index][1]))
+                    ];
+                    
+                    if (alternatives[0] &&  alternatives[1]) {
+                        status  =   SUCCESS;
+                    } else if (values[1].match(warnings[index])) {
+                        status  =   WARNING;
+                    }
+
+                    // Removendo tudo para garantir estado único
+                    removeClass($outputs[index],        COLORS[ERROR]);
+                    removeClass($outputs[index],        COLORS[SUCCESS]);
+                    removeClass($outputs[index],        COLORS[WARNING]);
+                    
+                    removeClass($outputIcons[index],    ICONS[ERROR]);
+                    removeClass($outputIcons[index],    ICONS[SUCCESS]);
+                    removeClass($outputIcons[index],    ICONS[WARNING]);
+                    
+                    // E adiconando as classes referentes ao status
+                    addClass($outputs[index],           COLORS[status]);
+                    addClass($outputIcons[index],       ICONS[status]);
+                    $outputTexts[index].innerHTML   =   MESSAGES[status];
+
+                    //  Reseta o elemento pro estado original
+                    $challengeElements[index].style   =   '';
+                    
+                    //  Aplica estilo
+                    if (-1  !== values[0]) {
+                        $challengeElements[index].style[propertyes[values[0]]]  =   values[1];
+                    }
+                
+                };
+                
+                
+                
+                $challengeSelects.forEach (function (select)
+                {
+                
+                    select.addEventListener('change', checkChallenge);
+                
+                });
+                
+                $challengeInputs.forEach (function (input)
+                {
+                
+                    input.addEventListener('input', checkChallenge);
+                
+                });
+            
+            });
+        
+        })(undefined);
+    
+    </script>
+	
+	
+</body>
+
+</html>

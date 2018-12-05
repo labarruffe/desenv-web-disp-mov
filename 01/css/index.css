@@ -1,0 +1,74 @@
+/*  Defino que a contagem do tamanho dos elementos começa na borda (padrão é no conteúdo, sem borda e padding) */
+* {
+	box-sizing:		border-box;
+}
+
+/* Para o final do texto não grudar no final da página */
+article {
+    padding-bottom: 50px;
+}
+
+/* Tirando margens do body */
+body {
+	height:			auto;
+	margin:			0px;
+	padding:		0px;
+	outline:		0px;
+	overflow-x:		hidden;
+}
+
+/*  Configurando o menu de links */
+body > nav {
+	padding:		20px 0px;
+	text-align:		center;
+}
+
+/* Agora elas podem conviver lado a lado */
+nav > div {
+	display:		inline-block;
+}
+
+/*  Padding de 1 letra e meia nos parágrafos */
+p {
+	padding:		1.5em;
+}
+
+li {
+	padding:	0.5em;
+}
+
+/*  Garantindo que os pre não saiam da tela */
+pre {
+	max-width:	calc(100% - 3em);
+}
+
+/*  Alterando a identação de listas de definições */
+dl {
+	padding:	0.5em 1.5em;
+}
+dt {
+	padding-top:	1.5em;
+}
+
+/*  Para o elemento flutuar à esquerda */
+.float-left {
+	float:	left;
+}
+
+/*  Ajuda a forçar o elemento a ficar sozinho em uma "linha" */
+.clear-both {
+	clear:	both;
+}
+
+/* Dá ao elemento alargura total da tela */
+.full-page-width {
+	min-width:		100vw;
+	width:			100vw;
+	max-width:		100vw;
+}
+
+/*  Não permite que as imagens saiam da tela, e deixa que a proporção eja decidida pela imagem */
+img {
+	max-width:	100%;
+    height:     auto;
+}

@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="7" />
+    <meta name="slide-number"       content="4" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="9" />
+    <meta name="slide-previous"     content="03-translate-2d.html" />
+    <meta name="slide-next"         content="05-skew.html" />
+	
+	<title>rotate()</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/transforms.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    rotate(<i>graus</i>)
+                </span>
+            </h1>
+            
+            <p>
+                Rotaciona o elemento no eixo Z, ou seja, em sentido horário e de 
+                frente para o usuário. A unidade para essa função são graus (<i>deg</i>). 
+                Os valores comuns vão de 0 a 360 graus (círculo trigonométrico) e também 
+                podem ser valores negativos, causando uma rotação no sentido anti-horário.
+            </p>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <div class="w3-row w3-margin-top">
+
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption><b>A) </b>Mister Mxyzptlk sem rotação</figcaption>
+                        <img id="mr-mxyzptlk-A" class="w3-image identity-matrix" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+               
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-top"><b>B) </b>Mister Mxyzptlk rotacionado 180 graus</figcaption>
+                        <img id="mr-mxyzptlk-B" class="w3-image rotate-2d-180" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+
+            </div>
+           
+           
+           
+            <div class="w3-row w3-margin-top">
+
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption><b>C) </b>Mister Mxyzptlkrotacionado 90 graus</figcaption>
+                        <img id="mr-mxyzptlk-C" class="w3-image rotate-2d-90" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+               
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-top"><b>D) </b>Mister Mxyzptlkrotacionado -90 graus.</figcaption>
+                        <img id="mr-mxyzptlk-D" class="w3-image rotate-2d--90" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+
+            </div>
+            
+            
+            
+            <div class="w3-example">
+                <pre id="matrix-output" class="w3-code notranslate cssHigh">
+        
+                </pre>  
+            </div>
+            
+            <h2> E como isso é feito?</h2>
+            <div class="w3-example">
+                <pre class="w3-code notranslate cssHigh">
+/*  Aplicado em B   */
+/*  Rotação Z de 180º (inversão em Y)  */
+.rotate-2d-180 {
+    transform:          rotate(180deg);
+    -webkit-transform:  rotate(180deg);
+}
+
+/*  Aplicado em C   */
+.rotate-2d-90  {
+    transform:          rotate(90deg);
+    -webkit-transform:  rotate(90deg);
+}
+
+/*  Aplicado em D   */
+.rotate-2d--90  {
+    transform:          rotate(-90deg);
+    -webkit-transform:  rotate(-90deg);
+}
+                </pre>  
+            </div>
+
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+    
+    <script type="text/javascript">
+    
+        ;(function (undefined)
+        {
+            
+            'use strict';
+            
+            
+            
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $output1        =   document.querySelector('#matrix-output')
+                ,   $mrMxyzptlkA    =   document.querySelector('#mr-mxyzptlk-A')
+                ,   $mrMxyzptlkB    =   document.querySelector('#mr-mxyzptlk-B')
+                ,   $mrMxyzptlkC    =   document.querySelector('#mr-mxyzptlk-C')
+                ,   $mrMxyzptlkD    =   document.querySelector('#mr-mxyzptlk-D');
+                
+                var transformA  =   window.getComputedStyle($mrMxyzptlkA).getPropertyValue('transform')
+                ,   transformB  =   window.getComputedStyle($mrMxyzptlkB).getPropertyValue('transform')
+                ,   transformC  =   window.getComputedStyle($mrMxyzptlkC).getPropertyValue('transform')
+                ,   transformD  =   window.getComputedStyle($mrMxyzptlkD).getPropertyValue('transform');
+                
+                $output1.innerHTML  =   
+                    'A: '   + transformA + '\nB: ' + transformB
+                +   '\nC: ' + transformC + '\nD: ' + transformD;
+            
+            });
+        
+        })();
+    
+    </script>
+	
+    
+    
+</body>
+
+</html>

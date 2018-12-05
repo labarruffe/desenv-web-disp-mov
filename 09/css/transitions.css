@@ -1,0 +1,231 @@
+/*  CSS comum a todos os botões dessa aula  */
+.button {
+    background-color:   rgb(0, 0, 0);
+    border:             1px solid rgb(0, 0, 0);
+    color:              rgb(255, 255, 255);
+    cursor:             pointer;
+    height:             30px;
+    width:              120px;
+}
+
+
+
+
+
+#hover-button-1 {
+    opacity:            0.6;
+    transform:          scale(1.0, 1.0);
+    -webkit-transform:  scale(1.0, 1.0);
+    
+    transition:         all ease 300ms;
+    -webkit-transition: all ease 300ms;
+    
+    width:              auto;
+}
+
+#hover-button-1:hover, 
+#hover-button-1:active {
+    opacity:            1.0;
+    transform:          scale(1.2, 1.2);
+    -webkit-transform:  scale(1.2, 1.2);
+}
+
+
+
+
+
+/*  Equivalente à #hover-button-1 */
+#hover-button-2 {
+    transition-property:			    all;
+    -webkit-transition-property:        all;
+
+    transition-timing-function:		    ease;
+    -webkit-transition-timing-function:	ease;
+
+    transition-duration:			    300ms;
+    -webkit-transition-duration:		300ms;
+
+    transition-delay:			        0ms;
+    -webkit-transition-delay:		    0ms;
+}
+
+
+
+
+
+#hover-button-3,
+#hover-button-4	{
+    transition-property:                height;
+    -webkit-transition-property:        height;
+    
+    transition-timing-function:         ease;
+    -webkit-transition-timing-function: ease;
+    
+    transition-duration:                600ms;
+    -webkit-transition-duration:        600ms;
+    
+    transition-delay:                   0ms;
+    -webkit-transition-delay:           0ms;
+}
+
+#hover-button-4 {
+    -webkit-transition-property:    width, height;
+    transition-property:            width, height;
+}
+
+#hover-button-3:hover,
+#hover-button-4:hover {
+    height: 50px;
+    width:  200px;
+}
+
+
+
+
+
+#hover-button-5 {
+    transition:         height 600ms ease 0ms;
+    -webkit-transition: height 600ms ease 0ms;
+}
+
+#hover-button-6 {
+    transition:         width 600ms ease 0ms, 	height 600ms ease 0ms;
+    -webkit-transition: width 600ms ease 0ms,	height 600ms ease 0ms;
+}
+
+#hover-button-5:hover,
+#hover-button-6:hover {
+    height: 50px;
+    width:  200px;
+}
+
+
+
+
+
+#hover-button-7, 
+#hover-button-8, 
+#hover-button-9 {
+    transition-property:                width;
+    -webkit-transition-property:        width;
+    
+    transition-timing-function:         ease;
+    -webkit-transition-timing-function: ease;
+    
+    transition-duration:                300ms;
+    -webkit-transition-duration:        300ms;
+    
+    transition-delay:                   0ms;
+    -webkit-transition-delay:           0ms;
+}
+
+#hover-button-8 {
+    transition-duration:                .6s;
+    -webkit-transition-duration:        .6s;
+}
+
+#hover-button-7:hover, 
+#hover-button-8:hover, 
+#hover-button-9:hover {
+    width:  200px;
+}
+
+#hover-button-9:hover {
+    height: 50px;
+}
+
+#hover-button-9 {
+    transition-property:            width, height;
+    -webkit-transition-property:    width, height;
+    
+    transition-duration:            300ms, 2s;
+    -webkit-transition-duration:    300ms, 2s;
+}
+
+
+
+
+
+#hover-button-10, 
+#hover-button-11, 
+#hover-button-12, 
+#hover-button-13, 
+#hover-button-14 {
+    transition-property:                width;
+    -webkit-transition-property:        width;
+    
+    transition-timing-function:         linear;
+    -webkit-transition-timing-function: linear;
+    
+    transition-duration:                3s;
+    -webkit-transition-duration:        3s;
+    
+    transition-delay:                   0ms;
+    -webkit-transition-delay:           0ms;
+    
+    width:                              50%;
+}
+
+#hover-button-11 {
+    transition-timing-function:		    ease;
+    -webkit-transition-timing-function: ease;
+}
+
+#hover-button-12 {
+    transition-timing-function:		    ease-in;
+    -webkit-transition-timing-function: ease-in;
+}
+
+#hover-button-13 {
+    transition-timing-function:		    ease-out;
+    -webkit-transition-timing-function: ease-out;
+}
+
+#hover-button-14 {
+    transition-timing-function:		    ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+#hover-button-10:hover, 
+#hover-button-11:hover, 
+#hover-button-12:hover, 
+#hover-button-13:hover, 
+#hover-button-14:hover {
+    width:  100%;
+}
+
+
+
+
+
+#hover-button-15, 
+#hover-button-16 
+{
+    transition-property:                width;
+    -webkit-transition-property:        width;
+    
+    transition-timing-function:         linear;
+    -webkit-transition-timing-function: linear;
+    
+    transition-duration:                600ms;
+    -webkit-transition-duration:        600ms;
+    
+    transition-delay:                   250ms;
+    -webkit-transition-delay:           250ms;
+    
+    width:                              50%;
+}
+
+#hover-button-16 {
+    transition-property:            width,	height;
+    -webkit-transition-property:    width,	height;
+    
+    transition-delay:               250ms,	850ms;
+    -webkit-transition-delay:       250ms,	850ms;
+}
+
+#hover-button-15:hover, 
+#hover-button-16:hover {
+    height: 50px;
+    width:  300px;
+}

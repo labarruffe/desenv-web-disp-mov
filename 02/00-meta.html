@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="2" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="30" />
+    <meta name="slide-previous"     content="index.html" />
+    <meta name="slide-next"         content="01-unidade-em.html" />
+	
+	<title>Meta-tags</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-wide w3-padding-left w3-padding-right">Meta-tags</span>
+            </h1>
+            
+            <p class="w3-padding">
+                São tags com metadados, que não tem implicações diretas na 
+                página, mas indicam coisas como: como ela deve ser renderizada, 
+                sobre o que a página fala, conjunto de caracteres utilizado, entre 
+                outras coisas.
+            </p>
+            
+            <hr />
+            
+            <div class="w3-example">
+                <div class="w3-code notranslate htmlHigh">
+                    &lt;meta charset="utf-8" /&gt;
+                </div>
+            </div>
+            
+            <p class="w3-padding">
+                Indica o conjunto de caracteres utilizado. No caso do PT_BR esse é o 
+                mais adequado. Deveria ser função do servidor http dar essa 
+                informação, porém, não devemos contar com isso.
+            </p>
+            
+            <hr />
+            
+            <div class="w3-example">
+                <div class="w3-code notranslate htmlHigh">
+                    &lt;meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" /&gt;
+                </div>
+            </div>
+            
+            <p class="w3-padding">
+                Indica como os dispositivos mobile devem tratar a página (renderizar).
+                Algumas das opções dele são. É ignorado no desktop.
+            </p>
+            
+            
+            
+            <ul class="w3-border-left">
+                <li class="w3-tag w3-theme w3-margin-top">width</li>
+                <ul class="w3-border-left">
+                    <li class="w3-margin-top"><b>device-width: </b>A largura da viewport é a largura da 
+                        tela do aparelho (recomendada).
+                    </li>
+                    <li class="w3-margin-top"><b>&lt;int&gt;px: </b>A largura da viewport é fixa em px, o 
+                        que pode causar alguns problemas indesejados em alguns 
+                        navegadores.
+                    </li>
+                </ul>
+                
+                <li class="w3-tag w3-theme w3-margin-top">user-scalable</li>
+                <ul class="w3-border-left">
+                    <li class="w3-margin-top"><b>yes: </b>Usuário pode dar zoom (recomendado).
+                    </li>
+                    <li class="w3-margin-top"><b>no: </b>Usuário não pode dar zoom.
+                    </li>
+                </ul>
+                
+                <li class="w3-tag w3-theme w3-margin-top">initial-scale</li>
+                <ul class="w3-border-left">
+                    <li class="w3-margin-top"><b>&lt;int&gt;: </b>Estado inicial de zoom, 1 é o padrão</li>
+                </ul>
+                
+                <li class="w3-tag w3-theme w3-margin-top">maximum-scale</li>
+                <ul class="w3-border-left">
+                    <li class="w3-margin-top"><b>&lt;int&gt;: </b>Máximo de de zoom, (não recomendado).</li>
+                </ul>
+            </ul>
+            
+            
+            
+            <hr />
+            
+            <div class="w3-center">
+                <h2>Exemplos</h2>
+                <p class="w3-padding">Página sem viewport (visual e tamanho do body).</p>
+            </div>
+
+            <div class="w3-row-padding">
+
+                <div class="w3-half">
+                   <figure class="w3-center">
+                    <img src="img/sw-01.jpg" class="w3-image">
+                    <figcaption>
+                        <a target="_blank" href="sources/01.html">
+                            Página sem viewport definido
+                        </a>
+                    </figcaption>
+                   </figure>
+                </div>
+                
+                <div class="w3-half">
+                   <figure class="w3-center">
+                    <img src="img/sw-02.jpg" class="w3-image" />
+                    <figcaption>
+                        Largura do body
+                    </figcaption>
+                   </figure>
+                </div>
+            
+            </div>
+            
+            
+            
+            <div class="w3-center">
+                <p class="w3-padding">Página com viewport (visual e tamanho do body).</p>
+            </div>
+
+            <div class="w3-row-padding">
+
+                <div class="w3-half">
+                   <figure class="w3-center">
+                    <img src="img/cw-01.jpg" class="w3-image">
+                    <figcaption>
+                        <a target="_blank" href="sources/02.html">
+                            Página cem viewport definido
+                        </a>
+                    </figcaption>
+                   </figure>
+                </div>
+                
+                <div class="w3-half">
+                   <figure class="w3-center">
+                    <img src="img/cw-02.jpg" class="w3-image" />
+                    <figcaption>
+                        Largura do body
+                    </figcaption>
+                   </figure>
+                </div>
+            
+            </div>
+
+        </article>
+    
+    </main>
+
+    
+    
+    
+
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+	
+</body>
+
+</html>

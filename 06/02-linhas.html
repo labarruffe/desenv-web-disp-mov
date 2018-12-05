@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="5" />
+    <meta name="slide-number"       content="2" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="8" />
+    <meta name="slide-previous"     content="01-oquee.html" />
+    <meta name="slide-next"         content="03-colunas.html" />
+	
+	<title>Linhas</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    Linhas
+                </span>
+            </h1>
+           
+            <h2>
+                Linhas (rows) de grid?
+            </h2>   
+            
+            <ul class="w3-border-left">
+		
+                <li class="w3-margin-top">
+                    Organizam o fluxo vertical do layout
+                <li>   
+                
+                <li class="w3-margin-top">
+                    Definem as áreas da página: header, conteúdo, 
+                    footer ...
+                <li>  
+
+                <li class="w3-margin-top">
+                    Organizam as colunas
+                <li>                 
+               
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <figure>
+            
+                <img class="w3-image" alt="Layout de exemplo" src="img/01-linha.jpg" />
+                
+                <figcaption>
+                    Exemplo de layout com grid
+                </figcaption>
+            
+            </figure>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <figure>
+            
+                <img class="w3-image" alt="Exemplo de linha (row)" src="img/02-linha.jpg" />
+                
+                <figcaption>
+                    Exemplo de linha (row)
+                </figcaption>
+            
+            </figure>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <figure>
+            
+                <img class="w3-image" alt="Exemplo de linha (row)" src="img/03-linha.jpg" />
+                
+                <figcaption>
+                    Exemplo de linha (row)
+                </figcaption>
+            
+            </figure>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            
+            
+            <h2>
+                Outro exemplo
+            </h2>   
+            
+            <figure>
+            
+                <img class="w3-image" alt="Layout de exemplo" src="img/04-linha.jpg" />
+                
+                <figcaption>
+                    Exemplo de layout com grid
+                </figcaption>
+            
+            </figure>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <figure>
+            
+                <img class="w3-image" alt="Exemplo de linha (row)" src="img/05-linha.jpg" />
+                
+                <figcaption>
+                    Exemplo de linha (row)
+                </figcaption>
+            
+            </figure>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <figure>
+            
+                <img class="w3-image" alt="Exemplo de linha (row)" src="img/06-linha.jpg" />
+                
+                <figcaption>
+                    Exemplo de linha (row)
+                </figcaption>
+            
+            </figure>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <figure>
+            
+                <img class="w3-image" alt="Exemplo de linha (row)" src="img/07-linha.jpg" />
+                
+                <figcaption>
+                    Exemplo de linha (row)
+                </figcaption>
+            
+            </figure>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            
+            
+            <h2>
+                Código-fonte
+            </h2>  
+            
+            
+            
+            <div class="w3-example">
+                <pre class="w3-code notranslate cssHigh challenge">
+
+.row {
+    box-sizing: border-box;
+    min-width:  100%;
+    width:      100%;
+    max-width:  100%;
+}
+
+/*  Vulgo: clearfix */
+.row:before, 
+.row:after {
+    content:    " ";
+    display:    table;
+}
+
+.row:after {
+    clear:  both;
+}
+                </pre>  
+            </div>
+            
+            
+               
+        </article>
+    
+    </main>
+
+    
+        
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="2" />
+    <meta name="slide-number"       content="16" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="18" />
+    <meta name="slide-previous"     content="14-float-right.html" />
+    <meta name="slide-next"         content="16-min-max-width-height.html" />
+	
+	<title>Template</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/revision.css">
+    
+    <style type="text/css">
+    
+        .sample-col {
+            display:    inline;
+            width:      30px;
+            height:     30px;
+        }
+    
+    </style>
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    float: none
+                </span>
+            </h1>
+            
+            
+            
+            <div class="float-none border-1">
+                float:	none;
+            </div>
+            
+            <div class="float-none border-1">
+                float: none;
+            </div>
+            
+            <a href="javascript: void(0);" class="float-none border-1 width-half line-height-200">
+                &lt;a&gt; com float:	none;
+            </a>
+            
+            <a href="javascript: void(0);" class="float-none border-1 width-half line-height-200">
+                &lt;a&gt; com float:	none;
+            </a>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h3>Container com 100%, 3 colunas</h3>
+            
+            <div class="float-left block" style="width: 100%;">
+                
+                <div class="block float-left border-1">
+                    float: left;
+                </div>
+                
+                <div class="block float-left border-1">
+                    float: left;
+                </div>
+            
+                <div class="block float-none border-1">
+                    float: none;
+                </div>
+
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <p class="float-left w3-padding">
+                Float none é o float "natural" dos elementos html, apesar de 
+                naturalmente eles tentarem se encaixar na esquerda da página (assim 
+                como em float: left). Entretanto atribuir float none a um elemento 
+                NÃO ALTERA seu display. Além disso ganhamos um pequeno truque: 
+                elementos sem float usam TODO o espaço na linha deixado por 
+                elementos com float.
+            </p>
+            
+           <hr class="w3-margin-top w3-margin-bottom" style="float: none; clear: both;"  />
+            
+            
+            
+            <h3 class="w3-margin-top w3-margin-bottom">
+               Botando float: none nas colunas
+            </h3>
+            
+            <div class="w3-container floated">
+                <span class="float-none border-1 sample-col">1</span>
+                <span class="float-none border-1 sample-col">2</span>
+                <span class="float-none border-1 sample-col">3</span>
+                <span class="float-none border-1 sample-col">4</span>
+                <span class="float-none border-1 sample-col">5</span>
+                <span class="float-none border-1 sample-col">6</span>
+            </div>
+            
+            
+            <hr class="w3-margin-top w3-margin-bottom"  />
+            
+            
+            <h3 class="w3-margin-top w3-margin-bottom">
+                Sem mexer no float das colunas
+            </h3>
+            
+            <div class="w3-container non-floated">
+                <span class="border-1 sample-col">1</span>
+                <span class="border-1 sample-col">2</span>
+                <span class="border-1 sample-col">3</span>
+                <span class="border-1 sample-col">4</span>
+                <span class="border-1 sample-col">5</span>
+                <span class="border-1 sample-col">6</span>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <div class="w3-example floated">
+                <p>
+                    As colunas de 2 exemplos acima são &lt;span /&gt;, que tem por 
+                    padrão display inline, mas vejam ccmo o <i>float: left</i> 
+                    modifica o display, assim as regras de width e height no 
+                    CSS da classe, o que não ocorre no exemplo logo acima, em que 
+                    as &lt;span /&gt;s não recebem float.
+                </p>
+                <pre id="output" class="w3-code notranslate cssHigh">
+                    
+                </pre>
+            </div>
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+    <script src="../js/index.js"></script>
+    <script type="text/javascript">
+    
+        ;(function (undefined)
+        {
+
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $staticCols     =   document.querySelectorAll('.non-floated .sample-col')
+                ,   $floatedCols    =   document.querySelectorAll('.floated .sample-col')
+                ,   $sampleStatic   =   $staticCols[0]
+                ,   $sampleFloated  =   $floatedCols[0]
+                ,   $output =   document.querySelector('#output')
+           
+                ,   floatedDisplay  =   window.getComputedStyle($sampleFloated).getPropertyValue('display')
+                ,   staticDisplay   =   window.getComputedStyle($sampleStatic).getPropertyValue('display');
+                
+                
+                var html    =   [
+                
+                    (' ')
+                ,   ('/* testando  window.getComputedStyle(element).getPropertyValue(\'display\') */')
+                ,   (' ')
+                ,   ('/* &lt;span /&gt;s com float: none */')
+                ,   ('.floated .sample-col {')
+                ,   ('\tdisplay:\t' +   floatedDisplay +   ';')
+                ,   ('}')
+                ,   (' ')
+                ,   ('/* &lt;span /&gt;s sem mexer no float */')
+                ,   ('.non-floated .sample-col {')
+                ,   ('\tdisplay:\t' +   staticDisplay +   ';')
+                ,   ('}')
+                ,   (' ')
+                ,   ('/* CHUPA regras de width e height em .sample-col !!! */')
+                ,   (' ')
+                
+                ];
+                
+                
+                
+                $output.innerHTML   =   html.join('\n');
+
+                w3CodeColor();
+                                
+            });
+        
+        })();
+    
+    </script>
+	
+    
+    
+</body>
+
+</html>

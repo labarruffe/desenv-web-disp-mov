@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="5" />
+    <meta name="slide-number"       content="4" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="8" />
+    <meta name="slide-previous"     content="04-calhas.html" />
+    <meta name="slide-next"         content="06-mobile.html" />
+	
+	<title>Cálculos</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    Cálculos
+                </span>
+            </h1>
+           
+            <h2>
+                Cálculos no grid?
+            </h2>   
+            
+            <ol class="w3-border-left">
+		
+                <li class="w3-margin-top">
+                    A largura da calha é fixa e a sua escolha (ex.: <i>1.5%</i>)
+                    
+                    <img class="w3-image w3-margin-top w3-margin-bottom" src="img/17-calculos.jpg" />
+                    
+                </li>  
+
+                <li class="w3-margin-top">
+                    Escolher o número de colunas (ex.: 12)
+                    
+                    <img class="w3-image w3-margin-top w3-margin-bottom" src="img/18-calculos.jpg" />
+                    
+                </li>     
+
+                <li class="w3-margin-top">
+                    Sabendo que o número de calhas é igual a <i>(colunas- 1)</i>
+                    
+                    <img class="w3-image w3-margin-top w3-margin-bottom" src="img/19-calculos.jpg" />
+                    
+                </li>    
+
+                <li class="w3-margin-top">
+                    Calcular o espaço tomado pelas calhas <i>(número de calhas * largura da calha)</i>
+                    
+                    <img class="w3-image w3-margin-top w3-margin-bottom" src="img/20-calculos.jpg" />
+                    
+                    <div class="w3-example">
+                        <pre class="w3-code jsHigh challenge">
+
+// Definidos pelo desenvolvedor
+largura_calha   =   1.5%;
+numero_colunas  =   12;
+
+numero_calhas   =   (numero_colunas - 1);               //  11
+total_calhas    =   (numero_calhas * largura_calha);    //  16.5%
+                        </pre>  
+                    </div>
+                    
+                </li>
+                
+                <li class="w3-margin-top">
+                    Calcular o espaço total ocupado pelas colunas <i>(100% - calhas)</i>
+                    
+                    <img class="w3-image w3-margin-top w3-margin-bottom" src="img/21-calculos.jpg" />
+                    
+                </li>
+                
+                <li class="w3-margin-top">
+                    Calcular o tamanha da menor coluna (1/12 do espaço total das colunas)
+                    
+                    <img class="w3-image w3-margin-top w3-margin-bottom" src="img/22-calculos.jpg" />
+          
+                    <div class="w3-example">
+                        <pre class="w3-code jsHigh challenge">
+
+total_colunas   =   (100% - total_calhas);              //  83,5%
+menor_coluna    =   (total_colunas / numero_colunas);   //  ~6.95833%
+                        </pre>  
+                    </div>
+                
+                </li>
+
+                <li class="w3-margin-top">
+                    Para calcular as outras possibilidades (2/12, 3/12, etc ...),  
+                    primeiro multiplicamos o tamanho da menor coluna pelo span
+                    (número de colunas que ela deve ser igual).
+                 
+                
+                    <img class="w3-image w3-margin-top w3-margin-bottom" src="img/23-calculos.jpg" />
+                
+                    <div class="w3-example">
+                        <pre class="w3-code jsHigh challenge">
+
+// Calculado acima
+menor_coluna    =   ~6.96%
+
+//  Como cada interação span = 1, 2, 3, ... é calculada
+coluna^span   =   ((menor_coluna * span) + (???))
+                        </pre> 
+                    </div>
+                    
+                </li> 
+                
+                <li class="w3-margin-top">
+                    E finalmente para cada <i>span</i> devemos "engolir" <i>(span - 1)</i> 
+                    calhas para que o alinhamento seja mantido, ou seja: 1 calha para span 2, 
+                    2 calhas para span 3, 3 calhas para span 4 e assim por diante.
+                    
+                    <img class="w3-image w3-margin-top w3-margin-bottom" src="img/24-calculos.jpg" />
+                    
+                    <div class="w3-example">
+                        <pre class="w3-code jsHigh challenge">
+
+//  Como cada interação span = 1, 2, 3, ... é calculada
+coluna^span =   ((menor_coluna * span) + ((span - 1) * largura_calha));
+
+// Então se span = 2
+coluna^2    =   ((6.96% * 2) + ((2 - 1) * 1.5%)) 
+coluna^2    =   ((13.92%) + (1.5%))
+coluna^2    =   ~15.42%;
+
+// Então se span = 3
+coluna^3    =   ((6.96% * 3) + ((3 - 1) * 1.5%)) 
+coluna^3    =   ((20.88%) + (3%))
+coluna^3    =   ~23.88%;
+
+// Então se span = 4
+coluna^4    =   ((6.96% * 4) + ((4 - 1) * 1.5%)) 
+coluna^4    =   ((27,84%) + (4.5%))
+coluna^4    =   ~32.34%;
+
+E assim por diante ...
+                        </pre> 
+                    </div>
+                    
+                </li>
+  
+            </ol>
+
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <figure>
+                <a target="_blank" title="Exemplo de grid" href="img/exemplo-grid.jpg">
+                
+                <img class="w3-image" src="img/exemplo-grid.jpg" alt="Exemplo de grid"/ >
+                
+                <figcaption>
+                    Exemplo de grid
+                </figcaption>
+                
+                </a>
+            </figure>
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <div class="w3-container">
+            
+                <div class="w3-tag w3-sign w3-card-4 w3-round w3-green w3-mobile w3-margin-top w3-margin-bottom">
+                  <a target="_blank" class="w3-tag w3-round w3-green w3-border w3-border-white" href="http://tableless.com.br/entendendo-sistemas-de-grid-css-do-zero/">
+                    <i class="fa fa-external-link w3-margin-right"></i>Material detalhado sobre o cálculo de grids
+                  </a>
+                </div>
+                
+                <div class="w3-tag w3-sign w3-card-4 w3-round w3-green w3-mobile w3-margin-top w3-margin-bottom">
+                  <a target="_blank" class="w3-tag w3-round w3-green w3-border w3-border-white" href="source/01.html">
+                    <i class="fa fa-code w3-margin-right"></i>Cálculo da grid (JS)
+                  </a>
+                </div>
+            
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+
+            
+        </article>
+    
+    </main>
+
+    
+        
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>

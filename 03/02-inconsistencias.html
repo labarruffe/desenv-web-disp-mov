@@ -1,0 +1,385 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="3" />
+    <meta name="slide-number"       content="2" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="12" />
+    <meta name="slide-previous"     content="01-inconsistencias.html" />
+    <meta name="slide-next"         content="03-reset-css.html" />
+	
+	<title>Inconsistências de tipografia</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top" w3-include-html="../top-menu.html">
+        &nbsp;  <!--    MEU QUERIDO MENU SUPERIOR   -->
+    </nav>
+	
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">Inconsistências em tipografia</span>
+            </h1>
+
+            <div class="w3-center">
+                <h2>Página de teste</h2>              
+            </div>
+           
+            <p>
+                Clique na tag abaixo para visualizar a página de teste explorada nos screen shots abaixo. 
+                Ela abrirá em outra página.
+            </p>
+           
+            <div class="w3-tag w3-sign w3-card-4 w3-round w3-green w3-mobile w3-margin-top w3-margin-bottom">
+              <a target="_blank" class="w3-tag w3-round w3-green w3-border w3-border-white" href="source/02.html">
+                <i class="fa fa-code w3-margin-right"></i> Página de teste 
+              </a>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            
+            
+            <div class="w3-center w3-margin-bottom">
+                <h2>Fontes padrão em diferentes S.O.s e Navegadores</h2>              
+            </div>
+            
+            <caption><span class="w3-tag w3-theme w3-margin-top w3-xlarge">Microsoft Internet Explorer / Edge</span></caption>
+            <table class="w3-table w3-striped w3-bordered w3-large">
+                <thead class="w3-theme-l3">
+                    <tr>
+                        <th>OS</th>
+                        <th>Sans-serif</th>
+                        <th>Serif</th>
+                        <th>Mono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Windows</td>
+                        <td>Arial</td>
+                        <td>Times New Roman</td>
+                        <td>Courier New</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <caption><span class="w3-tag w3-theme w3-margin-top w3-xlarge">Mozilla Firefox</span></caption>
+            <table class="w3-table w3-striped w3-bordered w3-large">
+                <thead class="w3-theme-l3">
+                    <tr>
+                        <th>OS</th>
+                        <th>Sans-serif</th>
+                        <th>Serif</th>
+                        <th>Mono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Windows</td>
+                        <td>Arial</td>
+                        <td>Times New Roman</td>
+                        <td>Courier New</td>
+                    </tr>
+                    <tr>
+                        <td>Mac OS X</td>
+                        <td>Helvetica</td>
+                        <td>Times</td>
+                        <td>Courier</td>
+                    </tr>
+                    <tr>
+                        <td>Linux</td>
+                        <td>sans-serif</td>
+                        <td>serif</td>
+                        <td>monospace</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <caption><span class="w3-tag w3-theme w3-margin-top w3-xlarge">Google Chrome</span></caption>
+            <table class="w3-table w3-striped w3-bordered w3-large">
+                <thead class="w3-theme-l3">
+                    <tr>
+                        <th>OS</th>
+                        <th>Sans-serif</th>
+                        <th>Serif</th>
+                        <th>Mono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Windows</td>
+                        <td>Arial</td>
+                        <td>Times New Roman</td>
+                        <td>Courier New</td>
+                    </tr>
+                    <tr>
+                        <td>Mac OS X</td>
+                        <td>Helvetica</td>
+                        <td>Times-Roman</td>
+                        <td>Courier</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <caption><span class="w3-tag w3-theme w3-margin-top w3-xlarge">Apple Safari</span></caption>
+            <table class="w3-table w3-striped w3-bordered w3-large">
+                <thead class="w3-theme-l3">
+                    <tr>
+                        <th>OS</th>
+                        <th>Standard</th>
+                        <th>Fixed Width</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Windows</td>
+                        <td>Times New Roman</td>
+                        <td>Courier New</td>
+                    </tr>
+                    <tr>
+                        <td>Mac OS X</td>
+                        <td>Times</td>
+                        <td>Courier</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            
+            
+            
+            <div class="w3-center">
+                <h2>Screenshots</h2>
+                <h3>Desktop</h3>
+                <p>Quais são os padrões tipográficos em diferentes navegadores para desktop.</p>
+            </div>
+
+            
+            
+            <div class="w3-row-padding">
+
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-01-padroes-ie6.jpg" title="Internet Explorer 6">
+                            <img src="img/01-01-padroes-ie6.jpg" class="w3-image" alt="Internet Explorer 6" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Internet Explorer 6
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-02-padroes-ie7.jpg" title="Internet Explorer 7">
+                            <img src="img/01-02-padroes-ie7.jpg" class="w3-image" alt="Internet Explorer 7" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Internet Explorer 7
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+            </div>
+            
+            
+            
+            <div class="w3-row-padding">
+
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-03-padroes-ie11.jpg" title="Internet Explorer 11">
+                        <a target="_blank" href="img/01-03-padroes-ie11.jpg" title="Internet Explorer 11">
+                            <img src="img/01-03-padroes-ie11.jpg" class="w3-image" alt="Internet Explorer 11" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Internet Explorer 11
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-04-padroes-edge.jpg" title="Microsoft Edge">
+                            <img src="img/01-04-padroes-edge.jpg" class="w3-image" alt="Microsoft Edge" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Microsoft Edge
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+            </div>
+            
+            
+            
+            <div class="w3-row-padding">
+
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-05-padroes-chrome.jpg" title="Google Chrome">
+                            <img src="img/01-05-padroes-chrome.jpg" class="w3-image" alt="Google Chrome" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Google Chrome
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-06-padroes-firefox.jpg" title="Mozilla Firefox">
+                            <img src="img/01-06-padroes-firefox.jpg" class="w3-image" alt="Mozilla Firefox" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Mozilla Firefox
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+            </div>
+            
+            
+            
+            <div class="w3-row-padding">
+
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-07-padroes-opera.jpg" title="Opera">
+                            <img src="img/01-07-padroes-opera.jpg" class="w3-image" alt="Opera" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Opera
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-08-padroes-safari.jpg" title="Apple Safari">
+                            <img src="img/01-08-padroes-safari.jpg" class="w3-image" alt="Apple Safari" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Apple Safari
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+            </div>
+            
+            
+            
+            
+            
+            <hr />
+            
+            <div class="w3-center">
+                <h3>Mobile</h3>
+                <p>Quais são os padrões tipográficos em diferentes dispositivos móveis.</p>
+            </div>
+            
+            
+            
+            <div class="w3-row-padding">
+
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-11-padroes-android.jpg" title="Android">
+                            <img src="img/01-11-padroes-android.jpg" class="w3-image" alt="Android" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Android
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-10-padroes-ios.jpg" title="iOS">
+                            <img src="img/01-10-padroes-ios.jpg" class="w3-image" alt="iOS" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  iOS
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+            </div>
+            
+            
+            
+            <div class="w3-row-padding">
+
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-09-padroes-window-phone.jpg" title="Windows Phone">
+                            <img src="img/01-09-padroes-window-phone.jpg" class="w3-image" alt="Windows Phone" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Windows Phone
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+
+            </div>
+
+
+            
+            
+        </article>
+    
+    </main>
+
+    
+    
+    
+
+    <script src="../js/w3data.js"></script>
+	<script type="text/javascript">
+        w3IncludeHTML();
+    </script>
+    
+    <script src="../js/index.js"></script>
+	
+</body>
+
+</html>

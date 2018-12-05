@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="5" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="7" />
+    <meta name="slide-previous"     content="index.html" />
+    <meta name="slide-next"         content="02-design-responsivo.html" />
+	
+	<title>História</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+     <style type="text/css">
+    
+        #challenge {    
+            border:             5px solid rgb(200, 50, 50);
+            max-width:          100%;
+            min-width:          320px;
+            overflow:           visible;
+            width:              640px;
+        }
+        
+        #challenge img {
+            height: 431px;
+            width:  1024px;
+        }
+    
+    </style>
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">História</span>
+            </h1>
+           
+            <p>
+                As primeiras soluções apresentadas para a criação de sites que se adaptavam a diferentes resoluções foram:
+            </p>   
+            
+
+            
+            
+            
+            <ul class="w3-border-left">
+		
+                <li>
+                    <b>Desnecessário: </b>Como as primeiras páginas apenas continham
+                    texto nenhum ajuste era necessário para que elas fossem responsivas, 
+                    layouts de 1 coluna sem imagens são naturalmente responsivos ... 
+                    O simples é belo ...
+                <li>
+                
+                
+                <li class="w3-margin-top">
+                    <b>Nenhuma: </b>Não havia adaptação do usuário, ele que lesse o 
+                    "melhor vizualisado utilizando-se o Internter Explorer e a resolução 
+                    800&nbsp;x&nbsp;600"
+                </li>
+                
+                <li class="w3-margin-top">
+                    <b>Duas versões: </b>havia 2 urls, uma para a versão 800&nbsp;x&nbsp;600 e 
+                    outra para a versão 1024&nbsp;x&nbsp;768, com - potencialmente - o mesmo conteúdo, 
+                    e isso se repetia para o site todo.
+                </li>
+                
+                <li class="w3-margin-top">
+                    <b>2 versões em 1 :</b>uma área de 800&nbsp;x&nbsp;600, mas o site tinha 
+                    1024&nbsp;x&nbsp;768, com rolagem horizontal <br /><br />
+                    <a href="img/01-versoes.jpg" target="_blank" title="site 2 em 1">
+                        <img src="img/01-versoes.jpg" alt="site 2 em 1">
+                    </a>
+                </li>
+                
+                <li class="w3-margin-top">
+                    <b>&lt;table border="0"&gt;</b>Tabelas aninhadas eram utilizadas 
+                    para criar o layout do site, tendo geralmente width de 100% e border 
+                    igual a 0, pois antes do HTML 5 o padrão das tabelas era terem bordas.
+                    <br />Essa metodologia aumenta MUITO (tamanho do arquivo) e dificulta MUITO 
+                    a manutenção do layout. Sem contar que a página fica sem semântica nenhuma.
+                    
+                    <br />
+                    
+                    <div class="w3-tag w3-sign w3-card-4 w3-round w3-green w3-mobile w3-margin-top w3-margin-bottom">
+                      <a target="_blank" class="w3-tag w3-round w3-green w3-border w3-border-white" href="source/01.html">
+                        <i class="fa fa-external-link w3-margin-right"></i>Exemple de layout com table
+                      </a>
+                    </div>
+                    
+                    <div class="w3-tag w3-sign w3-card-4 w3-round w3-green w3-mobile w3-margin-top w3-margin-bottom">
+                      <a target="_blank" class="w3-tag w3-round w3-green w3-border w3-border-white" href="source/02.html">
+                        <i class="fa fa-external-link w3-margin-right"></i>Mesmo layout tableless
+                      </a>
+                    </div>
+                    
+                </li>
+                
+                <li class="w3-margin-top">
+                    <b>Várias folhas de estilo: </b>utilizando o atributo <i>media</i> 
+                    do &lt;link&gt; para aplicar diferentes folhas de estilo em diferentes 
+                    resoluções.
+                    
+                    <div class="w3-code w3-small htmlHigh notranslate">
+                        &lt;link rel="stylesheet" href="css/index-800-600.css" media="screen and (width: 800px)"  /&gt;<span class="eol"></span>
+                        &lt;link rel="stylesheet" href="css/index-1024-768.css" media="screen and (width: 1024px)"  /&gt;
+                    </div>
+                                        
+                </li>
+                
+                <li class="w3-margin-top">
+                    Uma técnica semelhante também era utilizada também para fazer 
+                    consertos exclusivos para o Internet Explorer.
+                </li>
+                
+                <div class="w3-code w3-small htmlHigh notranslate">
+                &lt;!--[if IE]&gt;<span class="eol"></span>
+                   <span class="tab"></span>&lt;link rel="stylesheet" href="ie.css" type="text/css" /&gt;<span class="eol"></span>
+                   <span class="tab"></span>&lt;script src="ie.js"&gt;&lt;/script&gt;<span class="eol"></span>
+                &lt;![endif]--&gt;
+                </div>
+                
+                <li class="w3-margin-top">
+                    <b>Design adaptativo: </b>O uso de Javascript ou redirecionamentos no servidor para 
+                    levar o leitor para diferentes versões do site de forma transparente. Ex: 
+                    uma versão desktop e outra mobile (ou ainda uma versão tablet). Sendo que cada uma 
+                    dessas versões é um site inteiro, e em geral o uusário não consegue entrar na versão "errada".
+                </li>
+                
+            </ul>
+			
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            
+            
+        </article>
+    
+    </main>
+
+    
+        
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>

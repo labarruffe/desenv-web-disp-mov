@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="0" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="100" />
+    <meta name="slide-previous"     content="06-rotate-3d.html" />
+    <meta name="slide-next"         content="08-scale-3d.html" />
+	
+	<title>translate-3d()</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/cube.css">
+    <link rel="stylesheet" href="css/transforms-3d.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    translate-3d()
+                </span>
+            </h1>
+            
+            
+            
+            <p class="w3-padding">
+                Uma trasnlação 3d permite que movamos objetos, mas ganhamos mais 
+                uma dimensão de liberdade para tal: a Z. As translações podem ser 
+                realizadas em quaisquer direções simultaneamente.
+            </p>
+            
+            
+            
+            <h2>Exemplos</h2>
+      
+            <div class="w3-row">
+            
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top w3-border">
+                        <figcaption><b>A) </b>Cubo sem translação</figcaption>
+                        <div class="container">
+                            <div id="cube-a" class="cube identity-matrix">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+                
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top w3-border">
+                        <figcaption><b>B) </b>translate3d(100px, 0px, 0px)</figcaption>
+                        <div class="container">
+                            <div id="cube-b" class="cube translate-x-100px">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+            
+            </div>
+            
+            
+            
+            
+            
+            <div class="w3-row">
+            
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top w3-border">
+                        <figcaption><b>C) </b>translate3d(0px, 100px, 0px)</figcaption>
+                        <div class="container">
+                            <div id="cube-c" class="cube translate-y-100px">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+                
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top w3-border">
+                        <figcaption><b>D) </b>translate3d(0px, 0px, 100px)</figcaption>
+                        <div class="container">
+                            <div id="cube-d" class="cube translate-z-100px">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+            
+            </div>
+            
+            
+            
+            <div class="w3-example">
+                <pre id="output-1" class="w3-code notranslate cssHigh">
+       
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <h2>Como fazer</h2>
+            
+            <div class="w3-example">
+                <pre id="output-1" class="w3-code notranslate cssHigh">
+ 
+/*  Aplicado em B */ 
+/*  Equivalente a translateX(100px) */
+.translate-x-100px {
+    transform:          translate3d(100px, 0px, 0px);
+    -webkit-transform:  translate3d(100px, 0px, 0px);
+}
+
+/*  Aplicado em C */ 
+/*  Equivalente a translateY(100px) */
+.translate-y-100px {
+    transform:          translate3d(0px, 100px, 0px);
+    -webkit-transform:  translate3d(0px, 100px, 0px);
+}
+
+/*  Aplicado em D */ 
+/*  Equivalente a translateZ(100px) */
+.translate-z-100px {
+    transform:          translate3d(0px, 0px, 100px);
+    -webkit-transform:  translate3d(0px, 0px, 100px);
+}    
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <p class="w3-padding">
+                Como podemos ver as translações em X e Y podem ser resolvidas em 
+                2D, e a translação em Z pare não ter efeito ... Mas para resolver 
+                isso precisamos apenas de uma leve ... rotação ...
+            </p>
+            
+             <figure class="w3-center w3-margin-top w3-border">
+                        <figcaption><b>E) </b>rotateY(90deg) translate3d(0px, 0px, 100px)</figcaption>
+                        <div class="container">
+                            <div id="cube-d" class="cube rotate-y-45-translate-z-100px">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+    
+    <script type="text/javascript">
+    
+        ;(function (undefined)
+        {
+            
+            'use strict';
+            
+            
+            
+            var indexes =   'abcd'.split('');
+            
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $output1    =   document.querySelector('#output-1')
+                ,   html        =   [];
+                
+                indexes.forEach(function (index)
+                {
+                
+                    var $cube           =   document.querySelector('#cube-' + index)
+                    ,   matrix          =   window.getComputedStyle($cube).getPropertyValue('transform');
+                    
+                    html[html.length]   =   (index.toUpperCase() + ') ' + matrix);
+                
+                });
+                
+                $output1.innerHTML  =   html.join('\n');
+            
+            });
+        
+        })();
+    
+    </script>
+	
+    
+    
+</body>
+
+</html>

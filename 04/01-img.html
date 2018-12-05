@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="3" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="12" />
+    <meta name="slide-previous"     content="index.html" />
+    <meta name="slide-next"         content="02-background-image.html" />
+	
+	<title>IMG</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+     <style type="text/css">
+    
+        #challenge {    
+            border:             5px solid rgb(200, 50, 50);
+            max-width:          100%;
+            min-width:          320px;
+            overflow:           visible;
+            width:              640px;
+        }
+        
+        #challenge img {
+            height: 431px;
+            width:  1024px;
+        }
+    
+    </style>
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top" w3-include-html="../top-menu.html">
+        &nbsp;  <!--    MEU QUERIDO MENU SUPERIOR   -->
+    </nav>
+	
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">&lt;img /&gt;</span>
+            </h1>
+
+            <div class="w3-center">
+                <h2>IMG</h2>              
+            </div>
+           
+            <p>
+                A tag &lt;img&gt; é o meio mais comum de colocarmos imagens em uma página.
+            </p>   
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            
+            
+            <div class="w3-center">
+                <h2>Qualidades</h2>              
+            </div>
+            
+            <ul class="w3-border-left">
+                <li class="w3-padding">
+                    Fácil de usar, apenas definir o atributo src
+                </li>
+                <li class="w3-padding">
+                    Integrável com a tag semântica &lt;figure&gt;
+                </li>
+                <li class="w3-padding">
+                    Facilmente provê acessibilidade, com o atributo alt
+                </li>
+                <li class="w3-padding">
+                    Tem a informação da proporção da imagem original <i class="fa fa-exclamation"></i>
+                </li>
+            </ul> 
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <div class="w3-center">
+                <h2>Defeitos</h2>              
+            </div>
+            
+            <ul class="w3-border-left">
+                <li class="w3-padding">
+                    Não aderem ao tamanho dos elementos, e podem escapar dos containers
+                </li>
+                <li class="w3-padding">
+                    Podem vir a falhar, e deixar um ícone mostrando onde deveriam estar
+                </li>
+                <li class="w3-padding">
+                    Requer um download completo (requisição) por imagem
+                </li>
+            </ul> 
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <h2 class="w3-padding-48">
+                <span class="w3-tag w3-wide w3-padding-left w3-padding-right w3-theme">DESAFIO!</span>
+            </h2>
+            
+            <div id="challenge">
+                <img src="img/galactus.jpg" alt="Galactus" />
+            </div>
+            
+            <br /><br /><br />
+            
+            <div class="w3-example">
+                <p>
+                    Como não permitir que a imagem acima NÃO escape do container, e ao mesmo tempo não perca a sua proporção?
+                </p>
+                <div class="w3-code notranslate htmlHigh challenge">
+                    
+                    <span>#challenge</span> <span>img</span> <span class="eol">{</span>
+                    <span class="tab"></span><input data-index="0"  type="text" />: <input data-index="1"  type="text" /><span class="eol">;</span>
+                    <span class="tab"></span><input data-index="2"  type="text" />: <input data-index="3"  type="text" /><span class="eol">;</span>
+                    <span>}</span>
+                </div>
+                
+                <div id="challenge-output" class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom">
+                        <i class="fa fa-exclamation"></i>
+                        <span>Desafio não realizado</span>
+                 </div>
+                    
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <div class="w3-center">
+                <h2>Onde usar</h2>              
+            </div>
+            
+            <ul class="w3-border-left">
+                <li class="w3-padding">
+                    Dentro de &lt;figure&gt;
+                </li>
+                <li class="w3-padding">
+                    Dentro de &lt;a&gt;, se essa imagem for relevante ao link ou um glifo
+                </li>
+                <li class="w3-padding">
+                    Identidade do site (banner / menu)
+                </li>
+                <li class="w3-padding">
+                    Grandes componentes visuais que relacionam-se ao conteúdo
+                </li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <div class="w3-center">
+                <h2>Dicas</h2>              
+            </div>
+            
+            <ul class="w3-border-left">
+                <li class="w3-padding">
+                    Sempre limite a largura a 100% (.w3-image faz isso)
+                </li>
+                <li class="w3-padding">
+                    Mexa APENAS na altura ou na largura, e deixe o outro em auto, para não perdermos a proporção
+                </li>
+                <li class="w3-padding">
+                    Use o atributo ALT sempre
+                </li>
+            </ul>
+            
+        </article>
+    
+    </main>
+
+    
+    
+    
+
+    <script src="../js/w3data.js"></script>
+	<script type="text/javascript">
+        w3IncludeHTML();
+    </script>
+    
+    <script src="../js/index.js"></script>
+    
+    
+    
+    <script type="text/javascript">
+    
+        ;(function ()
+        {
+        
+            'use strict';
+            
+            
+            
+            var MESSAGES    =   {
+                'warning':  'Espertinho, mas não é isso que eu quero.'
+            ,   'error':    'Desafio não realizado'
+            ,   'success':  'Desafio completo'
+            };
+            
+            var ICONS       =   {
+                'warning':  'fa-exclamation-triangle'
+            ,   'error':    'fa-ban'
+            ,   'success':  'fa-check'
+            };
+            
+            var COLORS      =   {
+                'warning':  'w3-yellow'
+            ,   'error':    'w3-red'
+            ,   'success':  'w3-green'
+            };
+            
+            var ERROR   =   'error'
+            ,   SUCCESS =   'success'
+            ,   WARNING =   'warning';
+            
+            var WARNING_REGEXP  =   /(px|em|vw|cm|mm|in)|(scale)|(zoom)/gi;
+            
+            var successses  =   [
+                [   'width',        '100%', 'height',       'auto'  ]
+            ,   [   'height',       'auto', 'width',        '100%'  ]
+            ,   [   'max-width',    '100%', 'height',       'auto'  ]
+            ,   [   'height',       'auto', 'max-width',    '100%'  ]
+            ];
+            
+
+            
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $challengeImg       =   document.querySelector('#challenge img')
+                ,   $challengeInputs    =   document.querySelectorAll('.challenge input')
+                ,   $output             =   document.querySelector('#challenge-output')
+                ,   $outputIcon         =   $output.querySelector('i')
+                ,   $outputText         =   $output.querySelector('span');
+                
+                
+                
+                $challengeInputs.forEach (function (input)
+                {
+                
+                    input.addEventListener('input', function ()
+                    {
+                    
+                        var status          =   ERROR
+                        ,   alternatives    =   []
+                        ,   values          =   [
+                            $challengeInputs[0].value.trim().toLocaleLowerCase()
+                        ,   $challengeInputs[1].value.trim().toLocaleLowerCase()
+                        ,   $challengeInputs[2].value.trim().toLocaleLowerCase()
+                        ,   $challengeInputs[3].value.trim().toLocaleLowerCase()
+                        ];  
+                        
+                        successses.forEach(function (success)
+                        {
+                        
+                            alternatives    =   [
+                                (values[0]  === success[0])
+                            ,   (values[1]  === success[1])
+                            ,   (values[2]  === success[2])
+                            ,   (values[3]  === success[3])
+                            ];
+                        
+                            if (alternatives[0] &&  alternatives[1] &&  alternatives[2] &&  alternatives[3]) {
+                               status   = SUCCESS; 
+                            }
+                            
+                            if ((values[1].match(WARNING_REGEXP))
+                            ||  (values[3].match(WARNING_REGEXP))) {
+                                status  =   WARNING;
+                            }
+                        
+                        });
+                        
+                        // Removendo tudo para garantir estado único
+                        removeClass($output,            COLORS[ERROR]);
+                        removeClass($output,            COLORS[SUCCESS]);
+                        removeClass($output,            COLORS[WARNING]);
+                        
+                        removeClass($outputIcon,        ICONS[ERROR]);
+                        removeClass($outputIcon,        ICONS[SUCCESS]);
+                        removeClass($outputIcon,        ICONS[WARNING]);
+                        
+                        // E adiconando as classes referentes ao status
+                        addClass($output,               COLORS[status]);
+                        addClass($outputIcon,           ICONS[status]);
+                        $outputText.innerHTML       =   MESSAGES[status];
+                        
+                        
+                        if (undefined   !==    $challengeImg.style[values[0]]) {
+                            $challengeImg.style[values[0]]  =   values[1];
+                        }
+                        
+                        if (undefined   !==    $challengeImg.style[values[2]]) {
+                            $challengeImg.style[values[2]]  =   values[3];
+                        }
+                    
+                    });
+                
+                });
+            
+            });
+        
+        })(undefined);
+    
+    </script>
+	
+	
+</body>
+
+</html>

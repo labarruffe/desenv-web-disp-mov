@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="7" />
+    <meta name="slide-number"       content="7" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="9" />
+    <meta name="slide-previous"     content="06-matrix.html" />
+    <meta name="slide-next"         content="08-transform-origin.html" />
+	
+	<title>Combinando transformações</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/transforms.css">
+    
+    <style type="text/css">
+    
+        img {
+            transform:          scale(1.2, 1.2);
+            -webkit-transform:  scale(1.2, 1.2);
+        }
+        
+        .mr-mxyzptlk {
+            transform:          rotate(180deg);
+            -webkit-transform:  rotate(180deg);
+        }
+        
+        .mr-mxyzptlk-2 {
+            transform:          rotate(180deg) scale(1.2, 1.2);
+            -webkit-transform:  rotate(180deg) scale(1.2, 1.2);
+        }
+
+        .transform-node {
+            display:    inline-block;
+            height:     276px;
+            width:      160px;
+        }
+    
+    </style>
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    Combinando transformações
+                </span>
+            </h1>
+            
+            <p>
+                O método mais comum para podermos combinar diversas transformações css 
+                é escrevendo-as sequencialmente, separadas por espaço. Mas devemos lembrar 
+                que não podemos combinar as regras em diferentes regras, pois a regra mais 
+                específica sobrescreveria a mais genérica.
+            </p>
+            
+            <p>
+                Por exemplo, para dar escala 1.2 em todas as imagens (Mr. Mxyzptlk e 
+                Anti-Mr. Mxyzptlk), e ainda rotacionar apenas os Mr. Mxyzptlk o caso 
+                abaixo <b>NÃO</b> funcionaria.
+            </p>
+            
+            <div class="w3-example">
+                <pre class="w3-code notranslate cssHigh">
+                
+img {
+    transform:          scale(1.2, 1.2);
+    -webkit-transform:  scale(1.2, 1.2);
+}
+
+.mr-mxyzptlk {
+    transform:          rotate(180deg);
+    -webkit-transform:  rotate(180deg) ;
+}                    
+                </pre>  
+            </div>
+            
+            <div class="w3-row w3-margin-top">
+
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center w3-margin-bottom">
+                        <figcaption class="w3-margin-top w3-margin-bottom"><b>A) </b>Anti-Mr. Mxyzptlk (sem classe)</figcaption>
+                        <img id="mr-mxyzptlk-A" class="w3-border w3-image transform-origin-top-center" src="img/anti-mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+               
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-top w3-margin-bottom"><b>B) </b>Mr. Mxyzptlk (.mr-mxyzptlk)</figcaption>
+                        <img id="mr-mxyzptlk-B" class="w3-border w3-image mr-mxyzptlk" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <p>
+                Teríamos que escrever as transformações combinadas em <i>.mr-mxyzptlk</i> 
+                para obtermos o resultado desejado.
+            </p>
+            
+            <div class="w3-example">
+                <pre class="w3-code notranslate cssHigh">
+
+.mr-mxyzptlk-2 {
+    transform:          rotate(180deg) scale(1.2, 1.2);
+    -webkit-transform:  rotate(180deg) scale(1.2, 1.2);
+}          
+                </pre>  
+            </div>
+            
+            <div class="w3-row w3-margin-top">
+
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center w3-margin-bottom">
+                        <figcaption class="w3-margin-top w3-margin-bottom"><b>A) </b>Anti-Mr. Mxyzptlk (sem classe)</figcaption>
+                        <img class="w3-border w3-image transform-origin-top-center" src="img/anti-mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+               
+                <div class="w3-half w3-padding">
+                
+                    <figure class="w3-margin-top  w3-center w3-margin-bottom">
+                        <figcaption class="w3-margin-top w3-margin-bottom"><b>C) </b>Mr. Mxyzptlk (.mr-mxyzptlk-2)</figcaption>
+                        <img id="mr-mxyzptlk-C" class="w3-border w3-image mr-mxyzptlk-2" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                
+                </div>
+
+            </div>
+            
+            <div class="w3-example" style="margin-top: 50px;">
+                <pre id="matrix-output-1" class="w3-code notranslate cssHigh">
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <h2>Flavour: múltiplos nodos de transformação</h2>
+            
+            <p>
+                Outra estratégia é utilizarmos vários elementos aninhados, cada qual 
+                recebendo apenas um tipo de transformação. No final o elemento mais 
+                interno vai acabar recebendo a soma destas.
+            </p>
+            
+            <div class="w3-container w3-border w3-padding w3-margin-bottom w3-center" style="margin-top: 100px;">
+                <div class="rotate-node transform-node">
+                    <div class="translate-node transform-node">
+                        <div class="skew-node transform-node">
+                            <div class="scale-node transform-node">
+                                <img class="identity-matrix w3-border" src="img/the-impossible-man.jpg" alt="The Impossible Man" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="w3-example">
+                <p>Use esses controles para alterar as transformações do Impossible Man</p>
+                <div id="challenge" class="w3-code notranslate htmlHigh">
+                    
+                    <span>#the-impossible-man</span><span class="eol"> {</span>
+                    
+                    <span class="tab"></span>
+                    translate: 
+                    (<input data-index="0" value="0" type="number" />px, <input value="0" data-index="1" type="number" />px)
+                    <span class="eol">;</span>
+                    
+                    <span class="tab"></span>
+                    rotate: &nbsp;&nbsp;
+                    (<input data-index="2" value="0" type="number" />deg)
+                    <span class="eol">;</span>
+                    
+                    <span class="tab"></span>
+                    skew: &nbsp;&nbsp;&nbsp;&nbsp;
+                    (<input data-index="3" value="0" type="number" />deg, <input value="0" data-index="4" type="number" />deg)
+                    <span class="eol">;</span>
+                    
+                    <span class="tab"></span>
+                    scale: &nbsp;&nbsp;&nbsp;
+                    (<input data-index="5" value="1.0" step="0.1" type="number" />, <input step="0.1" value="1.0" data-index="6" type="number" />)
+                    <span class="eol">;</span>
+                    
+                    <span>}</span>
+                </div>
+                        
+                </div>
+                
+                
+                <h2>Como isso é feito?</h2>
+                
+                <div class="w3-example">
+                    <pre class="w3-code notranslate htmlHigh">
+
+&lt;!--    Apenas um container  --&gt;                    
+&lt;div class="w3-container w3-border w3-padding w3-margin-bottom w3-center" style="margin-top: 100px;"&gt;
+    
+    &lt;div class="rotate-node transform-node"&gt;              &lt;!--    Apenas rotate()      --&gt; 
+        &lt;div class="translate-node transform-node"&gt;       &lt;!--    Apenas translate()   --&gt; 
+            &lt;div class="skew-node transform-node"&gt;        &lt;!--    Apenas skew()        --&gt; 
+                &lt;div class="scale-node transform-node"&gt;   &lt;!--    Apenas scale()       --&gt; 
+                
+                    &lt;img class="identity-matrix w3-border" 
+                            src="img/the-impossible-man.jpg" 
+                            alt="The Impossible Man" /&gt;
+                            
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+&lt;/div&gt;
+                    
+                    </pre>
+                    
+                    <div class="w3-monospace w3-yellow w3-show-inline-block w3-margin-bottom challenge-output">
+                            <i class="fa fa-warning"></i>
+                            <span>Os nodos devem ser do MESMO tamanho do elemento interno.</span>
+                     </div>
+                    
+                </div>
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+    
+    <script type="text/javascript">
+    
+        ;(function (undefined)
+        {
+            
+            'use strict';
+            
+            
+            
+            // Aqui é apenas para as matrizes
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $output1        =   document.querySelector('#matrix-output-1')
+                ,   $mrMxyzptlkA    =   document.querySelector('#mr-mxyzptlk-A')
+                ,   $mrMxyzptlkB    =   document.querySelector('#mr-mxyzptlk-B')
+                ,   $mrMxyzptlkC    =   document.querySelector('#mr-mxyzptlk-C');
+                
+                var transformA  =   window.getComputedStyle($mrMxyzptlkA).getPropertyValue('transform')
+                ,   transformB  =   window.getComputedStyle($mrMxyzptlkB).getPropertyValue('transform')
+                ,   transformC  =   window.getComputedStyle($mrMxyzptlkC).getPropertyValue('transform');
+                
+                $output1.innerHTML  =   
+                    'A: '   + transformA + '\nB: ' + transformB +   '\nC: ' +   transformC;
+            
+            });
+            
+            
+            
+
+            // Aqui é para os múltiplos nodos
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var translateNode   =   document.querySelector('.translate-node')
+                ,   rotateNode      =   document.querySelector('.rotate-node')
+                ,   skewNode        =   document.querySelector('.skew-node')
+                ,   scaleNode       =   document.querySelector('.scale-node');
+                
+                var challenge   =  document.querySelector('#challenge')
+                ,   inputs      =   challenge.querySelectorAll('input');
+                
+                
+                
+                var affectedBy  =   [
+                    translateNode
+                ,   translateNode
+                ,   rotateNode
+                ,   skewNode
+                ,   skewNode
+                ,   scaleNode
+                ,   scaleNode
+                ];
+                
+                var cssRule =   [
+                    'translate(<0>px, <1>px)'
+                ,   'translate(<0>px, <1>px)'
+                ,   'rotate(<2>deg)'
+                ,   'skew(<3>deg, <4>deg)'
+                ,   'skew(<3>deg, <4>deg)'
+                ,   'scale(<5>, <6>)'
+                ,   'scale(<5>, <6>)'
+                ];
+                
+                var parseType   =   [
+                    parseInt
+                ,   parseInt
+                ,   parseInt
+                ,   parseInt
+                ,   parseInt
+                ,   parseFloat
+                ,   parseFloat
+                ];
+                
+                var defaults    =   [
+                    0
+                ,   0
+                ,   0
+                ,   0
+                ,   0
+                ,   1
+                ,   1
+                ];
+                
+                var values  =   defaults.slice(0);
+                
+                
+                var checkChallenge  =   function (event)
+                {
+                
+                    var firedBy =   event.target
+                    ,   index   =   parseInt(firedBy.attributes['data-index'].value)
+                    ,   value   =   parseType[index].call(null, firedBy.value);
+                    
+                    if (isNaN(value)) {
+                        value           =   defaults[index];
+                        firedBy.value   =   value;
+                    }
+                    
+                    values[index]   =   value;
+                    
+                    var rule    =   cssRule[index]
+                    ,   matches =   rule.match(/<\d+>/gi);
+                    
+                    matches.forEach(function (match)
+                    {
+                    
+                        var matchedIndex    =   parseInt(match.replace(/[^\d]/gi, ''));
+                        rule    =   rule.replace(match, values[matchedIndex]);
+                    
+                    });
+                    
+                    var node    =   affectedBy[index];
+                    
+                    console.debug(node);
+                    
+                    node.style['transform']         =   rule;
+                    node.style['-webkit-transform'] =   rule;
+
+                };
+                
+                
+                // Bindando os inputs
+                inputs.forEach (function (input)
+                {
+                
+                    input.addEventListener('input', checkChallenge);
+                
+                })
+                
+                console.debug(inputs);
+            
+            });
+        
+        })();
+    
+    </script>
+	
+    
+    
+</body>
+
+</html>

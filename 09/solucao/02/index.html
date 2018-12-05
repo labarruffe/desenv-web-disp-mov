@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <link rel="stylesheet" href="02.css">
+    
+    <style type="text/css">
+    
+        /*  Tirando o float o efeito ocorrerá apenas sobre os botões, */
+        /*  pois o container terá altura 0 */
+        .button-container {
+            float:  left;
+        }
+        
+        .button {
+            background-color:   rgb(255, 255, 255);
+            color:              rgb(0, 0, 0);
+            cursor:             pointer;
+            
+            transition:         all ease-in-out 666ms;
+            -webkit-transition: all ease-in-out 666ms;
+        }
+        
+        .button-container:hover .button {
+            background-color:   rgb(0, 0, 0);
+            color:              rgb(255, 255, 255);
+        }
+    
+    </style>
+    
+<head>
+
+<body>
+
+    <h1>Simultaneamente</h1>
+
+    <div class="button-container">
+    
+        <button class="button">Transicione a todos nós</button>
+        
+        <button class="button">Transicione a todos nós</button>
+        
+        <button class="button">Transicione a todos nós</button>
+        
+        <button class="button">Transicione a todos nós</button>
+        
+        <button class="button">Transicione a todos nós</button>
+
+     </div>
+
+</body>
+
+</html>

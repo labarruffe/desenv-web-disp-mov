@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="3" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="12" />
+    <meta name="slide-previous"     content="index.html" />
+    <meta name="slide-next"         content="02-inconsistencias.html" />
+	
+	<title>Inconsistências em elementos</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top" w3-include-html="../top-menu.html">
+        &nbsp;  <!--    MEU QUERIDO MENU SUPERIOR   -->
+    </nav>
+	
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">Inconsistências em elementos</span>
+            </h1>
+
+            <div class="w3-center">
+                <h2>Página de teste</h2>              
+            </div>
+           
+            <p>
+                Clique na tag abaixo para visualizar a página de teste explorada nos screen shots abaixo. 
+                Ela abrirá em outra página.
+            </p>
+           
+            <div class="w3-tag w3-sign w3-card-4 w3-round w3-green w3-mobile w3-margin-top w3-margin-bottom">
+              <a target="_blank" class="w3-tag w3-round w3-green w3-border w3-border-white" href="source/01.html">
+                <i class="fa fa-code w3-margin-right"></i> Página de teste 
+              </a>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            
+            
+            <div class="w3-center">
+                <h2>Maiores problemas</h2>              
+            </div>
+            
+            <ul class="w3-border-left">
+                <li class="w3-padding">
+                    Tamanhos das fontes nos &lt;h1&gt; - &lt;h6&gt;
+                </li>
+                <li class="w3-padding">
+                    Margens, alturas de linha e paddings dos elementos
+                </li>
+                <li class="w3-padding">
+                    Cascading da font-family em elementos de formulário
+                </li>
+                <li class="w3-padding">
+                    Displays de alguns elementos, principalmente em navegadores antigos
+                </li>
+            </ul> 
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+           
+           
+           
+           
+            
+            <div class="w3-center">
+                <h2>Screenshots</h2>
+                <h3>Desktop</h3>
+                <p>Como a página de teste acima é renderizada em diferentes navegadores para desktop.</p>
+            </div>
+
+            <div class="w3-row-padding">
+
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-chrome.jpg" title="Google Chrome">
+                            <img src="img/01-chrome.jpg" class="w3-image" alt="Google Chrome" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Google Chrome
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-firefox.jpg" title="Mozilla Firefox">
+                            <img src="img/01-firefox.jpg" class="w3-image" alt="Mozilla Firefox" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Mozilla Firefox
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+            </div>
+                
+                
+                
+            <div class="w3-row-padding">
+            
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-edge.jpg" title="Microsoft Edge">
+                            <img src="img/01-edge.jpg" class="w3-image" alt="Microsoft Edge" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Microsoft Edge
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-safari.jpg" title="Apple Safari">
+                            <img src="img/01-safari.jpg" class="w3-image" alt="Apple Safari" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Apple Safari
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+
+            </div>
+            
+            
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <div class="w3-center">
+                <h3>Mobile</h3>
+                <p>Como a página de teste acima é renderizada em diferentes dispositivos móveis.</p>
+            </div>
+
+            <div class="w3-row-padding">
+
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-android.jpg" title="Android">
+                            <img src="img/01-android.jpg" class="w3-image" alt="Android" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Android
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-ios.jpg" title="iOS">
+                            <img src="img/01-ios.jpg" class="w3-image" alt="iOS" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  iOS
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+                
+            </div>
+                
+                
+                
+            <div class="w3-row-padding">
+            
+                <div class="w3-half">
+                    <figure class="w3-figure">
+                        <a target="_blank" href="img/01-windows-phone.jpg" title="Windows Phone">
+                            <img src="img/01-windows-phone.jpg" class="w3-image" alt="Windows Phone" />
+                        
+                            <figcaption>
+                                <i class="fa fa-file-image-o w3-margin-right"></i>  Windows Phone
+                            </figcaption>
+                        </a>
+                   </figure>
+                </div>
+
+            </div>
+
+            
+            
+        </article>
+    
+    </main>
+
+    
+    
+    
+
+    <script src="../js/w3data.js"></script>
+	<script type="text/javascript">
+        w3IncludeHTML();
+    </script>
+    
+    <script src="../js/index.js"></script>
+	
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="2" />
+    <meta name="slide-number"       content="13" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="18" />
+    <meta name="slide-previous"     content="11-display-none.html" />
+    <meta name="slide-next"         content="13-float-left.html" />
+	
+	<title>box-sizing</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/revision.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    box-sizing
+                </span>
+            </h1>
+            
+            
+            
+            <div class="border-1 width-half">
+                box-sizing:	border-box; padding: 0px;
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <div class="border-1 padding-20 width-half">
+                box-sizing:	border-box; padding: 20px;
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <div class="border-20 padding-20 width-half">
+                box-sizing:	border-box; padding: 20px; border: 20px;
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <div class="border-1 padding-0 width-half box-content">
+                box-sizing:	content-box; padding: 0px;
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <div class="border-1 padding-20 width-half box-content">
+                box-sizing:	content-box; padding: 20px;
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <div class="border-20 padding-20 width-half box-content">
+                box-sizing:	content-box;  padding: 20px; border: 20px;
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+  
+  
+  
+            <p class="w3-padding">
+                Box sizing controla de onde e width e height são medidos em um 
+                elemento. A maioria dos navegadores tem como padrão content-box, ou 
+                seja, as dimensões são medidas a partir do conteúdo. O IE por sua 
+                vez usa por padrão a border-box, ou seja, paddings e bordas contam 
+                nas dimensões do elemento. <b>RECOMEDO FORTEMENTE</b> que se use box-sizing 
+                como border-box, o uso do content-box é muito situacional, e 
+                geralmente trará mais problemas do que benefícios.
+            </p>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <div class="w3-example">
+                <pre id="output" class="w3-code notranslate cssHigh">
+    
+/*  As 3 linhas MAIS comuns nos meus projetos   */    
+* {
+    box-sizing: border-box !important;
+}
+                </pre>
+            </div>
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+	
+    
+    
+</body>
+
+</html>

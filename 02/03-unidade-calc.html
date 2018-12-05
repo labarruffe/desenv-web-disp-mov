@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="2" />
+    <meta name="slide-number"       content="4" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="18" />
+    <meta name="slide-previous"     content="02-unidade-vw-vh.html" />
+    <meta name="slide-next"         content="04-position-static.html" />
+	
+	<title>unidade: calc()</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <style type="text/css">
+    
+        #challenge {
+            background-color:   rgb(255, 0, 0);
+            font-size:          0px;
+        }
+        
+        #challenge .challenge-col {
+            background-color:   rgb(255, 255, 255);
+            box-sizing:         border-box;
+            border:             1px solid rgb(0, 0, 0);
+            display:            inline-block;
+            float:              left;
+            font-size:          18px;
+            height:             50px;
+            line-height:        50px;
+            margin:             0px;
+            vertical-align:     middle;
+        }
+        
+        #challenge .challenge-col:last-child {
+            float:  none;
+        }
+    
+    </style>
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    unidade: calc()
+                </span>
+            </h1>
+            
+            
+            
+            <h2 class="w3-padding-24">
+                <span class="w3-tag w3-wide w3-padding-left w3-padding-right">DESAFIO!</span>
+            </h2>
+            
+            <div id="challenge">
+                <div class="challenge-col">1</div>
+                <div class="challenge-col">2</div>
+                <div class="challenge-col">3</div>
+            </div>
+            
+            <div class="w3-example">
+                <p class="w3-padding">
+                    Como fazer com que essas 3 pobres coluninhas saiam do aperto, 
+                    e ocupem de maneira igual os 100% do seu container vermelho, 
+                    sem nada sobrar, nem nada faltar de espaço - o encaixe perfeito. 
+                    E claro, usando a menor fração possível, como sempre na Matemática.
+                </p>
+                <div class="w3-code notranslate htmlHigh challenge">
+                    <span>#challenge</span> <span>.challenge-col</span> <span class="eol">{</span>
+                    <span class="tab"></span><span>width: </span> <input id="challenge-input" type="text" />;<span class="eol"></span>
+                    <span>}</span>
+                </div>
+                
+                <div id="challenge-output" class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom challenge-output">
+                    <i class="fa fa-ban w3-margin-right"></i>
+                    <span>Desafio não realizado</span>
+                </div>
+            
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <p class="w3-padding">
+                Calc não é exatamente uma unidade, mas sim uma função que recebe uma 
+                operação aritmética envolvendo medidas em CSS e o tamanho final do 
+                elemento é avaliado utilizando isso. Os operandos podem, inclusive, 
+                ser unidades relativas, e nesse caso o tamanho do elemento será reavaliado
+                em tempo real.
+            </p>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2>Estrutura da função</h2>
+            
+            <div class="w3-example">
+                <pre class="w3-code cssHigh">
+
+Atributo        Nome de    Primeira Operação    Segunda             
+com medidas     função     Medida   (+-/*)      Medida (escalar)
++--------+      +------+  +-------+ +---+ +------+
+| height |:     | calc |( | 100vh | | - | | 70px |);
++--------+      +------+  +-------+ +---+ +------+
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2>Exemplos de uso:</h2>
+            
+            <div class="w3-example">
+                <pre class="w3-code cssHigh">
+                
+    /* tela cheia (altura), levando em conta a barra do safari */
+    .is-safari .full-window-height {
+        min-height:	calc(100vh - 70px);
+        height:		calc(100vh - 70px);
+        max-height:	calc(100vh - 70px);
+    }
+
+    /* largura de 12 colunas */
+    .col.cols-12 {
+        min-height:	calc(100% / 12);
+        height:		calc(100% / 12);
+        max-height:	calc(100% / 12);
+    }
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+        
+        
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+    
+    
+    
+    <script type="text/javascript">
+    
+        ;(function (undefined)
+        {
+        
+            var MESSAGES    =   {
+                'warning':  'Espertinho, mas não é isso que eu quero.'
+            ,   'error':    'Desafio não realizado'
+            ,   'success':  'Desafio completo'
+            };
+            
+            var ICONS       =   {
+                'warning':  'fa-exclamation-triangle'
+            ,   'error':    'fa-ban'
+            ,   'success':  'fa-check'
+            };
+            
+            var COLORS      =   {
+                'warning':  'w3-yellow'
+            ,   'error':    'w3-red'
+            ,   'success':  'w3-green'
+            };
+            
+            var ERROR   =   'error'
+            ,   SUCCESS =   'success'
+            ,   WARNING =   'warning';
+            
+            
+            
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $challengeCols  =   document.querySelectorAll('#challenge .challenge-col')
+                ,   $challengeInput =   document.querySelector('#challenge-input')
+                ,   $output         =   document.querySelector('#challenge-output')
+                ,   $outputIcon     =   $output.querySelector('i')
+                ,   $outputText     =   $output.querySelector('span');
+                
+                $challengeInput.addEventListener('input', function ()
+                {
+                
+                    var status  =   ERROR
+                    ,   value   =   $challengeInput.value.trim().toLocaleLowerCase();
+                    
+                    if (value.match(/(px|\d+\.\d+\%)/)) {
+                        status  =   WARNING;
+                    } else if (value == 'calc(100% / 3)') {
+                        status  =   SUCCESS;
+                    }
+                    
+                    // Removendo tudo para garantir estado único
+                    removeClass($output,            COLORS[ERROR]);
+                    removeClass($output,            COLORS[SUCCESS]);
+                    removeClass($output,            COLORS[WARNING]);
+                    
+                    removeClass($outputIcon,        ICONS[ERROR]);
+                    removeClass($outputIcon,        ICONS[SUCCESS]);
+                    removeClass($outputIcon,        ICONS[WARNING]);
+                    
+                    // E adiconando as classes referentes ao status
+                    addClass($output,               COLORS[status]);
+                    addClass($outputIcon,           ICONS[status]);
+                    $outputText.innerHTML       =   MESSAGES[status];
+                    
+                    $challengeCols.forEach(function (col)
+                    {
+                        col.style.width =   value;
+                    });
+                
+                });
+            
+            });
+        
+        })();
+    
+    </script>
+	
+    
+    
+</body>
+
+</html>

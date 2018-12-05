@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="7" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="8" />
+    <meta name="slide-previous"     content="07-combinando.html" />
+    <meta name="slide-next"         content="exercicios-07.zip" />
+	
+	<title>transform-origin</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/transforms.css">
+    
+    <style type="text/css">
+    
+        .bar {
+            pointer-events:     all;
+            transform:          scale(1.0, 1.0);
+            transition:         transform ease-in-out 333ms;
+            width:              50%;
+            -webkit-transform:  scale(1.0, 1.0);
+            -webkit-transition: -webkit-transform ease-in-out 333ms;
+        }
+        
+        .bar:hover {
+            transform:          scale(2.0, 1.0);
+            -webkit-transform:  scale(2.0, 1.0);
+        }
+    
+    </style>
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    transform-origin
+                </span>
+            </h1>
+            
+            <p>
+                É o atributo CSS que dita em que ponto da imagem a transformação 
+                deve ser aplicada. O valor padrão é <i>center center</i>, ou seja 
+                a transformação vai ser aplciada a partir do centro da imagem, mas 
+                isso pode ser alterado conforme nossa necessidade.
+            </p>
+            
+            <p>
+                Os valores desse atributo são tuplas, que expresam a origem em 
+                <i>(x, y)</i> e podem receber valores:
+            </p>
+            
+            <ul class="w3-border-left">
+                <li>px</li>
+                <li>%</li>
+                <li>top, right, bottom, left, center</li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <p>
+                Para esse exemplo todos as imagens abaixo receberão uma rotação de 
+                45 graus para observarmos a diferença entre as origens da transformação.
+            </p>
+            
+            
+            
+            <div class="w3-row w3-margin-top w3-center">
+
+                <figure class="w3-margin-top  w3-center">
+                    <figcaption class="w3-margin-bottom"><b>A) </b>transform-origin(center, center)</figcaption>
+                    <img id="mr-mxyzptlk-A" class="w3-border w3-image rotate-2d-45 transform-origin-center-center" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                </figure>
+
+            </div>
+            
+            
+            
+            <div class="w3-row w3-margin-top w3-center">
+
+                <div class="w3-half w3-center">
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-bottom"><b>B) </b>transform-origin(top, center)</figcaption>
+                        <img id="mr-mxyzptlk-B" class="w3-border w3-image rotate-2d-45 transform-origin-top-center" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                </div>
+                
+                <div class="w3-half w3-center">
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-bottom"><b>C) </b>transform-origin(bottom, center)</figcaption>
+                        <img id="mr-mxyzptlk-C" class="w3-border w3-image rotate-2d-45 transform-origin-bottom-center" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                </div>
+
+            </div>
+            
+            
+            
+            <div class="w3-row w3-margin-top w3-center">
+
+                <div class="w3-half w3-center">
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-bottom"><b>D) </b>transform-origin(top, left)</figcaption>
+                        <img id="mr-mxyzptlk-D" class="w3-border w3-image rotate-2d-45 transform-origin-top-left" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                </div>
+                
+                <div class="w3-half w3-center">
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-bottom"><b>E) </b>transform-origin(top, right)</figcaption>
+                        <img id="mr-mxyzptlk-E" class="w3-border w3-image rotate-2d-45 transform-origin-top-right" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                </div>
+
+            </div>
+            
+            
+            
+            <div class="w3-row w3-margin-top w3-center">
+
+                <div class="w3-half w3-center">
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-bottom"><b>F) </b>transform-origin(bottom, left)</figcaption>
+                        <img id="mr-mxyzptlk-F" class="w3-border w3-image rotate-2d-45 transform-origin-bottom-left" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                </div>
+                
+                <div class="w3-half w3-center">
+                    <figure class="w3-margin-top  w3-center">
+                        <figcaption class="w3-margin-bottom"><b>G) </b>transform-origin(bottom, right)</figcaption>
+                        <img id="mr-mxyzptlk-G" class="w3-border w3-image rotate-2d-45 transform-origin-bottom-right" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                    </figure>
+                </div>
+
+            </div>
+
+            <hr class="w3-margin-bottom" style="margin-top: 120px;" />
+            
+            
+            
+            <p>
+                Vamos ver um exemplo mais ilustrativos, como num gráfico de barras. 
+                Ao mouse ser colocado sobre um deles ele dobrará de tamanho, 
+                recebendo um <i>scale(2.0, 1.0)</i>
+            </p>
+            
+            <div class="w3-container w3-border-left w3-margin-top">
+            
+                <div class="bar w3-theme-l2 w3-border w3-padding transform-origin-center-center">transform-origin: center center;</div>
+                <div class="bar w3-theme-l2 w3-border w3-padding transform-origin-right-center w3-margin-top">transform-origin: right center;</div>
+                <div class="bar w3-theme-l2 w3-border w3-padding transform-origin-left-center w3-margin-top">transform-origin: left center;</div>
+                
+            
+            </div>
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+	
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,388 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="0" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="100" />
+    <meta name="slide-previous"     content="05-transform-style.html" />
+    <meta name="slide-next"         content="07-translate-3d.html" />
+	
+	<title>rotate3d()</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/cube.css">
+    <link rel="stylesheet" href="css/transforms-3d.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    rotate3d()
+                </span>
+            </h1>
+            
+            
+            
+            <p class="w3-padding">
+                Uma rotação 3D permite-nos girar um objeto nos planos X, Y e/ou Z. 
+                Rotações no eixo Z são equivalentes à rotações 2d vizualmente. Além de podermos 
+                rotacionar os objetos em um eixo também podemos rotacioná-los em mais 
+                de um eixo ao mesmo tempo.
+            </p>
+    
+            
+            <h2>Exemplos</h2>
+      
+            <div class="w3-row">
+            
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top">
+                        <figcaption><b>A) </b>Cubo sem rotação</figcaption>
+                        <div class="container">
+                            <div id="cube-a" class="cube identity-matrix">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+                
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top">
+                        <figcaption><b>B) </b>Cubo rotacionado 45º em Z</figcaption>
+                        <div class="container">
+                            <div id="cube-b" class="cube rotate-z-45">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+            
+            </div>
+            
+            
+            
+            
+            
+            <div class="w3-row">
+            
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top">
+                        <figcaption><b>C) </b>Cubo rotacionado 45º em X</figcaption>
+                        <div class="container">
+                            <div id="cube-c" class="cube rotate-x-45">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+                
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top">
+                        <figcaption><b>D) </b>Cubo rotacionado 45º em Y</figcaption>
+                        <div class="container">
+                            <div id="cube-d" class="cube rotate-y-45">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+            
+            </div>
+            
+            
+            
+            <div class="w3-row">
+            
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top">
+                        <figcaption><b>E) </b>Cubo rotacionado 45º em X e Y</figcaption>
+                        <div class="container">
+                            <div id="cube-e" class="cube rotate-xy-45">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+                
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top">
+                        <figcaption><b>F) </b>Cubo rotacionado 45º em X e Z</figcaption>
+                        <div class="container">
+                            <div id="cube-f" class="cube rotate-xz-45">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+            
+            </div>
+            
+            
+            
+            <div class="w3-row">
+            
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top">
+                        <figcaption><b>G) </b>Cubo rotacionado 45º em Y e Z</figcaption>
+                        <div class="container">
+                            <div id="cube-g" class="cube rotate-yz-45">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+                
+                <div class="w3-half">
+                
+                    <figure class="w3-center w3-margin-top">
+                        <figcaption><b>H) </b>Cubo rotacionado 45º em X, Y e Z</figcaption>
+                        <div class="container">
+                            <div id="cube-h" class="cube rotate-xyz-45">
+                                <div class="face front">1</div>
+                                <div class="face back">2</div>
+                                <div class="face right">3</div>
+                                <div class="face left">4</div>
+                                <div class="face top">5</div>
+                                <div class="face bottom">6</div>
+                            </div>  
+                        </div>
+
+                    </figure>
+                
+                </div>
+            
+            </div>
+            
+            
+            
+            <div class="w3-example">
+                <pre id="output-1" class="w3-code notranslate cssHigh">
+       
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2>Como fazer</h2>
+            
+            <div class="w3-example">
+                <pre id="output-1" class="w3-code notranslate cssHigh">
+                
+/*  Aplicado em B   */
+/*  Equivalente a rotateZ(45deg) */
+.rotate-z-45 {
+    transform:          rotate3d(0, 0, 1, 45deg);
+    -webkit-transform:  rotate3d(0, 0, 1, 45deg);
+} 
+
+/*  Aplicado em C   */
+/*  Equivalente a rotateX(45deg) */
+.rotate-x-45 {
+    transform:          rotate3d(1, 0, 0, 45deg);
+    -webkit-transform:  rotate3d(1, 0, 0, 45deg);
+} 
+
+/*  Aplicado em D   */
+/*  Equivalente a rotateY(45deg) */
+.rotate-y-45 {
+    transform:          rotate3d(0, 1, 0, 45deg);
+    -webkit-transform:  rotate3d(0, 1, 0, 45deg);
+} 
+
+/*  Aplicado em E   */
+.rotate-xy-45 {
+    transform:          rotate3d(1, 1, 0, 45deg);
+    -webkit-transform:  rotate3d(1, 1, 0, 45deg);
+}
+
+/*  Aplicado em F   */
+.rotate-xz-45 {
+    transform:          rotate3d(1, 0, 1, 45deg);
+    -webkit-transform:  rotate3d(1, 0, 1, 45deg);
+}
+
+/*  Aplicado em G   */
+.rotate-yz-45 {
+    transform:          rotate3d(0, 1, 1, 45deg);
+    -webkit-transform:  rotate3d(0, 1, 1, 45deg);
+}
+
+/*  Aplicado em H   */
+.rotate-xyz-45 {
+    transform:          rotate3d(1, 1, 1, 45deg);
+    -webkit-transform:  rotate3d(1, 1, 1, 45deg);
+}       
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <div class="w3-tag w3-large w3-sign w3-card-4 w3-red w3-mobile w3-margin-top w3-margin-bottom">
+              <span target="_blank" class="w3-tag w3-round w3-red w3-border-white w3-left-align">
+                    <i class="fa fa-exclamation-triangle w3-margin-right"></i> 
+                    <b>CUIDADO: </b>Ao rotacionarmos um objeto rotacionamos todo o 
+                    eixo de coordenadas deste, ou seja, muito cuidado com o translate 
+                    aplicado depois, pois ele refletirá a nova orientação do objeto.
+              </span>
+            </div>
+            
+            <figure class="w3-center w3-margin-top">
+                <img src="img/rotate-coordinates.jpg" alt="Como a rotação afeta o sistema de coordenadas do objeto" class="w3-image"/>
+                <figcaption>Como a rotação afeta o sistema de coordenadas do objeto</figcaption>
+            </figure>
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+    
+    <script type="text/javascript">
+    
+        ;(function (undefined)
+        {
+            
+            'use strict';
+            
+            
+            
+            var indexes =   'abcdefgh'.split('');
+            
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $output1    =   document.querySelector('#output-1')
+                ,   html        =   [];
+                
+                indexes.forEach(function (index)
+                {
+                
+                    var $cube           =   document.querySelector('#cube-' + index)
+                    ,   matrix          =   window.getComputedStyle($cube).getPropertyValue('transform');
+                    
+                    html[html.length]   =   (index.toUpperCase() + ') ' + matrix);
+                
+                });
+                
+                $output1.innerHTML  =   html.join('\n');
+            
+            });
+        
+        })();
+    
+    </script>
+	
+    
+    
+</body>
+
+</html>

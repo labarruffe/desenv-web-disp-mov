@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="2" />
+    <meta name="slide-number"       content="2" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="30" />
+    <meta name="slide-previous"     content="00-meta.html" />
+    <meta name="slide-next"         content="02-unidade-vw-vh.html" />
+	
+	<title>unidade: em</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/revision.css">
+    
+    <style type="text/css">
+    
+        #challenge {    
+            min-width:          calc(3em + 2px);
+            width:              calc(3em + 2px) ;
+            max-width:          calc(3em + 2px);
+            
+            min-height:         calc(1em + 2px);
+            height:             calc(1em + 2px);
+            max-height:         calc(1em + 2px);
+            
+            word-break:         break-word;
+            overflow:           visible;
+            background:         rgb(255, 255, 0);
+            
+            border:             1px solid rgb(0, 0, 0);
+            border-collapse:    collapse;
+            
+            font-size:          32px;
+            line-height:        1em;
+            text-align:         center;
+        }
+        
+        #challenge span {
+            display:        inline-block;
+            width:          1em;
+            height:         1em;
+            background:     rgb(222, 222, 222);
+            line-height:    1em;
+        }
+    
+    </style>
+
+</head>
+
+<body>
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-wide w3-padding-left w3-padding-right">unidade: em</span>
+            </h1>
+            
+            <h2 class="w3-padding-24">
+                <span class="w3-tag w3-wide w3-padding-left w3-padding-right">DESAFIO!</span>
+            </h2>
+            
+            <div id="challenge" class="reset">
+                <span class="reset">TNT</span>
+            </div>
+            
+            <br /><br /><br />
+            
+            <div class="w3-example">
+                <p class="w3-padding">
+                    Sabendo que a div com bordas acima tem espaço para exatamente 3 letras, qual seria a melhor maneira de 
+                    encaixar a span escrito TNT dentro desta sem deixar sobrar espaço dentro da div 
+                    e nem deixar o span vazar para fora da borda?
+                </p>
+                <div class="w3-code notranslate htmlHigh challenge">
+                    <span>#challenge</span> <span>span</span> <span class="eol">{</span>
+                    <span class="tab"></span><span>width: </span> <input id="challenge-input" type="text" />;<span class="eol"></span>
+                    <span>}</span>
+                </div>
+                
+                <div id="challenge-output" class="w3-monospace w3-red w3-show-inline-block w3-margin-bottom challenge-output">
+                    <i class="fa fa-ban w3-margin-right"></i>
+                    <span>Desafio não realizado</span>
+                </div>
+            
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <p class="w3-padding">
+                É uma medida baseada no tamanho da fonte do elemento, ou seja, 1 em 
+                equivale a 100% do tamanho da fonte do elemento, sendo multiplicativo. 
+                2 em equivale e 200% do tamanho da fonte, 0.5em equivalem a 50% do 
+                tamanho da fonte e assim por diante. Por padrão a maioria dos 
+                navegadores têm uma fonte de 16px, logo, 1em equivale a 16px. 
+                Recomendo fortemente o uso de EMs para paddings de texto, pois assim 
+                podemos manter um bom fluxo vertical de leitura. Ex.: padding: 1.5em;
+            </p>
+            
+            <span class="reset inline-block border-1">
+                Tamanho natural.
+            </span>
+            
+            <br /><br />
+            
+            <span class="reset inline-block padding-1-5-em border-1">
+                Padding: 1.5em;
+            </span>
+            
+            <br /><br />
+            
+            <span class="reset inline-block height-3-em border-1">
+                height: 3em; font-size: 16px;
+            </span>
+            
+            <br /><br />
+            
+            <span class="reset inline-block height-3-em font-32-px border-1">
+                height: 3em; font-size: 32px;
+            </span>
+
+        </article>
+    
+    </main>
+
+    
+    
+    
+
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+    
+    <script type="text/javascript">
+    
+        ;(function (undefined)
+        {
+        
+            var MESSAGES    =   {
+                'warning':  'Espertinho, mas não é isso que eu quero.'
+            ,   'error':    'Desafio não realizado'
+            ,   'success':  'Desafio completo'
+            };
+            
+            var ICONS       =   {
+                'warning':  'fa-exclamation-triangle'
+            ,   'error':    'fa-ban'
+            ,   'success':  'fa-check'
+            };
+            
+            var COLORS      =   {
+                'warning':  'w3-yellow'
+            ,   'error':    'w3-red'
+            ,   'success':  'w3-green'
+            };
+            
+            var ERROR   =   'error'
+            ,   SUCCESS =   'success'
+            ,   WARNING =   'warning';
+            
+            
+            
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $challengeSpan  =   document.querySelector('#challenge span')
+                ,   $challengeInput =   document.querySelector('#challenge-input')
+                ,   $output         =   document.querySelector('#challenge-output')
+                ,   $outputIcon     =   $output.querySelector('i')
+                ,   $outputText     =   $output.querySelector('span');
+                
+                $challengeInput.addEventListener('input', function ()
+                {
+                
+                    var status  =   ERROR
+                    ,   value   =   $challengeInput.value.trim().toLocaleLowerCase();
+                    
+                    
+                    if (value.match(/(98px|100%)/)) {
+                        status  =   WARNING;
+                    } else if (value == '3em') {
+                        status  =   SUCCESS;
+                    }
+                    
+                    // Removendo tudo para garantir estado único
+                    removeClass($output,            COLORS[ERROR]);
+                    removeClass($output,            COLORS[SUCCESS]);
+                    removeClass($output,            COLORS[WARNING]);
+                    
+                    removeClass($outputIcon,        ICONS[ERROR]);
+                    removeClass($outputIcon,        ICONS[SUCCESS]);
+                    removeClass($outputIcon,        ICONS[WARNING]);
+                    
+                    // E adiconando as classes referentes ao status
+                    addClass($output,               COLORS[status]);
+                    addClass($outputIcon,           ICONS[status]);
+                    $outputText.innerHTML       =   MESSAGES[status];
+                    
+                    $challengeSpan.style.width  =   value;
+                
+                });
+            
+            });
+        
+        })();
+    
+    </script>
+	
+</body>
+
+</html>

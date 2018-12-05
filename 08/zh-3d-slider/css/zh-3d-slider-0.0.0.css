@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    background-color:   #facada;
+    font-size:          16px;
+}
+
+
+
+/*  680 @ 1920 */
+.zh-3d-slider { 
+    background-color:   rgb(255, 255, 255);
+    display:            block;
+    height:             calc(100vh - 40px);
+    max-width:          100vw;
+    min-width:          320px;
+    overflow:           visible;
+    perspective:        6666vw;
+    width:              100vw;
+    -webkit-persective: 6666vw;
+}
+
+.is-safari .zh-3d-slider {
+    height:             calc(100vh - (40px + 70px));
+}
+
+.has-mobile-stub .zh-3d-slider {
+    height:             calc(100vh - (40px + 55px));
+}
+
+.is-safari.has-mobile-stub .zh-3d-slider {
+    height:             calc(100vh - (40px + 55px + 70px));
+}
+
+@media all and (min-width: 1000px)
+{
+    
+    .zh-3d-slider { 
+        height:     calc(60vh - 40px);
+        min-height: calc(60vh - 40px);
+        max-height: 680px;
+    }
+    
+    .is-safari .zh-3d-slider {
+        height:     calc(60vh - (40px + 70px));
+        min-height: calc(60vh - (40px + 70px));
+    }
+    
+    .has-mobile-stub .zh-3d-slider {
+        height:     calc(60vh - (40px + 55px));
+        min-height: calc(60vh - (40px + 55px));
+    }
+    
+    .is-safari.has-mobile-stub .zh-3d-slider {
+        height:     calc(60vh - (40px + 55px + 70px));
+        min-height: calc(60vh - (40px + 55px + 70px));
+    }
+    
+}
+
+
+
+
+
+
+.w3-clearfix {
+    clear:      both;
+    display:    block;
+}
+
+.w3-clearfix:after, 
+.w3-clearfix:before {
+    clear:          both;
+    content:        ' ';
+    display:        table;
+    font-size:      0px;
+    line-height:    0px;
+}
+
+.zh-3d-slider-items {
+    display:            inline-block;
+    height:             calc(100% - 10%);
+    max-height:         calc(100% - 10%);
+    max-width:          1000vw;
+    min-height:         calc(100% - 10%);
+    min-width:          100%;
+    position:           relative;
+    width:              100%;
+}   
+
+@media all and (min-width: 1000px)
+{
+    
+    .zh-3d-slider-items {
+        max-width:  1560px !important;
+        min-width:  1000px;
+        width:      100vw;
+    }
+    
+}    
+
+.zh-3d-slider-item {
+    backface-visibility:                visible;
+    background-color:                   rgb(0, 0, 0);
+    background-position:                center center;
+    background-repeat:                  no-repeat;
+    background-size:                    cover;
+    border-radius:                      8px;
+    color:                              rgb(255, 255, 255);
+    height:                             60%;
+    image-rendering:                    optimizeQuality;
+    image-rendering:                    auto;
+    left:                               0px;
+    max-height:                         60%;
+    max-width:                          80%;
+    min-height:                         60%;
+    min-width:                          80%;
+    overflow:                           hidden;
+    position:                           absolute;
+    text-align:                         left;
+    text-shadow:                        rgb(0, 0, 0) 0px 1px 1px;
+    top:                                calc(100% / 2);
+    transform-style:                    flat;
+    transition-delay:                   0ms, 0ms, 0ms;
+    transition-duration:                333ms, 333ms, 333ms;
+    transition-property:                left, transform, z-index;
+    transition-timing-function:         ease-in-out, ease-in-out, ease-in-out;
+    width:                              80%;
+    -moz-osx-font-smoothing:            grayscale;
+    -webkit-background-size:            cover;
+    -webkit-backface-visibility:        visible;
+    -webkit-text-stroke:                0.45px rgba(0, 0, 0, 0.1);
+    -webkit-font-smoothing:             antialiased;
+    -webkit-transition-delay:           0ms, 0ms, 0ms;
+    -webkit-transition-duration:        333ms, 333ms 333ms;
+    -webkit-transition-property:        left, transform, z-index;
+    -webkit-transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+    -webkit-transform-style:            flat;
+}
+
+.zh-3d-slider-item, 
+.zh-3d-slider-item:active, 
+.zh-3d-slider-item:hover, 
+.zh-3d-slider-item:link, 
+.zh-3d-slider-item:visited  {
+    color:              rgb(255, 255, 255);
+    text-decoration:    none;
+}
+
+@media screen and (min-width: 1000px)
+{
+    
+    .zh-3d-slider-item {
+        height:     80%;
+        max-height: 80%;
+        max-width:  40%;
+        min-height: 80%;
+        min-width:  40%;
+        width:      40%;
+    }
+    
+}
+
+.zh-3d-slider-item  h2 {
+    bottom:                             0px;
+    font-size:                          1.7rem;
+    left:                               0px;
+    line-height:                        1.2em;
+    margin:                             0px;
+    padding:                            0px 0px 1.5rem 1.5rem;
+    position:                           absolute;
+    text-decoration:                    none;
+    transition-delay:                   0ms;
+    transition-duration:                333ms;
+    transition-property:                opacity;
+    transition-timing-function:         ease-in-out;
+    -webkit-margin-after:               0px;
+    -webkit-margin-before:              0px;
+    -webkit-margin-end:                 0px;
+    -webkit-margin-start:               0px;
+    -webkit-transition-delay:           0ms;
+    -webkit-transition-duration:        333ms;
+    -webkit-transition-property:        opacity;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.zh-3d-slider-item p {
+    display:    none;
+}
+
+.zh-3d-slider-item-1 {
+    background-image:   url('../img/FD7D6BD2766FACE8.jpg');
+}
+
+.zh-3d-slider-item-2 {
+    background-image:   url('../img/FD7D6BD2766FACEA.jpg');
+}
+
+.zh-3d-slider-item-3 {
+    background-image:   url('../img/FD7D6BD2766FACEB.jpg');
+}
+
+.zh-3d-slider-item-4 {
+    background-image:   url('../img/FD7D6BD2766FACEE.jpg');
+}
+
+.zh-3d-slider-item-5 {
+    background-image:   url('../img/FD7D6BD2766FACE9.jpg');
+}
+
+.zh-3d-slider-at-1 .zh-3d-slider-item-2 h2, 
+.zh-3d-slider-at-1 .zh-3d-slider-item-3 h2, 
+.zh-3d-slider-at-1 .zh-3d-slider-item-4 h2, 
+.zh-3d-slider-at-1 .zh-3d-slider-item-5 h2 {
+    opacity: 0;
+}
+
+/**
+ *
+ *  Agora as posições específicas estão em zh-3d-slider-positions-0.0.0.css
+ *
+ **/
+
+
+
+.zh-3d-slider-overlay {
+    background:         rgba(255,187,0,0);
+    background:         -moz-linear-gradient(top, rgba(255,187,0,0) 0%, rgba(255,231,0,1) 100%);
+    background:         -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,187,0,0)), color-stop(100%, rgba(255,231,0,1)));
+    background:         -webkit-linear-gradient(top, rgba(255,187,0,0) 0%, rgba(255,231,0,1) 100%);
+    background:         -o-linear-gradient(top, rgba(255,187,0,0) 0%, rgba(255,231,0,1) 100%);
+    background:         -ms-linear-gradient(top, rgba(255,187,0,0) 0%, rgba(255,231,0,1) 100%);
+    background:         linear-gradient(to bottom, rgba(255,187,0,0) 0%, rgba(255,231,0,1) 100%);
+    bottom:             10%;
+    filter:             progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbb00', endColorstr='#ffe700', GradientType=0 );
+    height:             90%;
+    left:               0%;
+    max-height:         90%;
+    max-width:          100%;
+    min-height:         90%;
+    min-width:          100%;
+    position:           absolute;
+    transform:          translate3d(0vw, 0vw, 321vw);
+    width:              100%;
+    z-index:            234;
+    -webkit-transform:  translate3d(0px, 0px, 321vw);
+}
+
+.zh-3d-slider-buttons-container {
+    height:             80%;
+    left:               50%;
+    max-height:         80%;
+    max-width:          40%;
+    min-height:         80%;
+    min-width:          40%;
+    pointer-events:     none;
+    position:           absolute;
+    top:                calc(100% / 2);
+    transform:          translate3d(-50%, -50%, 444vw) skew(0deg, 0deg) scale(1.0, 1.0);
+    -webkit-transform:  translate3d(-50%, -50%, 444vw) skew(0deg, 0deg) scale(1.0, 1.0);
+    z-index:            444;
+    width:              40%;
+}
+
+.zh-3d-slider-button {
+    background-color:   rgb(255, 214, 0);
+    border-radius:      50%;
+    color:              rgb(74, 74, 74);
+    cursor:             pointer;
+    display:            inline-block;
+    font-size:          1.3rem;
+    height:             42px;
+    line-height:        42px;
+    width:              42px;
+    max-height:         42px;
+    max-width:          42px;
+    min-height:         42px;
+    min-width:          42px;
+    pointer-events:     all;
+    position:           absolute;
+    text-align:         center;
+    vertical-align:     middle;
+    z-index:            555;
+}
+
+.zh-3d-slider-next, 
+.zh-3d-slider-previous {
+    display:    none;
+    position:   absolute;
+    top:        calc(50% - 21px);
+}
+
+.zh-3d-slider-previous {
+    left:           -11px;
+    padding-right:  0.3rem;
+}
+
+.zh-3d-slider-next {
+    right:          -11px;
+    padding-left:   0.3rem;
+}
+
+.zh-3d-slider-next-page {
+    left:   calc(50% - 20px);
+    bottom: -25px;
+}
+
+@media all and (min-width: 1000px)
+{
+    
+    .zh-3d-slider-next, 
+    .zh-3d-slider-previous {
+        display:    initial;
+    }
+    
+    .zh-3d-slider-next-page {
+        display:    none;
+    }
+    
+}
+
+
+
+
+
+.zh-3d-slider-bullets {
+    bottom:             calc((100% - (50% + 30%)) / 1.75);
+    float:              left;
+    height:             10px;
+    max-height:         10px;
+    max-width:          100%;
+    min-height:         10px;
+    min-width:          100%;
+    overflow:           hidden;
+    padding:            0px;
+    position:           absolute;
+    transform:          translate3d(0vw, -50%, 444vw);
+    width:              100%;
+    z-index:            444;
+}
+
+@media screen and (min-device-height: 667px)
+{
+    
+    .zh-3d-slider-bullets {
+        bottom: calc((100% - (50% + 30%)) / 1.5);
+    }
+    
+}
+
+.zh-3d-slider-bullet {
+    background-color:   rgba(0, 0, 0, 0.5);
+    color:              transparent;
+    border-radius:      50%;
+    display:            inline-block;
+    height:             9px;
+    line-height:        1.5;
+    width:              9px;
+}
+
+.zh-3d-slider-bullet.zh-3d-slider-bullet-active, 
+.zh-3d-slider-bullet:hover, 
+.zh-3d-slider-bullet:active {
+    background-color:   rgba(0, 0, 0, 1);
+}

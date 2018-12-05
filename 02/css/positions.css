@@ -1,0 +1,434 @@
+* {
+	box-sizing:		border-box;
+}
+
+p {
+	padding:		1.5em;
+}
+
+body {
+	height:			200vh;
+	width:			100%;
+	margin:			0px;
+	padding:		0px;
+	outline:		0px;
+}
+
+body > nav {
+	padding:		20px 0px;
+	text-align:		center;
+}
+
+nav > div {
+	display:		inline-block;
+}
+
+article div {
+	background:		rgba(255, 255, 255, 0.6);
+	border:			1px solid #000;
+	box-sizing:		border-box;
+	height:			200px;
+	line-height:	198px;
+	text-align:		center;
+	vertical-align:	middle;
+	width:			200px;
+	margin:			0px;
+	padding:		0px;
+	outline:		0px;
+}
+
+article div.father {
+	height:			400px;
+	width:			400px;
+}
+
+.reset {
+	margin:		0px;
+	padding:	0px;
+	outline:	0px;
+}
+
+
+
+
+
+/**
+ *
+ *	POSITION
+ *
+ **/
+ 
+.static {
+	position:	static;
+}
+
+.absolute {
+	position:	absolute;
+}
+
+.relative {
+	position:	relative;
+}
+
+.fixed {
+	position:	fixed;
+}
+
+
+
+
+
+/**
+ *
+ *	POSICIONAMENTO (TOP, LEFT, RIGHT, BOTTOM)
+ *
+ **/
+ 
+.top-50 {
+	top:	50px;
+}
+
+.top-200 {
+	top:	200px;
+}
+
+.top-300 {
+	top:	300px;
+}
+
+.top-400 {
+	top:	400px;
+}
+
+.top-500 {
+	top:	500px;
+}
+
+.top-600 {
+	top:	600px;
+}
+
+.top-700 {
+	top:	700px;
+}
+
+.left-50 {
+		left:	50px;
+}
+
+.left-200 {
+		left:	200px;
+}
+
+.left-300 {
+	left:	300px;
+}
+
+.left-500 {
+	left:	500px;
+}
+
+.left-600 {
+	left:	600px;
+}
+
+.left-700 {
+	left:	700px;
+}
+
+.right-0 {
+	right:	0px;
+}
+
+
+
+
+
+/**
+ *
+ *	LINE-HEIGHT
+ *
+ **/
+ 
+.line-height-200 {
+line-height:	200px;
+}
+ 
+ .lines-2 {
+	line-height:	calc(200px / 2);
+}
+
+.lines-3 {
+	line-height:	calc(200px / 3);
+}
+
+
+
+
+
+/**
+ * 
+ *	DISPLAY
+ *
+ **/
+ 
+.block, 
+.inline, 
+.inline-block, 
+.none {
+	width:	initial;
+}
+
+.block {
+	display:	block;
+}
+
+.inline {
+	display:		inline;
+	line-height:	initial;
+}
+
+.inline-block {
+	display:	inline-block;
+}
+
+.none {
+	display:	none;
+}
+
+
+
+
+
+/**
+ *
+ *	BOX_SIZING
+ *
+ **/
+ 
+.box-content {
+	box-sizing:	content-box;
+}
+
+
+
+
+
+/**
+ *
+ *	FLOATS
+ *
+ **/
+
+.float-left {
+	float:	left;
+}
+
+.float-right {
+	float:	right;
+}
+
+.float-none {
+	float:	none;
+}
+
+
+
+
+
+/**
+ *
+ *	MÁXIMOS E MÍNIMOS
+ *
+ **/
+
+.max-width-300 {
+	max-width:	300px;
+}
+
+.min-width-1000 {
+	min-width:	1000px;
+}
+
+
+
+
+
+/**
+ *
+ *	MEDIA-QUERYES
+ *
+ **/
+
+.media-query {
+	display:	none;
+	background:	#F00;
+}
+
+@media only screen 
+{
+	
+	.only-screen {
+		display:	block;
+		background:	#0F0;
+	}
+	
+}
+
+@media only mobile 
+{
+	
+	.only-mobile {
+		display:	block;
+		background:	#0F0;
+	}
+	
+}
+
+@media only print 
+{
+	
+	.only-print {
+		display:	block;
+		background:	#0F0;
+	}
+	
+}
+
+@media all and (min-width: 800px) 
+{
+	
+	.min-800-px {
+		display:	block;
+		background:	#00F;
+	}
+	
+}
+
+@media all and (max-width: 500px) 
+{
+	
+	.max-500-px {
+		display:	block;
+		background:	#0FF;
+	}
+	
+}
+
+@media all and (min-width: 500px)
+{
+	
+	@media all and (max-width: 800px) 
+	{
+	
+		.min-500-max-800-px {
+			display:	block;
+			background:	#FF0;
+		}
+		
+	}
+	
+} 
+
+@media all
+{
+	
+	.all {
+		display:	block;
+	}
+	
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) 
+{ 
+    
+	.retina {
+		display:	block;
+	}
+	
+}
+
+
+
+
+
+/**
+ *
+ *	TAMANHO (WIDTH, HEIGHT)
+ *
+ **/
+ 
+.height-auto {
+	 height:	auto;
+ }
+ 
+.width-half {
+	width:		50%;
+}
+
+.height-half {
+	height:		50%;
+}
+
+.height-3-em {
+	height:	3em;
+}
+
+.width-50-vw {
+	width:	50vw;
+}
+
+.height-50-vh {
+	height:	50vh;
+}
+
+
+
+
+
+/**
+ *
+ *	PADDING
+ *
+ **/
+
+.padding-20 {
+ padding:	20px;
+}
+ 
+.padding-1-5-em {
+	padding:	1.5em;
+}
+
+
+
+
+ 
+/**
+ *
+ *	BORDER
+ *
+ **/
+ 
+.border-1 {
+	border:	1px 	solid 	#000;
+}
+
+.border-20 {
+	border:	20px	solid	#000;
+}
+
+
+
+
+
+/**
+ *
+ *	FONT
+ *
+ **/
+
+.font-32-px {
+	font-size:	32px;
+}
+ 

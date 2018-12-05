@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="2" />
+    <meta name="slide-number"       content="11" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="18" />
+    <meta name="slide-previous"     content="09-display-inline.html" />
+    <meta name="slide-next"         content="11-display-none.html" />
+	
+	<title>display: inline-block</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/revision.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    display: inline-block
+                </span>
+            </h1>
+            
+            
+            
+            <div class="inline-block border-1">display: inline-block;</div><div class="inline-block border-1">display: inline-block;</div>
+            
+            <div class="inline-block border-1">
+                Longo texto, texto longo. Longo texto, texto longo. Longo texto, texto longo. 
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <h3 class="w3-margin-top w3-margin-bottom">
+                Sem espaço entre (\n conta)
+            </h3>
+            
+            <div class="inline-block width-half lines-2 height-auto border-1 box-border">
+                display: 	inline-block;	<br />
+                width:		50%;
+            </div><div class="inline-block width-half lines-2 height-auto border-1 box-border">
+                display: 	inline-block;	<br />
+                width:		50%;
+            </div>	
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <h3 class="w3-margin-top w3-margin-bottom">
+                Com espaço entre (\n conta)
+            </h3>
+            
+            <div class="inline-block width-half lines-2 height-auto border-1 box-border">
+                display: 	inline-block;	<br />
+                width:		50%;
+            </div>
+            <div class="inline-block width-half lines-2 height-auto border-1 box-border">
+                display: 	inline-block;	<br />
+                width:		50%;
+            </div>	
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <h3 class="w3-margin-top w3-margin-bottom">
+                Com espaço entre (\n conta) e float: left
+            </h3>
+            
+            <div class="inline-block width-half lines-2 height-auto border-1 box-border float-left">
+                display: 	inline-block;	<br />
+                width:		50%;
+            </div>
+            <div class="inline-block width-half lines-2 height-auto border-1 box-border float-left w3-margin-bottom">
+                display: 	inline-block;	<br />
+                width:		50%;
+            </div>
+            
+            <!--    Voltando ao float normal da página  -->
+            <hr class="w3-margin-top w3-margin-bottom" style="float: inirial; clear: both;" />
+            
+            <h3 class="w3-margin-top w3-margin-bottom">
+                Testando line-height
+            </h3>
+            
+            <div class="inline-block line-height-200 border-1">
+                display: 	inline;	line-height: 200px;
+            </div>
+            
+            <h3 class="w3-margin-top w3-margin-bottom">
+                Pai 100% e com text-align: center. 
+                Filho com display: inline-block e width: 50%
+            </h3>
+                
+            <div class="block border-1 w3-center">
+                <div class="inline-block width-half border-1">
+                    display: 	inline-block; <br />
+                    width:      50%;
+                </div>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <p class="w3-padding">
+                Elementos com display inline-block unem o melhor dos displays inline 
+                e block. Comportam-se como elementos inline, ficando naturalmente 
+                alinhados lado-a-lado, tem largura padrão automática (dependendo do 
+                conteúdo) e seguem o fluxodo texto. Entretando, assim como elementos 
+                block, podemos alterar sua width e height, e sua altura inicial 
+                depende da line-height. Sem dúvida o mais versátil dos displays.
+            </p>
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+	
+    
+    
+</body>
+
+</html>

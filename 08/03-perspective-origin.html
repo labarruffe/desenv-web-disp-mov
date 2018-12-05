@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="0" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="100" />
+    <meta name="slide-previous"     content="02-perspective.html" />
+    <meta name="slide-next"         content="04-backface-visibility.html" />
+	
+	<title>perspective-origin()</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/cube.css">
+    <link rel="stylesheet" href="css/transforms-3d.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    perspective-origin()
+                </span>
+            </h1>
+            
+            <p class="w3-padding">
+                <i>perspective-origin()</i> permite-nos escolher onde na parte mais 
+                próxima do observador do frustrum a câmera vai ser fixada, como 
+                podemos ver na imagem abaixo (no caso: center center)
+            </p>
+            
+            <figure class="w3-margin-top  w3-center">
+                <img class="w3-image" src="img/perspective-origin.jpg" alt="perspective-origin em CSS" />
+                <figcaption>perspective-origin em CSS</figcaption>
+            </figure>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <p class="w3-padding">
+                Esse valor pode ser em %, px, ou qualquer outra unidade de medida, 
+                além das palavras-chaves: top, right, bottom, left e center. Como 
+                podemos ver  no exemplo abaixo.
+            </p>
+            
+            <h2>Exemplos</h2>
+            
+                
+             <figure class="w3-center w3-margin-top">
+
+                <div class="container">
+                    <div id="cosmic-cube" class="cube perspective-1000px perspective-origin-center-center">
+                        <div class="face front">1</div>
+                        <div class="face back">2</div>
+                        <div class="face right">3</div>
+                        <div class="face left">4</div>
+                        <div class="face top">5</div>
+                        <div class="face bottom">6</div>
+                    </div>  
+                </div>
+
+            </figure>
+            
+            <div class="w3-example">
+                Use o select abaixo para modificar a <i>perspective-origin()</i> do cubo acima
+                <div class="w3-code notranslate cssHigh">
+.cube <span class="eol">{<span class="eol">&nbsp;</span>
+                    
+                    <span class="tab">&nbsp;</span>perspective-origin-x: 
+
+                    <select id="perspective-origin-x">
+                        <option value="center">center</option>
+                        <option value="right">right</option>
+                        <option value="left">left</option>
+                        <option value="-150%">-150%</option>
+                        <option value="150%">150%</option>
+                    </select>
+                    <span class="eol">;</span>
+                    
+                    <span class="tab">&nbsp;</span>perspective-origin-y: 
+
+                    <select id="perspective-origin-y">
+                        <option value="center">center</option>
+                        <option value="top">top</option>
+                        <option value="bottom">bottom</option>
+                        <option value="-150%">-150%</option>
+                        <option value="150%">150%</option>
+                    </select>
+                    <span class="eol">;</span>
+  
+<span class="eol">}</span>
+                </div>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <p class="w3-padding">
+                Entretanto a forma mais comum de escrita é em uma linha só, como em: 
+            </p>
+            
+            <div class="w3-example">
+                <pre class="w3-code notranslate cssHigh">
+
+.default-perspective-origin {
+    perspective-origin:         center center;
+    -webkit-perspective-origin: center center;
+}           
+                </pre>
+            </div>
+
+            
+            
+        </article>
+    
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+    
+    <script type="text/javascript">
+    
+        ;(function (undefined)
+        {
+            
+            'use strict';
+            
+            
+            
+            var X   =   0
+            ,   Y   =   1;
+            
+            var DEFAULTS    =   [
+                'center'
+            ,   'center'
+            ];
+            
+            var values  =   DEFAULTS.slice(0);
+            
+            
+            
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $cube     =   document.querySelector('#cosmic-cube')
+                ,   $selectX  =   document.querySelector('#perspective-origin-x')
+                ,   $selectY  =   document.querySelector('#perspective-origin-y');
+                
+                
+                
+                var changePerspective   =   function (event)
+                {
+
+                    $cube.style['perspective-origin-x']         =   values[X];
+                    $cube.style['-webkit-perspective-origin-x'] =   values[X];
+                    
+                    $cube.style['perspective-origin-y']         =   values[Y];
+                    $cube.style['-webkit-perspective-origin-y'] =   values[Y];
+                
+                };
+                
+                var changePerspectiveX  =   function ()
+                {
+                    values[X]   =   $selectX.value;
+                    changePerspective();
+                };
+                
+                var changePerspectiveY  =   function ()
+                {
+                    values[Y]   =   $selectY.value;
+                    changePerspective();
+                };
+                
+                
+                
+                $selectX.addEventListener('change', changePerspectiveX);
+                $selectY.addEventListener('change', changePerspectiveY);
+                
+            });
+        
+        })();
+    
+    </script>
+	
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="0" />
+    <meta name="slide-number"       content="1" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="100" />
+    <meta name="slide-previous"     content="index.html" />
+    <meta name="slide-next"         content="02-transition-property.html" />
+	
+	<title>CSS-transitions</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/transitions.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+    
+    
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    CSS-transitions
+                </span>
+            </h1>
+            
+            <p class="w3-padding">
+                É um conjunto de atributos CSS que ditam como ocorre a alteração 
+                de estado de um elemento entre diferentes estados. Utilizando transições 
+                CSS não precisamos mais fazer trocas abruptas de estilo ao darmos 
+                feedback de um :hover, por exemplo, ou para colocar um elemento em 
+                cena, podemos fazer isso ao longo de um tempo. O que precisamos 
+                para utilizar uma trasição-CSS é:
+            </p>
+            
+            <ul class="w3-border-left">
+                <li>Um elemento em um estado inicial (conjunto de regras CSS)</li>
+                <li>Esse elemento apresentar a regra <i>transition</i></li>
+                <li>Um evento (:hover, :active, alteração de classes, ...)</li>
+                <li>Alguma(s) regras CSS diferente(s) para serem aplicadas nesse novo estado do elemento</li>
+            </ul>
+            
+            <figure class="w3-center w3-padding">
+                <img src="img/trasnsicao.jpg" alt="Elementos de uma transição CSS" />
+                <figcaption>Elementos de uma transição CSS</figcaption>
+            </figure>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <p>
+                Transições CSS são geralmente associadas a eventos que ocorrem 
+                devido as seguintes situações: 
+            </p>
+            
+            <ul class="w3-border-left">
+                <li><b>hover: </b>o mouse entra no elemento</li>
+                <li><b>não hover: </b>o mouse sai do elemento</i></li>
+                <li><b>focus: </b>elemento de formulário que o usuário está interagindo</i></li>
+                <li><b>alterações de classe: </b>uma ou mais classes foram adicionadas ou removidas do elemento</li>
+                <li><b>alterações de atributo: </b>algum atributo CSS animável foi alterado</li>
+            </ul>
+
+            <p class="w3-padding">
+                Transitions são ideais para dar feedback ao usuário, mostrando a 
+                interação dele ao longo de um tempo, facilitando a percepção das 
+                mudanças na página causadas por essa interação. Por exemplo é 
+                comum darmos feedback de mouse over sobre botões e/ou links.
+            </p>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+            <div class="w3-container w3-center">
+                <button id="hover-button-1" class="button">Bote o mouse sobre mim (desktop)</button>
+            </div>
+            
+            <div class="w3-example">
+                <pre id="output-1" class="w3-code notranslate cssHigh">
+
+/*  Regra comum a todos os botões dessa aula    */
+.button {
+    background-color:   rgb(0, 0, 0);
+    border:             1px solid rgb(0, 0, 0);
+    color:              rgb(255, 255, 255);
+    cursor:             pointer;
+    height:             30px;
+    width:              120px;
+}
+   
+/*  Estado inicial do botão acima   */   
+#hover-button-1 {
+    opacity:            0.6;
+    transform:          scale(1.0, 1.0);
+    -webkit-transform:  scale(1.0, 1.0);
+    
+    transition:         all ease 300ms;
+    -webkit-transition: all ease 300ms;
+    
+    width:              auto;
+}
+
+/*  Estado a ser assumido após um evento :hover */
+#hover-button-1:hover, 
+#hover-button-1:active {
+    opacity:            1.0;
+    transform:          scale(1.2, 1.2);
+    -webkit-transform:  scale(1.2, 1.2);
+}
+                </pre>
+            </div>
+            
+            <p class="w3-padding">
+                Quando o mouse encontra-se sobre o botão queremos que ele escale 
+                para 1,2 vezes o seu tamanho, mas não queremos que ele faça isso 
+                instantaneamente, e sim que cresça gradualmente por 300ms, por 
+                isso usamos o atributo <i>transition</i>.
+            </p>
+
+            <ul class="w3-border-left">
+                <li><b>transition: </b>	nome do atributo, use sempre pelo menos o -webkit- também</li>
+                <li><b>all: </b> short-hand do transition-property, significa todas transições</li>
+                <li><b>ease: </b> short-hand de transition-timing function</li>
+                <li><b>300ms: </b> short-hand de transition-duration, tempo da transição</li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+        
+        
+            <p class="w3-padding">
+                Veremos as diferentes sub-propriedades em separado. Escrevendo a mesma 
+                transição acima sem short-hands. E um botão para demonstrar a equivalência 
+                de ambas as formas.
+            </p>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+            <div class="w3-container w3-center">
+                <button id="hover-button-1" class="button">Bote o mouse sobre mim (desktop)</button>
+            </div>
+            
+            <div class="w3-example">
+                <pre id="output-2" class="w3-code notranslate cssHigh">
+
+/*  Equivalente à #hover-button-1 */
+#hover-button-2 {
+		
+    -webkit-transition-property:        all;
+    transition-property:                all;
+
+    -webkit-transition-timing-function: ease;
+    transition-timing-function:         ease;
+
+    -webkit-transition-duration:        300ms;
+    transition-duration:                300ms;
+
+    -webkit-transition-delay:           0ms;
+    transition-delay:                   0ms;
+    
+}
+                </pre>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+        
+        </article>
+            
+    </main>
+
+
+    
+    
+    
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+	
+    
+    
+</body>
+
+</html>

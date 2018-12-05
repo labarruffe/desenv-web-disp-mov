@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="1" />
+    <meta name="slide-number"       content="7" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="12" />
+    <meta name="slide-previous"     content="07-bootstrap.html" />
+    <meta name="slide-next"         content="09-google-fonts.html" />
+	
+	<title>Famílias de fontes</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-theme w3-top w3-left-align w3-large" w3-include-html="../top-menu.html">
+        &nbsp;  <!--    MEU QUERIDO MENU SUPERIOR   -->
+    </nav>
+	
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">Famílias de fontes</span>
+            </h1>
+            
+            <p>
+                Há diferentes famílias de fontes, que são usadas para diferentes identidades visuais. 
+                É importante, mesmo que a fonte original falhe por algum motivo (download, CORS) 
+                que a sua substituta seja uma fonte da mesma família, para tentar manter o produto 
+                que o cliente está revebendo o mais próximo possível do design original. São famílias de fontes:
+            </p>
+            
+            <div class="w3-code cssHigh notranslate">
+            
+                /*  Exemplo de como manter a fonte dentro da mesma família  */      <span class="eol"></span>
+                .font-times-new-roman {                                             <span class="eol"></span>
+                <span class="tab"></span>font-family:    "Times New Roman", serif;  <span class="eol"></span>
+                }                                                                   <span class="eol"></span>
+                
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-tag w3-theme w3-margin-top w3-xxlarge">
+                serif
+            </h2>
+            
+            <p>
+                Fontes com serifa, aquelas "barrinhas" no final das letras. 
+                Geralmente são utilizadas apenas em títulos, mas hoje em dia não 
+                há problema em utilizá-las no corpo do texto, pois a resolução 
+                e qualidade dos displays permite a fácil leitura desses tipos.
+            </p>
+            
+            <figure class="w3-figure">
+                <img src="img/serif.jpg" class="w3-image" alt="Fontes com e sem serifa" />
+            
+                <figcaption>
+                    Fontes com e sem serifa
+                </figcaption>
+            </figure>
+           
+            <h3 class="w3-tag w3-theme-l2 w3-margin-top">exemplos</h3>
+            <ul class="w3-border-left">
+                <li class="w3-padding">Times New Roman</li>
+                <li class="w3-padding">Georgia</li>
+                <li class="w3-padding">Garamond</li>
+                <li class="w3-padding">MS Serif</li>
+                <li class="w3-padding">
+                    Repositório: 
+                    <a target="_blank" href="https://fonts.google.com/?category=Serif">
+                        https://fonts.google.com/?category=Serif <i class="fa fa-external-link"></i>
+                    </a>
+                </li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-tag w3-theme w3-margin-top w3-xxlarge">
+                sans-serif
+            </h2>
+            
+            <p>
+                São fontes que não apresentam as serifas, muito adequadas para o 
+                corpo do texto, principalmente em dispositivos mobile, pois seu 
+                acabamento simples evita que detalhes pequenos (como as serifas) 
+                pareçam apenas borrões em tamanhos pequens. Tendem a ser bem 
+                flexíveis em redimensionamento, podendo ser usadas em tamanhos 
+                pequenos (8px, por exemplo) sem muitos problemas.
+            </p>
+           
+            <h3 class="w3-tag w3-theme-l2 w3-margin-top">exemplos</h3>
+            <ul class="w3-border-left">
+                <li class="w3-padding">Arial</li>
+                <li class="w3-padding">Helvetica</li>
+                <li class="w3-padding">Verdana</li>
+                <li class="w3-padding">Montserrat</li>
+                <li class="w3-padding">
+                    Repositório: 
+                    <a target="_blank" href="https://fonts.google.com/?category=Sans+Serif">
+                        https://fonts.google.com/?category=Sans+Serif <i class="fa fa-external-link"></i>
+                    </a>
+                </li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-tag w3-theme w3-margin-top w3-xxlarge">
+                cursive
+            </h2>
+            
+            <p>
+                São fontes curvadas, assemelhadas a escrita à mão. Nem todas são 
+                ligadas / emendadas. São adequadas apenas para títulos, e com 
+                ressalvas, pois boa parte delas tem uma legibilidade baixa, 
+                PRINCIPALMENTE em tamanho pequeno e / ou negritadas.
+            </p>
+           
+            <h3 class="w3-tag w3-theme-l2 w3-margin-top">exemplos</h3>
+            <ul class="w3-border-left">
+                <li class="w3-padding">Comics Sans MS</li>
+                <li class="w3-padding">
+                    Repositório: 
+                    <a target="_blank" href="https://fonts.google.com/?category=Handwriting">
+                        https://fonts.google.com/?category=Handwriting <i class="fa fa-external-link"></i>
+                    </a>
+                </li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-tag w3-theme w3-margin-top w3-xxlarge">
+                monospace
+            </h2>
+            
+            <p>
+                Fontes cujos símbolos ocupam o mesmo espaço, ou seja, todas as 
+                letras têm a mesma largura. Geralmente são utilizadas para 
+                representar código de máquina e/ou linguagens de programação, já 
+                que a maioria dos editores de código usa fontes monoespaçadas 
+                para facilitar o alinhamento de diferentes linhas de código.
+            </p>
+            
+            <p>
+                Alguns navegadores utilizam fontes monospace para elementos de 
+                formulário, o que pode levá-los a destoarem completamente do 
+                resto da identidade visual do projeto, requerendo, portanto, uso d
+                e normalização do CSS para que as fontes adequadas sejam 
+                aplicadas nos elementos de formulário.
+            </p>
+           
+            <h3 class="w3-tag w3-theme-l2 w3-margin-top">exemplos</h3>
+            <ul class="w3-border-left">
+                <li class="w3-padding">Courier New</li>
+                <li class="w3-padding">
+                    Repositório: 
+                    <a target="_blank" href="https://fonts.google.com/?category=Monospace">
+                        https://fonts.google.com/?category=Monospace <i class="fa fa-external-link"></i>
+                    </a>
+                </li>
+            </ul>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <h2 class="w3-tag w3-theme w3-margin-top w3-xxlarge">
+                Fontes seguras para a web (safe fonts)
+            </h2>
+            
+            <p>
+                São fontes muito comumente distribuídas junto com os Sistemas Operacionais, 
+                e portanto, podendo ser facilmente utilizadas sem precisarmos criar webfonts. 
+                Uma listagem delas pode ser encontrada em: 
+                <a target="_blank" href="http://web.mit.edu/jmorzins/www/fonts.html">
+                    http://web.mit.edu/jmorzins/www/fonts.html&nbsp;<i class="fa fa-external-link"></i>
+                </a>
+            </p>
+            
+            <p>
+                Elas são uma ótima solução para projetos pequenos, mas infelizmente 
+                são fontes antigas e pouco refinadas, sendo menos adequadas para 
+                trabalhos de alto-nível e/ou com cunho artístico; nesse caso devemos 
+                recorrer a webfonts.
+            </p>
+
+        </article>
+    
+    </main>
+
+    
+    
+    
+
+    <script src="../js/w3data.js"></script>
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3IncludeHTML();
+        w3CodeColor();
+    </script>
+    
+    <script src="../js/index.js"></script>
+	
+</body>
+
+</html>

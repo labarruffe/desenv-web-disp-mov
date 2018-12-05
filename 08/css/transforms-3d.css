@@ -1,0 +1,205 @@
+/**
+ *
+ *  Back-face Culling
+ *
+ **/
+ 
+.backface-visibility-hidden {
+    backface-visibility:            hidden;
+    -webkit-backface-visibility:    hidden;
+}
+
+.backface-visibility-visible {
+    backface-visibility:            visible;
+    -webkit-backface-visibility:    visible;
+}
+
+
+
+/**
+ *
+ *  Escala
+ **/
+ *
+ 
+.scale-x-1_5 {
+    transform:          scale3d(1.5, 1.0, 1.0);
+    -webkit-transform:  scale3d(1.5, 1.0, 1.0);
+}
+
+.scale-y-1_5 {
+    transform:          scale3d(1.0, 1.5, 1.0);
+    -webkit-transform:  scale3d(1.0, 1.5, 1.0);
+}
+
+.scale-z-1_5 {
+    transform:          scale3d(1.0, 1.0, 1.5);
+    -webkit-transform:  scale3d(1.0, 1.0, 1.5);
+}
+
+
+
+/**
+ *
+ *  Matrix
+ *
+ **/
+ 
+/*  Matriz identidade 2D (não altera a vizualização) */
+.identity-matrix-2d {
+    transform:          matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform:  matrix(1, 0, 0, 1, 0, 0);
+}
+
+/*  Matriz identidade 3D (não altera a vizualização) */
+.identity-matrix, 
+.identity-matrix-3d {
+    transform:          matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+    -webkit-transform:  matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+}
+
+
+
+/**
+ *
+ *  Perspectiva
+ *
+ **/
+ 
+.perspective-500px {
+    perspective:            500px;
+    -webkit-perspective:    500px;
+}
+ 
+.perspective-1000px {
+    perspective:            1000px;
+    -webkit-perspective:    1000px;
+}
+
+
+
+/**
+ *
+ *  Perspectiva
+ *
+ **/
+ 
+.perspective-origin-150pc-150pc {
+    perspective-origin:         150% 150%;
+    -webkit-perspective-origin: 150% 150%;
+}
+ 
+.perspective-origin-top-left {
+    perspective-origin:         top left;
+    -webkit-perspective-origin: top left;
+}
+
+.perspective-origin-top-right {
+    perspective-origin:         top right;
+    -webkit-perspective-origin: top right;
+}
+
+.perspective-origin-center-right {
+    perspective-origin:         center right;
+    -webkit-perspective-origin: center right;
+}
+ 
+.perspective-origin-center-center {
+    perspective-origin:         center center;
+    -webkit-perspective-origin: center center;
+}
+
+
+
+/**
+ *
+ *  Rotação
+ *
+ */
+
+.rotate-x-35 {
+    transform:          rotate3d(1, 0, 0, 35deg);
+    -webkit-transform:  rotate3d(1, 0, 0, 35deg);
+}
+
+.rotate-x-45 {
+    transform:          rotate3d(1, 0, 0, 45deg);
+    -webkit-transform:  rotate3d(1, 0, 0, 45deg);
+} 
+
+.rotate-y-45 {
+    transform:          rotate3d(0, 1, 0, 45deg);
+    -webkit-transform:  rotate3d(0, 1, 0, 45deg);
+} 
+
+.rotate-y-90 {
+    transform:          rotate3d(0, 1, 0, 90deg);
+    -webkit-transform:  rotate3d(0, 1, 0, 90deg);
+} 
+
+.rotate-z-45 {
+    transform:          rotate3d(0, 0, 1, 45deg);
+    -webkit-transform:  rotate3d(0, 0, 1, 45deg);
+} 
+
+.rotate-xy-45 {
+    transform:          rotate3d(1, 1, 0, 45deg);
+    -webkit-transform:  rotate3d(1, 1, 0, 45deg);
+}
+
+.rotate-xz-45 {
+    transform:          rotate3d(1, 0, 1, 45deg);
+    -webkit-transform:  rotate3d(1, 0, 1, 45deg);
+}
+
+.rotate-yz-45 {
+    transform:          rotate3d(0, 1, 1, 45deg);
+    -webkit-transform:  rotate3d(0, 1, 1, 45deg);
+}
+
+.rotate-xyz-45 {
+    transform:          rotate3d(1, 1, 1, 45deg);
+    -webkit-transform:  rotate3d(1, 1, 1, 45deg);
+}
+
+
+
+/**
+ *
+ *  Translação
+ *
+ **/
+ 
+.translate-x-100px {
+    transform:          translate3d(100px, 0px, 0px);
+    -webkit-transform:  translate3d(100px, 0px, 0px);
+}
+
+.translate-y-100px {
+    transform:          translate3d(0px, 100px, 0px);
+    -webkit-transform:  translate3d(0px, 100px, 0px);
+}
+
+.translate-z-100px {
+    transform:          translate3d(0px, 0px, 100px);
+    -webkit-transform:  translate3d(0px, 0px, 100px);
+}
+
+
+
+/**
+ *
+ *  Combinadas
+ *
+ **/
+ 
+.rotate-y-45-translate-z-100px {
+    transform:          rotateY(45deg) translate3d(0px, 0px, 100px);
+    -webkit-transform:  rotateY(45deg) translate3d(0px, 0px, 100px);
+}
+
+.rotate-y-45-scale-z-1_5 {
+    transform:          rotateY(45deg) scale3d(1.0, 1.0, 1.5);
+    -webkit-transform:  rotateY(45deg) scale3d(1.0, 1.0, 1.5);
+}
+ 

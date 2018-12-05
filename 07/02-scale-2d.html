@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    
+    <meta name="slide-author"       content="Guilherme Maron" />
+    <meta name="slide-discipline"   content="Desenvolvimento Web para Dispositivos Móveis" />
+    <meta name="slide-class"        content="7" />
+    <meta name="slide-number"       content="2" />  <!--    Index is zero   -->
+    <meta name="slide-of"           content="9" />
+    <meta name="slide-previous"     content="01-oque-sao.html" />
+    <meta name="slide-next"         content="03-translate-2d.html" />
+	
+	<title>scale()</title>
+	
+	<link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme-black.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <link rel="stylesheet" href="css/transforms.css">
+    
+    <style type="text/css">
+    
+        #scale-buttons-container .w3-button, 
+        #width-buttons-container .w3-button {
+            transform:          scale(1.0, 1.0);
+            -webkit-transform:  scale(1.0, 1.0);
+            width:              100px;
+            z-index:            1;
+        }
+        
+        #width-buttons-container .w3-button:hover {
+            width:      120px;
+            z-index:    10;
+        }
+        
+        #scale-buttons-container .w3-button:hover {
+            transform:          scale(1.2, 1);
+            -webkit-transform:  scale(1.2, 1);
+            z-index:            10;
+        }
+    
+    </style>
+
+</head>
+
+<body class="w3-theme-l5">
+
+    <nav id="top-nav" class="w3-bar w3-top w3-theme  w3-left-align w3-large w3-card-4">
+        <a id="previous-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <i class="fa fa-arrow-left w3-margin-right"></i>
+            <span class="w3-hide-small">anterior</span>
+        </a>
+
+        <a id="index-button" href="index.html" class="w3-disabled w3-bar-item w3-button w3-theme-l2">
+            <i class="fa fa-home w3-margin-right w3-margin-left"></i>
+        </a>
+
+        <a id="next-button" href="javascript: void(0);" class="w3-disabled w3-bar-item w3-button w3-hover-white ">
+            <span class="w3-hide-small">próximo</span>
+            <i class="fa fa-arrow-right w3-margin-left"></i>
+        </a>
+
+        <a id="home-button" href="../index.html" class="w3-bar-item w3-button w3-right w3-theme-l2">
+            <i class="fa fa-globe w3-margin-right w3-margin-left"></i>
+            <span class="w3-hide-small w3-hide-medium w3-margin-right">Desenvolvimento Mobile</span>
+        </a>
+    </nav>
+	
+    
+    
+    <main class="w3-center">
+    
+        <article class="w3-card w3-card-2 w3-show-inline-block ">
+            
+            <h1 class="w3-center w3-padding-48">
+                <span class="w3-tag w3-theme w3-wide w3-padding-left w3-padding-right">
+                    scale(<i>escala</i>) ou <br />
+                    scale(<i>escala em x</i>, <i>escala em y</i>)
+                </span>
+            </h1>  
+            
+            <p>
+                Uma das transformações mais utilizadas, pois permite que o tamanho de 
+                elementos seja alterado <b>SEM</b> alterar o espaço ocupado por esse, 
+                ou seja, sem dança de layouts. Vamos ver como ele altera os elementos.
+            </p>
+            
+           <div class="w3-row w3-margin-top">
+           
+            <div class="w3-half w3-padding">
+            
+                <figure class="w3-margin-top  w3-center">
+                    <figcaption><b>A) </b>Mister Mxyzptlk e sua matriz identidade.</figcaption>
+                    <img id="mr-mxyzptlk" class="w3-image identity-matrix" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                </figure>
+            
+            </div>
+           
+            <div class="w3-half w3-padding">
+            
+                <figure class="w3-margin-top  w3-center">
+                    <figcaption class="w3-margin-top"><b>B) </b>Mister Mxyzptlk com escala 1.5 (150%).</figcaption>
+                    <img id="mr-mxyzptlk-scale-1-5" class="w3-image scale-2d-1-5 transform-origin-top-center" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                </figure>
+            
+            </div>
+           
+           </div>
+            
+            <div class="w3-example" style="margin-top: 100px;">
+                <pre id="matrix-output" class="w3-code notranslate cssHigh">
+        
+                </pre>  
+            </div>
+            
+            <h2> E como isso é feito?</h2>
+            <div class="w3-example">
+                <pre class="w3-code notranslate cssHigh">
+/*  Aplicado em B   */
+.scale-2d-1-5 {
+    transform:          scale(1.5, 1.5);
+    -webkit-transform:  scale(1.5, 1.5);
+}
+
+que é equivalente a 
+
+.scale-2d-1-5 {
+    transform:          scale(1.5);
+    -webkit-transform:  scale(1.5);
+}
+                </pre>  
+            </div>
+
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            
+            <p>
+                Essa é uma transformação MUITO útil para feedback
+            </p>
+            
+            <span class="w3-tag w3-theme w3-margin-bottom">
+                Com width
+            </span>
+            
+            <div class="w3-container" id="width-buttons-container">
+                <div class="w3-button w3-theme">
+                    Botão 1
+                </div>
+                <div class="w3-button w3-theme">
+                    Botão 2
+                </div>
+                <div class="w3-button w3-theme">
+                    Botão 3
+                </div>
+                <div class="w3-button w3-theme">
+                    Botão 4
+                </div>
+                <div class="w3-button w3-theme">
+                    Botão 5
+                </div>
+            </div>
+            
+            <span class="w3-tag w3-theme w3-margin-bottom w3-margin-top">
+                Com scale
+            </span>
+            
+            <div class="w3-container" id="scale-buttons-container">
+                <div class="w3-button w3-theme">
+                    Botão 1
+                </div>
+                <div class="w3-button w3-theme">
+                    Botão 2
+                </div>
+                <div class="w3-button w3-theme">
+                    Botão 3
+                </div>
+                <div class="w3-button w3-theme">
+                    Botão 4
+                </div>
+                <div class="w3-button w3-theme">
+                    Botão 5
+                </div>
+            </div>
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            <p>
+                Podemos aplicar também escalas diferentes apenas em X ou Y
+            </p>
+            
+            <div class="w3-row w3-margin-top">
+           
+            <div class="w3-half w3-padding">
+            
+                <figure class="w3-margin-top w3-center">
+                    <figcaption><b>C) </b>Mister Mxyzptlk com escala 1.5 em X (150% de largura).</figcaption>
+                    <img id="mr-mxyzptlk-scale-X-1-5" class="w3-image scale-X-1-5 transform-origin-top-center" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                </figure>
+            
+            </div>
+           
+            <div class="w3-half w3-padding">
+            
+                <figure class="w3-margin-top w3-center">
+                    <figcaption class="w3-margin-top"><b>D) </b>Mister Mxyzptlk com escala 1.5 em Y (150% de altura).</figcaption>
+                    <img id="mr-mxyzptlk-scale-Y-1-5" class="w3-image scale-Y-1-5 transform-origin-top-center" src="img/mr-mxyzptlk.jpg" alt="Mister Mxyzptlk" />
+                </figure>
+            
+            </div>
+           
+           </div>
+            
+            <div class="w3-example" style="margin-top: 100px;">
+                <pre id="matrix-output-2" class="w3-code notranslate cssHigh">
+        
+                </pre>  
+            </div>
+            
+            <h2> E como isso é feito?</h2>
+            <div class="w3-example">
+                <pre class="w3-code notranslate cssHigh">
+/*  Aplicado em C   */
+.scale-X-1-5 {
+    transform:          scale(1.5, 1.0);
+    -webkit-transform:  scale(1.5, 1.0);
+}
+
+/*  Aplicado em D   */
+.scale-Y-1-5 {
+    transform:          scale(1.0, 1.5);
+    -webkit-transform:  scale(1.0, 1.5);
+}
+                </pre>  
+            </div>
+
+            <hr class="w3-margin-top w3-margin-bottom" />
+            
+            
+            <hr class="w3-margin-top w3-margin-bottom" />
+
+        </article>
+    
+    </main>
+
+    
+        
+    <script src="../js/w3codecolor.js"></script>
+	<script type="text/javascript">
+        w3CodeColor();
+    </script>
+    <script src="../js/index.js"></script>
+    
+    
+    
+    <script type="text/javascript">
+    
+        ;(function (undefined)
+        {
+            
+            'use strict';
+            
+            
+            
+            document.addEventListener('DOMContentLoaded', function ()
+            {
+            
+                var $output1    =   document.querySelector('#matrix-output')
+                ,   $output2    =   document.querySelector('#matrix-output-2')
+                ,   $mrMxyzptlk =   document.querySelector('#mr-mxyzptlk')
+                ,   $bigMxy     =   document.querySelector('#mr-mxyzptlk-scale-1-5')
+                ,   $fatMxy     =   document.querySelector('#mr-mxyzptlk-scale-X-1-5')
+                ,   $tallMxy    =   document.querySelector('#mr-mxyzptlk-scale-Y-1-5');
+                
+                var transformA  =   window.getComputedStyle($mrMxyzptlk).getPropertyValue('transform')
+                ,   transformB  =   window.getComputedStyle($bigMxy)    .getPropertyValue('transform')
+                ,   transformC  =   window.getComputedStyle($fatMxy)    .getPropertyValue('transform')
+                ,   transformD  =   window.getComputedStyle($tallMxy)   .getPropertyValue('transform');
+                
+                $output1.innerHTML  =   'A: ' + transformA + '\nB: ' + transformB;
+                $output2.innerHTML  =   'C: ' + transformC + '\nD: ' + transformD;
+            
+            });
+        
+        })();
+    
+    </script>
+
+</body>
+
+</html>

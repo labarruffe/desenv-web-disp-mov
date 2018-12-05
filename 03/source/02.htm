@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1">
+	
+	<title>Padrões</title>
+	
+</head>
+
+<body>
+
+	<article>
+        
+        <h1>Fontes</h1>
+        <h2>Fontes</h2>
+        <h3>Fontes</h3>
+        
+
+        <p>
+            Vamos estudar os padrões de alguns navegadores no que tange a tipografia
+            <br />
+        </p>
+        
+        <code><pre id="output">Lendo informações ...</pre></code>
+	
+	</article>
+
+    
+    
+    
+    
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+
+	<script type="text/javascript">
+	
+		$(function ()
+		{
+		
+			var output	=	$('#output')
+			,	attrs	=	[];
+			
+	
+
+			var debugTag	=	function (tag, array)
+			{
+			
+				array.push('\n\t' + tag.toUpperCase() + '\n\n');
+			
+				array.push(tag + '.font:\t\t' 		+	(	(tag.length < 2) 
+														? 	('\t') 
+														: 	('')));
+				array.push($(tag).css('font-family'));
+				array.push('\n');
+				
+				array.push(tag + '.font-size:\t' 	+ 	(	(tag.length < 5) 	
+														? 	('\t') 
+														: 	('')));
+				array.push($(tag).css('font-size'));
+				array.push('\n');
+				
+				array.push(tag + '.line-height:\t'	+ 	(	(tag.length < 4) 
+														? ('\t') 
+														: ('')));
+				array.push($(tag).css('line-height'));
+				array.push('\n');
+				
+				array.push(tag + '.margin:\t\t');
+				array.push($(tag).css('margin'));
+				array.push('\n');
+				
+				array.push(tag + '.padding:\t\t');
+				array.push($(tag).css('padding'));
+				array.push('\n');
+			
+			};
+			
+			
+			
+            
+            
+			debugTag('body',	attrs);
+			debugTag('h1', 		attrs);
+			debugTag('h2', 		attrs);
+			debugTag('h3', 		attrs);
+			debugTag('p', 		attrs);
+			debugTag('br', 		attrs);
+			
+            
+            
+			output.html(attrs.join(''));
+		
+		});
+	
+	</script>
+	
+</body>
+
+</html>
